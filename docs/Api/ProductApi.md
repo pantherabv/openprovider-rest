@@ -1,4 +1,4 @@
-# OpenAPI\Client\ProductApi
+# Panthera\Openprovider\ProductApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getProduct()`
 
 ```php
-getProduct($id): \OpenAPI\Client\Model\ProductGetProductResponse
+getProduct($id): \Panthera\Openprovider\Model\ProductGetProductResponse
 ```
 
 Get product
@@ -24,12 +24,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductApi(
+$apiInstance = new Panthera\Openprovider\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductGetProductResponse**](../Model/ProductGetProductResponse.md)
+[**\Panthera\Openprovider\Model\ProductGetProductResponse**](../Model/ProductGetProductResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ try {
 ## `listProducts()`
 
 ```php
-listProducts($limit, $offset, $with_price, $with_supported_software, $with_description, $order_by_name, $order_by_brand_name, $order_by_category, $order_by_sub_category, $order_by_brand_seqno, $order_by_product_seqno): \OpenAPI\Client\Model\ProductListProductsResponse
+listProducts($limit, $offset, $with_price, $with_supported_software, $with_description, $order_by_name, $order_by_brand_name, $order_by_category, $order_by_sub_category, $order_by_brand_seqno, $order_by_product_seqno): \Panthera\Openprovider\Model\ProductListProductsResponse
 ```
 
 List products
@@ -84,12 +84,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ProductApi(
+$apiInstance = new Panthera\Openprovider\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ProductListProductsResponse**](../Model/ProductListProductsResponse.md)
+[**\Panthera\Openprovider\Model\ProductListProductsResponse**](../Model/ProductListProductsResponse.md)
 
 ### Authorization
 

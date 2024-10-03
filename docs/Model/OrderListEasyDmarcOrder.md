@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activated_at** | **string** |  | [optional]
-**domain** | [**\OpenAPI\Client\Model\OrderDomain**](OrderDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\OrderDomain**](OrderDomain.md) |  | [optional]
 **expired_at** | **string** |  | [optional]
 **id** | **int** |  | [optional]
 **record_host** | **string** |  | [optional]

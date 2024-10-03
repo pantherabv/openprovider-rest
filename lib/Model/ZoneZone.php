@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZoneZone Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
         'active' => 'bool',
         'creation_date' => 'string',
         'dnskey' => 'string',
-        'history' => '\OpenAPI\Client\Model\HistoryZoneHistory[]',
+        'history' => '\Panthera\Openprovider\Model\HistoryZoneHistory[]',
         'id' => 'int',
         'ip' => 'string',
         'is_deleted' => 'bool',
@@ -68,9 +68,9 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_spamexperts_enabled' => 'bool',
         'modification_date' => 'string',
         'name' => 'string',
-        'premium_dns' => '\OpenAPI\Client\Model\ZonePremiumDnsData',
+        'premium_dns' => '\Panthera\Openprovider\Model\ZonePremiumDnsData',
         'provider' => 'string',
-        'records' => '\OpenAPI\Client\Model\RecordRecordInfo[]',
+        'records' => '\Panthera\Openprovider\Model\RecordRecordInfo[]',
         'reseller_id' => 'int',
         'type' => 'string'
     ];
@@ -478,7 +478,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets history
      *
-     * @return \OpenAPI\Client\Model\HistoryZoneHistory[]|null
+     * @return \Panthera\Openprovider\Model\HistoryZoneHistory[]|null
      */
     public function getHistory()
     {
@@ -488,7 +488,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets history
      *
-     * @param \OpenAPI\Client\Model\HistoryZoneHistory[]|null $history history
+     * @param \Panthera\Openprovider\Model\HistoryZoneHistory[]|null $history history
      *
      * @return self
      */
@@ -694,7 +694,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets premium_dns
      *
-     * @return \OpenAPI\Client\Model\ZonePremiumDnsData|null
+     * @return \Panthera\Openprovider\Model\ZonePremiumDnsData|null
      */
     public function getPremiumDns()
     {
@@ -704,7 +704,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets premium_dns
      *
-     * @param \OpenAPI\Client\Model\ZonePremiumDnsData|null $premium_dns premium_dns
+     * @param \Panthera\Openprovider\Model\ZonePremiumDnsData|null $premium_dns premium_dns
      *
      * @return self
      */
@@ -748,7 +748,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets records
      *
-     * @return \OpenAPI\Client\Model\RecordRecordInfo[]|null
+     * @return \Panthera\Openprovider\Model\RecordRecordInfo[]|null
      */
     public function getRecords()
     {
@@ -758,7 +758,7 @@ class ZoneZone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets records
      *
-     * @param \OpenAPI\Client\Model\RecordRecordInfo[]|null $records records
+     * @param \Panthera\Openprovider\Model\RecordRecordInfo[]|null $records records
      *
      * @return self
      */

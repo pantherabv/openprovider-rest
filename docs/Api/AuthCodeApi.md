@@ -1,4 +1,4 @@
-# OpenAPI\Client\AuthCodeApi
+# Panthera\Openprovider\AuthCodeApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getAuthCode()`
 
 ```php
-getAuthCode($id, $domain_name, $domain_extension, $auth_code_type, $sending_type): \OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse
+getAuthCode($id, $domain_name, $domain_extension, $auth_code_type, $sending_type): \Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse
 ```
 
 Get auth code
@@ -24,12 +24,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthCodeApi(
+$apiInstance = new Panthera\Openprovider\Api\AuthCodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -61,7 +61,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse**](../Model/AuthcodeGetAuthCodeResponse.md)
+[**\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse**](../Model/AuthcodeGetAuthCodeResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `resetAuthCode()`
 
 ```php
-resetAuthCode($id, $body): \OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse
+resetAuthCode($id, $body): \Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse
 ```
 
 Reset auth code
@@ -92,19 +92,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthCodeApi(
+$apiInstance = new Panthera\Openprovider\Api\AuthCodeApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest(); // \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest
+$body = new \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest(); // \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest
 
 try {
     $result = $apiInstance->resetAuthCode($id, $body);
@@ -119,11 +119,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest**](../Model/AuthcodeResetAuthCodeRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest**](../Model/AuthcodeResetAuthCodeRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse**](../Model/AuthcodeResetAuthCodeResponse.md)
+[**\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse**](../Model/AuthcodeResetAuthCodeResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ProductSslProductWarranty Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ProductSslProductWarranty implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product' => '\OpenAPI\Client\Model\ProductSslProductPrice',
-        'reseller' => '\OpenAPI\Client\Model\ProductSslProductReseller'
+        'product' => '\Panthera\Openprovider\Model\ProductSslProductPrice',
+        'reseller' => '\Panthera\Openprovider\Model\ProductSslProductReseller'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ProductSslProductWarranty implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets product
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductPrice|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductPrice|null
      */
     public function getProduct()
     {
@@ -309,7 +309,7 @@ class ProductSslProductWarranty implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets product
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductPrice|null $product product
+     * @param \Panthera\Openprovider\Model\ProductSslProductPrice|null $product product
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ProductSslProductWarranty implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets reseller
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductReseller|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductReseller|null
      */
     public function getReseller()
     {
@@ -336,7 +336,7 @@ class ProductSslProductWarranty implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets reseller
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductReseller|null $reseller reseller
+     * @param \Panthera\Openprovider\Model\ProductSslProductReseller|null $reseller reseller
      *
      * @return self
      */

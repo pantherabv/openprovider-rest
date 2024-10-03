@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activated_at** | **string** |  | [optional]
-**domain** | [**\OpenAPI\Client\Model\OrderDomain**](OrderDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\OrderDomain**](OrderDomain.md) |  | [optional]
 **easydmarc_email_address** | **string** |  | [optional]
 **expired_at** | **string** |  | [optional]
 **id** | **int** |  | [optional]
-**recent_easydmarc_action** | [**\OpenAPI\Client\Model\OrderRecentEasyDmarcAction**](OrderRecentEasyDmarcAction.md) |  | [optional]
+**recent_easydmarc_action** | [**\Panthera\Openprovider\Model\OrderRecentEasyDmarcAction**](OrderRecentEasyDmarcAction.md) |  | [optional]
 **record_host** | **string** |  | [optional]
 **record_type** | **string** |  | [optional]
 **record_value** | **string** |  | [optional]

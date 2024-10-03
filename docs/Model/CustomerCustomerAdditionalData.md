@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attached_files** | [**\OpenAPI\Client\Model\CustomerFile[]**](CustomerFile.md) |  | [optional]
+**attached_files** | [**\Panthera\Openprovider\Model\CustomerFile[]**](CustomerFile.md) |  | [optional]
 **birth_address** | **string** |  | [optional]
 **birth_city** | **string** |  | [optional]
 **birth_country** | **string** |  | [optional]

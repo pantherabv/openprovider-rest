@@ -1,4 +1,4 @@
-# OpenAPI\Client\CsrApi
+# Panthera\Openprovider\CsrApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createCsr()`
 
 ```php
-createCsr($body): \OpenAPI\Client\Model\CsrCreateCsrResponse
+createCsr($body): \Panthera\Openprovider\Model\CsrCreateCsrResponse
 ```
 
 Create csr
@@ -24,18 +24,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CsrApi(
+$apiInstance = new Panthera\Openprovider\Api\CsrApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\CsrCreateCsrRequest(); // \OpenAPI\Client\Model\CsrCreateCsrRequest
+$body = new \Panthera\Openprovider\Model\CsrCreateCsrRequest(); // \Panthera\Openprovider\Model\CsrCreateCsrRequest
 
 try {
     $result = $apiInstance->createCsr($body);
@@ -49,11 +49,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\CsrCreateCsrRequest**](../Model/CsrCreateCsrRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\CsrCreateCsrRequest**](../Model/CsrCreateCsrRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CsrCreateCsrResponse**](../Model/CsrCreateCsrResponse.md)
+[**\Panthera\Openprovider\Model\CsrCreateCsrResponse**](../Model/CsrCreateCsrResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ try {
 ## `decodeCsr()`
 
 ```php
-decodeCsr($body): \OpenAPI\Client\Model\CsrDecodeCsrResponse
+decodeCsr($body): \Panthera\Openprovider\Model\CsrDecodeCsrResponse
 ```
 
 Decode csr
@@ -84,18 +84,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CsrApi(
+$apiInstance = new Panthera\Openprovider\Api\CsrApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\CsrDecodeCsrRequest(); // \OpenAPI\Client\Model\CsrDecodeCsrRequest
+$body = new \Panthera\Openprovider\Model\CsrDecodeCsrRequest(); // \Panthera\Openprovider\Model\CsrDecodeCsrRequest
 
 try {
     $result = $apiInstance->decodeCsr($body);
@@ -109,11 +109,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\CsrDecodeCsrRequest**](../Model/CsrDecodeCsrRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\CsrDecodeCsrRequest**](../Model/CsrDecodeCsrRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CsrDecodeCsrResponse**](../Model/CsrDecodeCsrResponse.md)
+[**\Panthera\Openprovider\Model\CsrDecodeCsrResponse**](../Model/CsrDecodeCsrResponse.md)
 
 ### Authorization
 

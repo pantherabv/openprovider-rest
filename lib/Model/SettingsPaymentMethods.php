@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SettingsPaymentMethods Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class SettingsPaymentMethods implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'name' => 'string',
-        'settings' => '\OpenAPI\Client\Model\SettingsPaymentMethodSettings'
+        'settings' => '\Panthera\Openprovider\Model\SettingsPaymentMethodSettings'
     ];
 
     /**
@@ -326,7 +326,7 @@ class SettingsPaymentMethods implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\SettingsPaymentMethodSettings|null
+     * @return \Panthera\Openprovider\Model\SettingsPaymentMethodSettings|null
      */
     public function getSettings()
     {
@@ -336,7 +336,7 @@ class SettingsPaymentMethods implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\SettingsPaymentMethodSettings|null $settings settings
+     * @param \Panthera\Openprovider\Model\SettingsPaymentMethodSettings|null $settings settings
      *
      * @return self
      */

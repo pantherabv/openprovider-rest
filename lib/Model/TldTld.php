@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TldTld Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
         'admin_handle_supported' => 'bool',
         'billing_handle_enabled' => 'bool',
         'billing_handle_supported' => 'bool',
-        'description' => '\OpenAPI\Client\Model\TldDescription',
+        'description' => '\Panthera\Openprovider\Model\TldDescription',
         'dnssec_algorithms' => 'int[]',
         'dnssec_allowed' => 'bool',
         'dnssec_digests_allowed' => 'bool',
@@ -73,12 +73,12 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
         'is_private_whois_allowed' => 'bool',
         'is_trade_auth_code_required' => 'bool',
         'is_transfer_auth_code_required' => 'bool',
-        'level_prices' => '\OpenAPI\Client\Model\TldLevelPrice[]',
+        'level_prices' => '\Panthera\Openprovider\Model\TldLevelPrice[]',
         'max_period' => 'int',
         'min_period' => 'int',
         'name' => 'string',
         'owner_handle_supported' => 'bool',
-        'prices' => '\OpenAPI\Client\Model\TldPrices',
+        'prices' => '\Panthera\Openprovider\Model\TldPrices',
         'quarantine_period' => 'int',
         'renew_available' => 'bool',
         'reseller_handle_enabled' => 'bool',
@@ -86,8 +86,8 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
         'restrictions' => 'string[]',
         'soft_quarantine_period' => 'int',
         'status' => 'string',
-        'supported_application_mode' => '\OpenAPI\Client\Model\TldApplicationMode[]',
-        'supported_idn_scripts' => '\OpenAPI\Client\Model\TldIdnScript[]',
+        'supported_application_mode' => '\Panthera\Openprovider\Model\TldApplicationMode[]',
+        'supported_idn_scripts' => '\Panthera\Openprovider\Model\TldIdnScript[]',
         'tech_handle_supported' => 'bool',
         'trade_available' => 'bool',
         'transfer_available' => 'bool',
@@ -611,7 +611,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets description
      *
-     * @return \OpenAPI\Client\Model\TldDescription|null
+     * @return \Panthera\Openprovider\Model\TldDescription|null
      */
     public function getDescription()
     {
@@ -621,7 +621,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets description
      *
-     * @param \OpenAPI\Client\Model\TldDescription|null $description description
+     * @param \Panthera\Openprovider\Model\TldDescription|null $description description
      *
      * @return self
      */
@@ -962,7 +962,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets level_prices
      *
-     * @return \OpenAPI\Client\Model\TldLevelPrice[]|null
+     * @return \Panthera\Openprovider\Model\TldLevelPrice[]|null
      */
     public function getLevelPrices()
     {
@@ -972,7 +972,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets level_prices
      *
-     * @param \OpenAPI\Client\Model\TldLevelPrice[]|null $level_prices level_prices
+     * @param \Panthera\Openprovider\Model\TldLevelPrice[]|null $level_prices level_prices
      *
      * @return self
      */
@@ -1097,7 +1097,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets prices
      *
-     * @return \OpenAPI\Client\Model\TldPrices|null
+     * @return \Panthera\Openprovider\Model\TldPrices|null
      */
     public function getPrices()
     {
@@ -1107,7 +1107,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets prices
      *
-     * @param \OpenAPI\Client\Model\TldPrices|null $prices prices
+     * @param \Panthera\Openprovider\Model\TldPrices|null $prices prices
      *
      * @return self
      */
@@ -1313,7 +1313,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets supported_application_mode
      *
-     * @return \OpenAPI\Client\Model\TldApplicationMode[]|null
+     * @return \Panthera\Openprovider\Model\TldApplicationMode[]|null
      */
     public function getSupportedApplicationMode()
     {
@@ -1323,7 +1323,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets supported_application_mode
      *
-     * @param \OpenAPI\Client\Model\TldApplicationMode[]|null $supported_application_mode supported_application_mode
+     * @param \Panthera\Openprovider\Model\TldApplicationMode[]|null $supported_application_mode supported_application_mode
      *
      * @return self
      */
@@ -1340,7 +1340,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets supported_idn_scripts
      *
-     * @return \OpenAPI\Client\Model\TldIdnScript[]|null
+     * @return \Panthera\Openprovider\Model\TldIdnScript[]|null
      */
     public function getSupportedIdnScripts()
     {
@@ -1350,7 +1350,7 @@ class TldTld implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets supported_idn_scripts
      *
-     * @param \OpenAPI\Client\Model\TldIdnScript[]|null $supported_idn_scripts supported_idn_scripts
+     * @param \Panthera\Openprovider\Model\TldIdnScript[]|null $supported_idn_scripts supported_idn_scripts
      *
      * @return self
      */

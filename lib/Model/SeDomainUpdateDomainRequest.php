@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SeDomainUpdateDomainRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'aliases' => '\OpenAPI\Client\Model\SeDomainAliasUpdates',
+        'aliases' => '\Panthera\Openprovider\Model\SeDomainAliasUpdates',
         'bundle' => 'bool',
-        'destinations' => '\OpenAPI\Client\Model\SeDomainDestination[]',
+        'destinations' => '\Panthera\Openprovider\Model\SeDomainDestination[]',
         'domain_name' => 'string',
-        'products' => '\OpenAPI\Client\Model\SeDomainProducts'
+        'products' => '\Panthera\Openprovider\Model\SeDomainProducts'
     ];
 
     /**
@@ -320,7 +320,7 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets aliases
      *
-     * @return \OpenAPI\Client\Model\SeDomainAliasUpdates|null
+     * @return \Panthera\Openprovider\Model\SeDomainAliasUpdates|null
      */
     public function getAliases()
     {
@@ -330,7 +330,7 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets aliases
      *
-     * @param \OpenAPI\Client\Model\SeDomainAliasUpdates|null $aliases aliases
+     * @param \Panthera\Openprovider\Model\SeDomainAliasUpdates|null $aliases aliases
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets destinations
      *
-     * @return \OpenAPI\Client\Model\SeDomainDestination[]|null
+     * @return \Panthera\Openprovider\Model\SeDomainDestination[]|null
      */
     public function getDestinations()
     {
@@ -384,7 +384,7 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets destinations
      *
-     * @param \OpenAPI\Client\Model\SeDomainDestination[]|null $destinations destinations
+     * @param \Panthera\Openprovider\Model\SeDomainDestination[]|null $destinations destinations
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets products
      *
-     * @return \OpenAPI\Client\Model\SeDomainProducts|null
+     * @return \Panthera\Openprovider\Model\SeDomainProducts|null
      */
     public function getProducts()
     {
@@ -438,7 +438,7 @@ class SeDomainUpdateDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets products
      *
-     * @param \OpenAPI\Client\Model\SeDomainProducts|null $products products
+     * @param \Panthera\Openprovider\Model\SeDomainProducts|null $products products
      *
      * @return self
      */

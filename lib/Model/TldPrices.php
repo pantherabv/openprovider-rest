@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TldPrices Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,18 +57,18 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'create_price' => '\OpenAPI\Client\Model\TldPrice',
-        'domicile_price' => '\OpenAPI\Client\Model\TldPrice',
+        'create_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'domicile_price' => '\Panthera\Openprovider\Model\TldPrice',
         'max_period' => 'int',
         'min_period' => 'int',
-        'renew_price' => '\OpenAPI\Client\Model\TldPrice',
-        'reseller_price' => '\OpenAPI\Client\Model\TldPriceWithPromoInfo',
-        'restore_price' => '\OpenAPI\Client\Model\TldPrice',
-        'setup_price' => '\OpenAPI\Client\Model\TldPrice',
-        'soft_restore_price' => '\OpenAPI\Client\Model\TldPrice',
-        'trade_price' => '\OpenAPI\Client\Model\TldPrice',
-        'transfer_price' => '\OpenAPI\Client\Model\TldPrice',
-        'update_price' => '\OpenAPI\Client\Model\TldPrice'
+        'renew_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'reseller_price' => '\Panthera\Openprovider\Model\TldPriceWithPromoInfo',
+        'restore_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'setup_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'soft_restore_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'trade_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'transfer_price' => '\Panthera\Openprovider\Model\TldPrice',
+        'update_price' => '\Panthera\Openprovider\Model\TldPrice'
     ];
 
     /**
@@ -369,7 +369,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets create_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getCreatePrice()
     {
@@ -379,7 +379,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets create_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $create_price create_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $create_price create_price
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets domicile_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getDomicilePrice()
     {
@@ -406,7 +406,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets domicile_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $domicile_price domicile_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $domicile_price domicile_price
      *
      * @return self
      */
@@ -477,7 +477,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets renew_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getRenewPrice()
     {
@@ -487,7 +487,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets renew_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $renew_price renew_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $renew_price renew_price
      *
      * @return self
      */
@@ -504,7 +504,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets reseller_price
      *
-     * @return \OpenAPI\Client\Model\TldPriceWithPromoInfo|null
+     * @return \Panthera\Openprovider\Model\TldPriceWithPromoInfo|null
      */
     public function getResellerPrice()
     {
@@ -514,7 +514,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reseller_price
      *
-     * @param \OpenAPI\Client\Model\TldPriceWithPromoInfo|null $reseller_price reseller_price
+     * @param \Panthera\Openprovider\Model\TldPriceWithPromoInfo|null $reseller_price reseller_price
      *
      * @return self
      */
@@ -531,7 +531,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets restore_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getRestorePrice()
     {
@@ -541,7 +541,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets restore_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $restore_price restore_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $restore_price restore_price
      *
      * @return self
      */
@@ -558,7 +558,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets setup_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getSetupPrice()
     {
@@ -568,7 +568,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets setup_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $setup_price setup_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $setup_price setup_price
      *
      * @return self
      */
@@ -585,7 +585,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets soft_restore_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getSoftRestorePrice()
     {
@@ -595,7 +595,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets soft_restore_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $soft_restore_price soft_restore_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $soft_restore_price soft_restore_price
      *
      * @return self
      */
@@ -612,7 +612,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets trade_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getTradePrice()
     {
@@ -622,7 +622,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets trade_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $trade_price trade_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $trade_price trade_price
      *
      * @return self
      */
@@ -639,7 +639,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets transfer_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getTransferPrice()
     {
@@ -649,7 +649,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets transfer_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $transfer_price transfer_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $transfer_price transfer_price
      *
      * @return self
      */
@@ -666,7 +666,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets update_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getUpdatePrice()
     {
@@ -676,7 +676,7 @@ class TldPrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets update_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $update_price update_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $update_price update_price
      *
      * @return self
      */

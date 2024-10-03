@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TagServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,12 +133,12 @@ class TagServiceApi
      *
      * Create tag
      *
-     * @param  \OpenAPI\Client\Model\HelperstagTag $body body (required)
+     * @param  \Panthera\Openprovider\Model\HelperstagTag $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TagCreateTagResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TagCreateTagResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createTag($body, string $contentType = self::contentTypes['createTag'][0])
     {
@@ -151,12 +151,12 @@ class TagServiceApi
      *
      * Create tag
      *
-     * @param  \OpenAPI\Client\Model\HelperstagTag $body (required)
+     * @param  \Panthera\Openprovider\Model\HelperstagTag $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TagCreateTagResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TagCreateTagResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagWithHttpInfo($body, string $contentType = self::contentTypes['createTag'][0])
     {
@@ -199,11 +199,11 @@ class TagServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TagCreateTagResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TagCreateTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TagCreateTagResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TagCreateTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,16 +221,16 @@ class TagServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TagCreateTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TagCreateTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -248,13 +248,13 @@ class TagServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TagCreateTagResponse';
+            $returnType = '\Panthera\Openprovider\Model\TagCreateTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class TagServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TagCreateTagResponse',
+                        '\Panthera\Openprovider\Model\TagCreateTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class TagServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -310,7 +310,7 @@ class TagServiceApi
      *
      * Create tag
      *
-     * @param  \OpenAPI\Client\Model\HelperstagTag $body (required)
+     * @param  \Panthera\Openprovider\Model\HelperstagTag $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -331,7 +331,7 @@ class TagServiceApi
      *
      * Create tag
      *
-     * @param  \OpenAPI\Client\Model\HelperstagTag $body (required)
+     * @param  \Panthera\Openprovider\Model\HelperstagTag $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -339,7 +339,7 @@ class TagServiceApi
      */
     public function createTagAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createTag'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TagCreateTagResponse';
+        $returnType = '\Panthera\Openprovider\Model\TagCreateTagResponse';
         $request = $this->createTagRequest($body, $contentType);
 
         return $this->client
@@ -381,7 +381,7 @@ class TagServiceApi
     /**
      * Create request for operation 'createTag'
      *
-     * @param  \OpenAPI\Client\Model\HelperstagTag $body (required)
+     * @param  \Panthera\Openprovider\Model\HelperstagTag $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTag'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -483,9 +483,9 @@ class TagServiceApi
      * @param  string $value The value of the tag. I.e.: VIP customer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTag'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TagDeleteTagResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TagDeleteTagResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteTag($key = null, $value = null, string $contentType = self::contentTypes['deleteTag'][0])
     {
@@ -502,9 +502,9 @@ class TagServiceApi
      * @param  string $value The value of the tag. I.e.: VIP customer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTag'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TagDeleteTagResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TagDeleteTagResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTagWithHttpInfo($key = null, $value = null, string $contentType = self::contentTypes['deleteTag'][0])
     {
@@ -547,11 +547,11 @@ class TagServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TagDeleteTagResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TagDeleteTagResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TagDeleteTagResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TagDeleteTagResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -569,16 +569,16 @@ class TagServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TagDeleteTagResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TagDeleteTagResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -596,13 +596,13 @@ class TagServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TagDeleteTagResponse';
+            $returnType = '\Panthera\Openprovider\Model\TagDeleteTagResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -635,7 +635,7 @@ class TagServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TagDeleteTagResponse',
+                        '\Panthera\Openprovider\Model\TagDeleteTagResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -643,7 +643,7 @@ class TagServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -689,7 +689,7 @@ class TagServiceApi
      */
     public function deleteTagAsyncWithHttpInfo($key = null, $value = null, string $contentType = self::contentTypes['deleteTag'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TagDeleteTagResponse';
+        $returnType = '\Panthera\Openprovider\Model\TagDeleteTagResponse';
         $request = $this->deleteTagRequest($key, $value, $contentType);
 
         return $this->client
@@ -840,9 +840,9 @@ class TagServiceApi
      * @param  string $value The value of the tag. I.e.: VIP customer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTags'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TagListTagsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TagListTagsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listTags($key = null, $value = null, string $contentType = self::contentTypes['listTags'][0])
     {
@@ -859,9 +859,9 @@ class TagServiceApi
      * @param  string $value The value of the tag. I.e.: VIP customer. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTags'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TagListTagsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TagListTagsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTagsWithHttpInfo($key = null, $value = null, string $contentType = self::contentTypes['listTags'][0])
     {
@@ -904,11 +904,11 @@ class TagServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TagListTagsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TagListTagsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TagListTagsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TagListTagsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -926,16 +926,16 @@ class TagServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TagListTagsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TagListTagsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -953,13 +953,13 @@ class TagServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TagListTagsResponse';
+            $returnType = '\Panthera\Openprovider\Model\TagListTagsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -992,7 +992,7 @@ class TagServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TagListTagsResponse',
+                        '\Panthera\Openprovider\Model\TagListTagsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1000,7 +1000,7 @@ class TagServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1046,7 +1046,7 @@ class TagServiceApi
      */
     public function listTagsAsyncWithHttpInfo($key = null, $value = null, string $contentType = self::contentTypes['listTags'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TagListTagsResponse';
+        $returnType = '\Panthera\Openprovider\Model\TagListTagsResponse';
         $request = $this->listTagsRequest($key, $value, $contentType);
 
         return $this->client

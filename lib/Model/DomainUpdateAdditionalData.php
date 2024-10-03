@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainUpdateAdditionalData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class DomainUpdateAdditionalData implements ModelInterface, ArrayAccess, \JsonSe
         'auth_code' => 'string',
         'company_registration_number' => 'string',
         'customer_uin' => 'string',
-        'customer_uin_doc_type' => '\OpenAPI\Client\Model\DomainUINDocumentType',
+        'customer_uin_doc_type' => '\Panthera\Openprovider\Model\DomainUINDocumentType',
         'domain_name_variants' => 'string[]',
         'intended_use' => 'string',
         'law_acceptance' => 'string',
@@ -539,7 +539,7 @@ class DomainUpdateAdditionalData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets customer_uin_doc_type
      *
-     * @return \OpenAPI\Client\Model\DomainUINDocumentType|null
+     * @return \Panthera\Openprovider\Model\DomainUINDocumentType|null
      */
     public function getCustomerUinDocType()
     {
@@ -549,7 +549,7 @@ class DomainUpdateAdditionalData implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets customer_uin_doc_type
      *
-     * @param \OpenAPI\Client\Model\DomainUINDocumentType|null $customer_uin_doc_type customer_uin_doc_type
+     * @param \Panthera\Openprovider\Model\DomainUINDocumentType|null $customer_uin_doc_type customer_uin_doc_type
      *
      * @return self
      */

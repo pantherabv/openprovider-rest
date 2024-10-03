@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * LicenseServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -169,12 +169,12 @@ class LicenseServiceApi
      *
      * Create plesk license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createPleskLicense($body, string $contentType = self::contentTypes['createPleskLicense'][0])
     {
@@ -187,12 +187,12 @@ class LicenseServiceApi
      *
      * Create plesk license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPleskLicenseWithHttpInfo($body, string $contentType = self::contentTypes['createPleskLicense'][0])
     {
@@ -235,11 +235,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -257,16 +257,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -284,13 +284,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -323,7 +323,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class LicenseServiceApi
      *
      * Create plesk license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPleskLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -367,7 +367,7 @@ class LicenseServiceApi
      *
      * Create plesk license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPleskLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -375,7 +375,7 @@ class LicenseServiceApi
      */
     public function createPleskLicenseAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createPleskLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse';
         $request = $this->createPleskLicenseRequest($body, $contentType);
 
         return $this->client
@@ -417,7 +417,7 @@ class LicenseServiceApi
     /**
      * Create request for operation 'createPleskLicense'
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createPleskLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -515,12 +515,12 @@ class LicenseServiceApi
      *
      * Create virtuozzo license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      * @deprecated
      */
     public function createVirtuozzoLicense($body, string $contentType = self::contentTypes['createVirtuozzoLicense'][0])
@@ -534,12 +534,12 @@ class LicenseServiceApi
      *
      * Create virtuozzo license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function createVirtuozzoLicenseWithHttpInfo($body, string $contentType = self::contentTypes['createVirtuozzoLicense'][0])
@@ -583,11 +583,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -605,16 +605,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -632,13 +632,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -671,7 +671,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -679,7 +679,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -694,7 +694,7 @@ class LicenseServiceApi
      *
      * Create virtuozzo license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtuozzoLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -716,7 +716,7 @@ class LicenseServiceApi
      *
      * Create virtuozzo license
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtuozzoLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -725,7 +725,7 @@ class LicenseServiceApi
      */
     public function createVirtuozzoLicenseAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createVirtuozzoLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse';
         $request = $this->createVirtuozzoLicenseRequest($body, $contentType);
 
         return $this->client
@@ -767,7 +767,7 @@ class LicenseServiceApi
     /**
      * Create request for operation 'createVirtuozzoLicense'
      *
-     * @param  \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createVirtuozzoLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -869,9 +869,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseDeleteLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseDeleteLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deletePleskLicense($key_id, string $contentType = self::contentTypes['deletePleskLicense'][0])
     {
@@ -887,9 +887,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deletePleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseDeleteLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseDeleteLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePleskLicenseWithHttpInfo($key_id, string $contentType = self::contentTypes['deletePleskLicense'][0])
     {
@@ -932,11 +932,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseDeleteLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseDeleteLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -954,16 +954,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -981,13 +981,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1020,7 +1020,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1028,7 +1028,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1072,7 +1072,7 @@ class LicenseServiceApi
      */
     public function deletePleskLicenseAsyncWithHttpInfo($key_id, string $contentType = self::contentTypes['deletePleskLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse';
         $request = $this->deletePleskLicenseRequest($key_id, $contentType);
 
         return $this->client
@@ -1216,9 +1216,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseDeleteLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseDeleteLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      * @deprecated
      */
     public function deleteVirtuozzoLicense($key_id, string $contentType = self::contentTypes['deleteVirtuozzoLicense'][0])
@@ -1235,9 +1235,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseDeleteLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseDeleteLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function deleteVirtuozzoLicenseWithHttpInfo($key_id, string $contentType = self::contentTypes['deleteVirtuozzoLicense'][0])
@@ -1281,11 +1281,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseDeleteLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseDeleteLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1303,16 +1303,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1330,13 +1330,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1369,7 +1369,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1377,7 +1377,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1423,7 +1423,7 @@ class LicenseServiceApi
      */
     public function deleteVirtuozzoLicenseAsyncWithHttpInfo($key_id, string $contentType = self::contentTypes['deleteVirtuozzoLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseDeleteLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse';
         $request = $this->deleteVirtuozzoLicenseRequest($key_id, $contentType);
 
         return $this->client
@@ -1568,9 +1568,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPleskKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseGetLicenseKeyResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getPleskKey($key_id, string $contentType = self::contentTypes['getPleskKey'][0])
     {
@@ -1586,9 +1586,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPleskKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseGetLicenseKeyResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPleskKeyWithHttpInfo($key_id, string $contentType = self::contentTypes['getPleskKey'][0])
     {
@@ -1631,11 +1631,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1653,16 +1653,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1680,13 +1680,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1719,7 +1719,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse',
+                        '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1727,7 +1727,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1771,7 +1771,7 @@ class LicenseServiceApi
      */
     public function getPleskKeyAsyncWithHttpInfo($key_id, string $contentType = self::contentTypes['getPleskKey'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse';
         $request = $this->getPleskKeyRequest($key_id, $contentType);
 
         return $this->client
@@ -1915,9 +1915,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseGetLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseGetLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getPleskLicense($key_id, string $contentType = self::contentTypes['getPleskLicense'][0])
     {
@@ -1933,9 +1933,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseGetLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseGetLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPleskLicenseWithHttpInfo($key_id, string $contentType = self::contentTypes['getPleskLicense'][0])
     {
@@ -1978,11 +1978,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseGetLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseGetLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseGetLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseGetLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2000,16 +2000,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseGetLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseGetLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2027,13 +2027,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2066,7 +2066,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseGetLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseGetLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2074,7 +2074,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2118,7 +2118,7 @@ class LicenseServiceApi
      */
     public function getPleskLicenseAsyncWithHttpInfo($key_id, string $contentType = self::contentTypes['getPleskLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseResponse';
         $request = $this->getPleskLicenseRequest($key_id, $contentType);
 
         return $this->client
@@ -2262,9 +2262,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVirtuozzoKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseGetLicenseKeyResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse|\Panthera\Openprovider\Model\ErrorError
      * @deprecated
      */
     public function getVirtuozzoKey($key_id, string $contentType = self::contentTypes['getVirtuozzoKey'][0])
@@ -2281,9 +2281,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVirtuozzoKey'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseGetLicenseKeyResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function getVirtuozzoKeyWithHttpInfo($key_id, string $contentType = self::contentTypes['getVirtuozzoKey'][0])
@@ -2327,11 +2327,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2349,16 +2349,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2376,13 +2376,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2415,7 +2415,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse',
+                        '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2423,7 +2423,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2469,7 +2469,7 @@ class LicenseServiceApi
      */
     public function getVirtuozzoKeyAsyncWithHttpInfo($key_id, string $contentType = self::contentTypes['getVirtuozzoKey'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse';
         $request = $this->getVirtuozzoKeyRequest($key_id, $contentType);
 
         return $this->client
@@ -2614,9 +2614,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseGetLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseGetLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      * @deprecated
      */
     public function getVirtuozzoLicense($key_id, string $contentType = self::contentTypes['getVirtuozzoLicense'][0])
@@ -2633,9 +2633,9 @@ class LicenseServiceApi
      * @param  int $key_id License key ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseGetLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseGetLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function getVirtuozzoLicenseWithHttpInfo($key_id, string $contentType = self::contentTypes['getVirtuozzoLicense'][0])
@@ -2679,11 +2679,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseGetLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseGetLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseGetLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseGetLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2701,16 +2701,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseGetLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseGetLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2728,13 +2728,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2767,7 +2767,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseGetLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseGetLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2775,7 +2775,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2821,7 +2821,7 @@ class LicenseServiceApi
      */
     public function getVirtuozzoLicenseAsyncWithHttpInfo($key_id, string $contentType = self::contentTypes['getVirtuozzoLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseGetLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseGetLicenseResponse';
         $request = $this->getVirtuozzoLicenseRequest($key_id, $contentType);
 
         return $this->client
@@ -2975,9 +2975,9 @@ class LicenseServiceApi
      * @param  string $product Product type (only Plesk is available). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listItems'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseListItemsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseListItemsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listItems($limit = null, $offset = null, $order_by_id = null, $order_by_key_id = null, $order_by_title = null, $order_by_product = null, $order_by_status = null, $order_by_key_number = null, $order_by_expiration_date = null, $product = null, string $contentType = self::contentTypes['listItems'][0])
     {
@@ -3002,9 +3002,9 @@ class LicenseServiceApi
      * @param  string $product Product type (only Plesk is available). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listItems'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseListItemsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseListItemsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listItemsWithHttpInfo($limit = null, $offset = null, $order_by_id = null, $order_by_key_id = null, $order_by_title = null, $order_by_product = null, $order_by_status = null, $order_by_key_number = null, $order_by_expiration_date = null, $product = null, string $contentType = self::contentTypes['listItems'][0])
     {
@@ -3047,11 +3047,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseListItemsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseListItemsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseListItemsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseListItemsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3069,16 +3069,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseListItemsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseListItemsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3096,13 +3096,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseListItemsResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseListItemsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3135,7 +3135,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseListItemsResponse',
+                        '\Panthera\Openprovider\Model\LicenseListItemsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3143,7 +3143,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3205,7 +3205,7 @@ class LicenseServiceApi
      */
     public function listItemsAsyncWithHttpInfo($limit = null, $offset = null, $order_by_id = null, $order_by_key_id = null, $order_by_title = null, $order_by_product = null, $order_by_status = null, $order_by_key_number = null, $order_by_expiration_date = null, $product = null, string $contentType = self::contentTypes['listItems'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseListItemsResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseListItemsResponse';
         $request = $this->listItemsRequest($limit, $offset, $order_by_id, $order_by_key_id, $order_by_title, $order_by_product, $order_by_status, $order_by_key_number, $order_by_expiration_date, $product, $contentType);
 
         return $this->client
@@ -3457,9 +3457,9 @@ class LicenseServiceApi
      * @param  string $status License status. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listLicensesWithPriceVersion'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listLicensesWithPriceVersion($limit = null, $offset = null, $order_by_id = null, $order_by_key_id = null, $order_by_title = null, $order_by_product = null, $order_by_status = null, $order_by_key_number = null, $order_by_expiration_date = null, $product = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, $status = null, string $contentType = self::contentTypes['listLicensesWithPriceVersion'][0])
     {
@@ -3489,9 +3489,9 @@ class LicenseServiceApi
      * @param  string $status License status. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listLicensesWithPriceVersion'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listLicensesWithPriceVersionWithHttpInfo($limit = null, $offset = null, $order_by_id = null, $order_by_key_id = null, $order_by_title = null, $order_by_product = null, $order_by_status = null, $order_by_key_number = null, $order_by_expiration_date = null, $product = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, $status = null, string $contentType = self::contentTypes['listLicensesWithPriceVersion'][0])
     {
@@ -3534,11 +3534,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3556,16 +3556,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3583,13 +3583,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3622,7 +3622,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse',
+                        '\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3630,7 +3630,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3702,7 +3702,7 @@ class LicenseServiceApi
      */
     public function listLicensesWithPriceVersionAsyncWithHttpInfo($limit = null, $offset = null, $order_by_id = null, $order_by_key_id = null, $order_by_title = null, $order_by_product = null, $order_by_status = null, $order_by_key_number = null, $order_by_expiration_date = null, $product = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, $status = null, string $contentType = self::contentTypes['listLicensesWithPriceVersion'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse';
         $request = $this->listLicensesWithPriceVersionRequest($limit, $offset, $order_by_id, $order_by_key_id, $order_by_title, $order_by_product, $order_by_status, $order_by_key_number, $order_by_expiration_date, $product, $key_number, $title_pattern, $key_number_pattern, $parent_key_id, $status, $contentType);
 
         return $this->client
@@ -4001,9 +4001,9 @@ class LicenseServiceApi
      * @param  int $parent_key_id Key ID of the partent license. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPleskLicenses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseListLicensesResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseListLicensesResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listPleskLicenses($limit = null, $offset = null, $key_id = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, string $contentType = self::contentTypes['listPleskLicenses'][0])
     {
@@ -4025,9 +4025,9 @@ class LicenseServiceApi
      * @param  int $parent_key_id Key ID of the partent license. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listPleskLicenses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseListLicensesResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseListLicensesResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPleskLicensesWithHttpInfo($limit = null, $offset = null, $key_id = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, string $contentType = self::contentTypes['listPleskLicenses'][0])
     {
@@ -4070,11 +4070,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseListLicensesResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseListLicensesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseListLicensesResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseListLicensesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4092,16 +4092,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseListLicensesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseListLicensesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4119,13 +4119,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseListLicensesResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseListLicensesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4158,7 +4158,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseListLicensesResponse',
+                        '\Panthera\Openprovider\Model\LicenseListLicensesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4166,7 +4166,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4222,7 +4222,7 @@ class LicenseServiceApi
      */
     public function listPleskLicensesAsyncWithHttpInfo($limit = null, $offset = null, $key_id = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, string $contentType = self::contentTypes['listPleskLicenses'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseListLicensesResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseListLicensesResponse';
         $request = $this->listPleskLicensesRequest($limit, $offset, $key_id, $key_number, $title_pattern, $key_number_pattern, $parent_key_id, $contentType);
 
         return $this->client
@@ -4433,9 +4433,9 @@ class LicenseServiceApi
      * @param  int $parent_key_id Key ID of the partent license. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVirtuozzoLicenses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseListLicensesResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseListLicensesResponse|\Panthera\Openprovider\Model\ErrorError
      * @deprecated
      */
     public function listVirtuozzoLicenses($limit = null, $offset = null, $key_id = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, string $contentType = self::contentTypes['listVirtuozzoLicenses'][0])
@@ -4458,9 +4458,9 @@ class LicenseServiceApi
      * @param  int $parent_key_id Key ID of the partent license. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVirtuozzoLicenses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseListLicensesResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseListLicensesResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function listVirtuozzoLicensesWithHttpInfo($limit = null, $offset = null, $key_id = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, string $contentType = self::contentTypes['listVirtuozzoLicenses'][0])
@@ -4504,11 +4504,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseListLicensesResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseListLicensesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseListLicensesResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseListLicensesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4526,16 +4526,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseListLicensesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseListLicensesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4553,13 +4553,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseListLicensesResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseListLicensesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4592,7 +4592,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseListLicensesResponse',
+                        '\Panthera\Openprovider\Model\LicenseListLicensesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4600,7 +4600,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4658,7 +4658,7 @@ class LicenseServiceApi
      */
     public function listVirtuozzoLicensesAsyncWithHttpInfo($limit = null, $offset = null, $key_id = null, $key_number = null, $title_pattern = null, $key_number_pattern = null, $parent_key_id = null, string $contentType = self::contentTypes['listVirtuozzoLicenses'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseListLicensesResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseListLicensesResponse';
         $request = $this->listVirtuozzoLicensesRequest($limit, $offset, $key_id, $key_number, $title_pattern, $key_number_pattern, $parent_key_id, $contentType);
 
         return $this->client
@@ -4863,12 +4863,12 @@ class LicenseServiceApi
      *
      * @param  string $product Product type (only Plesk is available) (required)
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseResetHwidRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseResetHwidRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetHwid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseResetHwidResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseResetHwidResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function resetHwid($product, $key_id, $body, string $contentType = self::contentTypes['resetHwid'][0])
     {
@@ -4883,12 +4883,12 @@ class LicenseServiceApi
      *
      * @param  string $product Product type (only Plesk is available) (required)
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseResetHwidRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseResetHwidRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetHwid'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseResetHwidResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseResetHwidResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetHwidWithHttpInfo($product, $key_id, $body, string $contentType = self::contentTypes['resetHwid'][0])
     {
@@ -4931,11 +4931,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseResetHwidResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseResetHwidResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseResetHwidResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseResetHwidResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4953,16 +4953,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseResetHwidResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseResetHwidResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4980,13 +4980,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseResetHwidResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseResetHwidResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5019,7 +5019,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseResetHwidResponse',
+                        '\Panthera\Openprovider\Model\LicenseResetHwidResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5027,7 +5027,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5044,7 +5044,7 @@ class LicenseServiceApi
      *
      * @param  string $product Product type (only Plesk is available) (required)
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseResetHwidRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseResetHwidRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetHwid'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5067,7 +5067,7 @@ class LicenseServiceApi
      *
      * @param  string $product Product type (only Plesk is available) (required)
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseResetHwidRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseResetHwidRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetHwid'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5075,7 +5075,7 @@ class LicenseServiceApi
      */
     public function resetHwidAsyncWithHttpInfo($product, $key_id, $body, string $contentType = self::contentTypes['resetHwid'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseResetHwidResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseResetHwidResponse';
         $request = $this->resetHwidRequest($product, $key_id, $body, $contentType);
 
         return $this->client
@@ -5119,7 +5119,7 @@ class LicenseServiceApi
      *
      * @param  string $product Product type (only Plesk is available) (required)
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseResetHwidRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseResetHwidRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetHwid'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5248,12 +5248,12 @@ class LicenseServiceApi
      * Update plesk license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseUpdateLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseUpdateLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updatePleskLicense($key_id, $body, string $contentType = self::contentTypes['updatePleskLicense'][0])
     {
@@ -5267,12 +5267,12 @@ class LicenseServiceApi
      * Update plesk license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePleskLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseUpdateLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseUpdateLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePleskLicenseWithHttpInfo($key_id, $body, string $contentType = self::contentTypes['updatePleskLicense'][0])
     {
@@ -5315,11 +5315,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseUpdateLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseUpdateLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5337,16 +5337,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5364,13 +5364,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5403,7 +5403,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5411,7 +5411,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5427,7 +5427,7 @@ class LicenseServiceApi
      * Update plesk license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePleskLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5449,7 +5449,7 @@ class LicenseServiceApi
      * Update plesk license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePleskLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5457,7 +5457,7 @@ class LicenseServiceApi
      */
     public function updatePleskLicenseAsyncWithHttpInfo($key_id, $body, string $contentType = self::contentTypes['updatePleskLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse';
         $request = $this->updatePleskLicenseRequest($key_id, $body, $contentType);
 
         return $this->client
@@ -5500,7 +5500,7 @@ class LicenseServiceApi
      * Create request for operation 'updatePleskLicense'
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updatePleskLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5614,12 +5614,12 @@ class LicenseServiceApi
      * Update virtuozzo license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LicenseUpdateLicenseResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\LicenseUpdateLicenseResponse|\Panthera\Openprovider\Model\ErrorError
      * @deprecated
      */
     public function updateVirtuozzoLicense($key_id, $body, string $contentType = self::contentTypes['updateVirtuozzoLicense'][0])
@@ -5634,12 +5634,12 @@ class LicenseServiceApi
      * Update virtuozzo license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateVirtuozzoLicense'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LicenseUpdateLicenseResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\LicenseUpdateLicenseResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function updateVirtuozzoLicenseWithHttpInfo($key_id, $body, string $contentType = self::contentTypes['updateVirtuozzoLicense'][0])
@@ -5683,11 +5683,11 @@ class LicenseServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LicenseUpdateLicenseResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LicenseUpdateLicenseResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5705,16 +5705,16 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5732,13 +5732,13 @@ class LicenseServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse';
+            $returnType = '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5771,7 +5771,7 @@ class LicenseServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse',
+                        '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5779,7 +5779,7 @@ class LicenseServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5795,7 +5795,7 @@ class LicenseServiceApi
      * Update virtuozzo license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateVirtuozzoLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5818,7 +5818,7 @@ class LicenseServiceApi
      * Update virtuozzo license
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateVirtuozzoLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5827,7 +5827,7 @@ class LicenseServiceApi
      */
     public function updateVirtuozzoLicenseAsyncWithHttpInfo($key_id, $body, string $contentType = self::contentTypes['updateVirtuozzoLicense'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LicenseUpdateLicenseResponse';
+        $returnType = '\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse';
         $request = $this->updateVirtuozzoLicenseRequest($key_id, $body, $contentType);
 
         return $this->client
@@ -5870,7 +5870,7 @@ class LicenseServiceApi
      * Create request for operation 'updateVirtuozzoLicense'
      *
      * @param  int $key_id License key ID (required)
-     * @param  \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateVirtuozzoLicense'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

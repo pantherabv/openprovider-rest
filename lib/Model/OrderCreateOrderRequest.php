@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OrderCreateOrderRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class OrderCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
         'autorenew' => 'string',
         'csr' => 'string',
         'domain_amount' => 'int',
-        'domain_validation_methods' => '\OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]',
+        'domain_validation_methods' => '\Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]',
         'enable_dns_automation' => 'bool',
         'host_names' => 'string[]',
         'organization_handle' => 'string',
@@ -498,7 +498,7 @@ class OrderCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets domain_validation_methods
      *
-     * @return \OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]|null
+     * @return \Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]|null
      */
     public function getDomainValidationMethods()
     {
@@ -508,7 +508,7 @@ class OrderCreateOrderRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets domain_validation_methods
      *
-     * @param \OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]|null $domain_validation_methods domain_validation_methods
+     * @param \Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]|null $domain_validation_methods domain_validation_methods
      *
      * @return self
      */

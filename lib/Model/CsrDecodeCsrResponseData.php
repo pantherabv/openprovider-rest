@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * CsrDecodeCsrResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class CsrDecodeCsrResponseData implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'domain_names_count' => 'int',
-        'public_key' => '\OpenAPI\Client\Model\CsrCsrPublicKey',
+        'public_key' => '\Panthera\Openprovider\Model\CsrCsrPublicKey',
         'signature_hash_algorithm' => 'string',
-        'subject' => '\OpenAPI\Client\Model\CsrCsrSubject',
+        'subject' => '\Panthera\Openprovider\Model\CsrCsrSubject',
         'subject_alternative_name' => 'string[]'
     ];
 
@@ -347,7 +347,7 @@ class CsrDecodeCsrResponseData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets public_key
      *
-     * @return \OpenAPI\Client\Model\CsrCsrPublicKey|null
+     * @return \Panthera\Openprovider\Model\CsrCsrPublicKey|null
      */
     public function getPublicKey()
     {
@@ -357,7 +357,7 @@ class CsrDecodeCsrResponseData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets public_key
      *
-     * @param \OpenAPI\Client\Model\CsrCsrPublicKey|null $public_key public_key
+     * @param \Panthera\Openprovider\Model\CsrCsrPublicKey|null $public_key public_key
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class CsrDecodeCsrResponseData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets subject
      *
-     * @return \OpenAPI\Client\Model\CsrCsrSubject|null
+     * @return \Panthera\Openprovider\Model\CsrCsrSubject|null
      */
     public function getSubject()
     {
@@ -411,7 +411,7 @@ class CsrDecodeCsrResponseData implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets subject
      *
-     * @param \OpenAPI\Client\Model\CsrCsrSubject|null $subject subject
+     * @param \Panthera\Openprovider\Model\CsrCsrSubject|null $subject subject
      *
      * @return self
      */

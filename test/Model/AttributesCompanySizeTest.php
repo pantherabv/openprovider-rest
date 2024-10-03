@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  &quot;Panthera\Openprovider&quot;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace &quot;Panthera\Openprovider&quot;\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description - UNKNOWN_COMPANY_SIZE: Unknown company size, e.g reseller just created account or didn&#39;t specified company size  - BETWEEN_1_AND_10: Company has from 1 to 10 employees  - BETWEEN_11_AND_50: Company has from 11 to 50 employees  - BETWEEN_51_AND_200: Company has from 51 to 200 employees  - BETWEEN_201_AND_500: Company has from 201 to 500 employees  - BETWEEN_501_AND_1000: Company has from 501 to 1000 employees  - MORE_THAN_1000: Company more than 1000 employees
- * @package     OpenAPI\Client
+ * @package     &quot;Panthera\Openprovider&quot;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

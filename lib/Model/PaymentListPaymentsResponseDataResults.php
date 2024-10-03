@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * PaymentListPaymentsResponseDataResults Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class PaymentListPaymentsResponseDataResults implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\PaymentPrices',
+        'amount' => '\Panthera\Openprovider\Model\PaymentPrices',
         'confirmation_date' => 'string',
         'creation_date' => 'string',
         'id' => 'int',
@@ -348,7 +348,7 @@ class PaymentListPaymentsResponseDataResults implements ModelInterface, ArrayAcc
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\PaymentPrices|null
+     * @return \Panthera\Openprovider\Model\PaymentPrices|null
      */
     public function getAmount()
     {
@@ -358,7 +358,7 @@ class PaymentListPaymentsResponseDataResults implements ModelInterface, ArrayAcc
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\PaymentPrices|null $amount amount
+     * @param \Panthera\Openprovider\Model\PaymentPrices|null $amount amount
      *
      * @return self
      */

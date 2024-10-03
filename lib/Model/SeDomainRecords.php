@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SeDomainRecords Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class SeDomainRecords implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'aliases' => 'string[]',
-        'destinations' => '\OpenAPI\Client\Model\SeDomainDestination[]',
+        'destinations' => '\Panthera\Openprovider\Model\SeDomainDestination[]',
         'outgoing_user_ips' => 'string[]'
     ];
 
@@ -333,7 +333,7 @@ class SeDomainRecords implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets destinations
      *
-     * @return \OpenAPI\Client\Model\SeDomainDestination[]|null
+     * @return \Panthera\Openprovider\Model\SeDomainDestination[]|null
      */
     public function getDestinations()
     {
@@ -343,7 +343,7 @@ class SeDomainRecords implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets destinations
      *
-     * @param \OpenAPI\Client\Model\SeDomainDestination[]|null $destinations destinations
+     * @param \Panthera\Openprovider\Model\SeDomainDestination[]|null $destinations destinations
      *
      * @return self
      */

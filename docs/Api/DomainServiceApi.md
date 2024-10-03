@@ -1,4 +1,4 @@
-# OpenAPI\Client\DomainServiceApi
+# Panthera\Openprovider\DomainServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -23,7 +23,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `approveTransfer()`
 
 ```php
-approveTransfer($id, $body): \OpenAPI\Client\Model\ResponseBoolResponse
+approveTransfer($id, $body): \Panthera\Openprovider\Model\ResponseBoolResponse
 ```
 
 Approve transfer
@@ -36,19 +36,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\DomainApproveTransferRequest(); // \OpenAPI\Client\Model\DomainApproveTransferRequest
+$body = new \Panthera\Openprovider\Model\DomainApproveTransferRequest(); // \Panthera\Openprovider\Model\DomainApproveTransferRequest
 
 try {
     $result = $apiInstance->approveTransfer($id, $body);
@@ -63,11 +63,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\DomainApproveTransferRequest**](../Model/DomainApproveTransferRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainApproveTransferRequest**](../Model/DomainApproveTransferRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
+[**\Panthera\Openprovider\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ try {
 ## `checkDomain()`
 
 ```php
-checkDomain($body): \OpenAPI\Client\Model\DomainCheckDomainResponse
+checkDomain($body): \Panthera\Openprovider\Model\DomainCheckDomainResponse
 ```
 
 Check domain
@@ -98,18 +98,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\DomainCheckDomainRequest(); // \OpenAPI\Client\Model\DomainCheckDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainCheckDomainRequest(); // \Panthera\Openprovider\Model\DomainCheckDomainRequest
 
 try {
     $result = $apiInstance->checkDomain($body);
@@ -123,11 +123,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\DomainCheckDomainRequest**](../Model/DomainCheckDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainCheckDomainRequest**](../Model/DomainCheckDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainCheckDomainResponse**](../Model/DomainCheckDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainCheckDomainResponse**](../Model/DomainCheckDomainResponse.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ try {
 ## `createDomain()`
 
 ```php
-createDomain($body): \OpenAPI\Client\Model\DomainCreateDomainResponse
+createDomain($body): \Panthera\Openprovider\Model\DomainCreateDomainResponse
 ```
 
 Create domain
@@ -158,18 +158,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\DomainCreateDomainRequest(); // \OpenAPI\Client\Model\DomainCreateDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainCreateDomainRequest(); // \Panthera\Openprovider\Model\DomainCreateDomainRequest
 
 try {
     $result = $apiInstance->createDomain($body);
@@ -183,11 +183,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\DomainCreateDomainRequest**](../Model/DomainCreateDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainCreateDomainRequest**](../Model/DomainCreateDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainCreateDomainResponse**](../Model/DomainCreateDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainCreateDomainResponse**](../Model/DomainCreateDomainResponse.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `deleteDomain()`
 
 ```php
-deleteDomain($id, $domain_name, $domain_extension, $type, $skip_soft_quarantine, $force_delete): \OpenAPI\Client\Model\DomainDeleteDomainResponse
+deleteDomain($id, $domain_name, $domain_extension, $type, $skip_soft_quarantine, $force_delete): \Panthera\Openprovider\Model\DomainDeleteDomainResponse
 ```
 
 Delete domain
@@ -218,12 +218,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -257,7 +257,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainDeleteDomainResponse**](../Model/DomainDeleteDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainDeleteDomainResponse**](../Model/DomainDeleteDomainResponse.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ try {
 ## `getDomain()`
 
 ```php
-getDomain($id, $domain_name, $domain_extension, $with_history, $with_api_history, $with_additional_data, $with_verification_email, $with_abuse_details, $with_whois_privacy_data, $with_registry_statuses, $is_deleted): \OpenAPI\Client\Model\DomainGetDomainResponse
+getDomain($id, $domain_name, $domain_extension, $with_history, $with_api_history, $with_additional_data, $with_verification_email, $with_abuse_details, $with_whois_privacy_data, $with_registry_statuses, $is_deleted): \Panthera\Openprovider\Model\DomainGetDomainResponse
 ```
 
 Get domain
@@ -288,12 +288,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -337,7 +337,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainGetDomainResponse**](../Model/DomainGetDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainGetDomainResponse**](../Model/DomainGetDomainResponse.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ try {
 ## `listDomains()`
 
 ```php
-listDomains($order_by_id, $order_by_domain_name, $order_by_domain_extension, $order_by_order_date, $order_by_active_date, $order_by_expiration_date, $order_by_renewal_date, $order_by_status, $order_by_transfer_date, $limit, $offset, $id, $extension, $renewal_date, $full_name, $domain_name_pattern, $ns_group_pattern, $status, $status_not_equal, $queue_status, $contact_handle, $comment_pattern, $with_history, $with_api_history, $with_additional_data, $application_mode, $with_verification_email, $with_registry_statuses, $response_type, $response_to, $is_deleted): \OpenAPI\Client\Model\DomainListDomainsResponse
+listDomains($order_by_id, $order_by_domain_name, $order_by_domain_extension, $order_by_order_date, $order_by_active_date, $order_by_expiration_date, $order_by_renewal_date, $order_by_status, $order_by_transfer_date, $limit, $offset, $id, $extension, $renewal_date, $full_name, $domain_name_pattern, $ns_group_pattern, $status, $status_not_equal, $queue_status, $contact_handle, $comment_pattern, $with_history, $with_api_history, $with_additional_data, $application_mode, $with_verification_email, $with_registry_statuses, $response_type, $response_to, $is_deleted): \Panthera\Openprovider\Model\DomainListDomainsResponse
 ```
 
 List domains
@@ -368,12 +368,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -457,7 +457,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainListDomainsResponse**](../Model/DomainListDomainsResponse.md)
+[**\Panthera\Openprovider\Model\DomainListDomainsResponse**](../Model/DomainListDomainsResponse.md)
 
 ### Authorization
 
@@ -475,7 +475,7 @@ try {
 ## `renewDomain()`
 
 ```php
-renewDomain($id, $body): \OpenAPI\Client\Model\DomainRenewDomainResponse
+renewDomain($id, $body): \Panthera\Openprovider\Model\DomainRenewDomainResponse
 ```
 
 Renew domain
@@ -488,19 +488,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\DomainRenewDomainRequest(); // \OpenAPI\Client\Model\DomainRenewDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainRenewDomainRequest(); // \Panthera\Openprovider\Model\DomainRenewDomainRequest
 
 try {
     $result = $apiInstance->renewDomain($id, $body);
@@ -515,11 +515,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\DomainRenewDomainRequest**](../Model/DomainRenewDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainRenewDomainRequest**](../Model/DomainRenewDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainRenewDomainResponse**](../Model/DomainRenewDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainRenewDomainResponse**](../Model/DomainRenewDomainResponse.md)
 
 ### Authorization
 
@@ -537,7 +537,7 @@ try {
 ## `restoreDomain()`
 
 ```php
-restoreDomain($id, $body): \OpenAPI\Client\Model\DomainRestoreDomainResponse
+restoreDomain($id, $body): \Panthera\Openprovider\Model\DomainRestoreDomainResponse
 ```
 
 Restore domain
@@ -550,19 +550,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\DomainRestoreDomainRequest(); // \OpenAPI\Client\Model\DomainRestoreDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainRestoreDomainRequest(); // \Panthera\Openprovider\Model\DomainRestoreDomainRequest
 
 try {
     $result = $apiInstance->restoreDomain($id, $body);
@@ -577,11 +577,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\DomainRestoreDomainRequest**](../Model/DomainRestoreDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainRestoreDomainRequest**](../Model/DomainRestoreDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainRestoreDomainResponse**](../Model/DomainRestoreDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainRestoreDomainResponse**](../Model/DomainRestoreDomainResponse.md)
 
 ### Authorization
 
@@ -599,7 +599,7 @@ try {
 ## `sendFoa1()`
 
 ```php
-sendFoa1($id, $body): \OpenAPI\Client\Model\ResponseBoolResponse
+sendFoa1($id, $body): \Panthera\Openprovider\Model\ResponseBoolResponse
 ```
 
 Send foa1
@@ -612,19 +612,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\DomainSendFoa1Request(); // \OpenAPI\Client\Model\DomainSendFoa1Request
+$body = new \Panthera\Openprovider\Model\DomainSendFoa1Request(); // \Panthera\Openprovider\Model\DomainSendFoa1Request
 
 try {
     $result = $apiInstance->sendFoa1($id, $body);
@@ -639,11 +639,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\DomainSendFoa1Request**](../Model/DomainSendFoa1Request.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainSendFoa1Request**](../Model/DomainSendFoa1Request.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
+[**\Panthera\Openprovider\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ try {
 ## `suggestNameDomain()`
 
 ```php
-suggestNameDomain($body): \OpenAPI\Client\Model\DomainSuggestNameDomainResponse
+suggestNameDomain($body): \Panthera\Openprovider\Model\DomainSuggestNameDomainResponse
 ```
 
 Suggest name domain
@@ -674,18 +674,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\DomainSuggestNameDomainRequest(); // \OpenAPI\Client\Model\DomainSuggestNameDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest(); // \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest
 
 try {
     $result = $apiInstance->suggestNameDomain($body);
@@ -699,11 +699,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\DomainSuggestNameDomainRequest**](../Model/DomainSuggestNameDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainSuggestNameDomainRequest**](../Model/DomainSuggestNameDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainSuggestNameDomainResponse**](../Model/DomainSuggestNameDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse**](../Model/DomainSuggestNameDomainResponse.md)
 
 ### Authorization
 
@@ -721,7 +721,7 @@ try {
 ## `tradeDomain()`
 
 ```php
-tradeDomain($body): \OpenAPI\Client\Model\DomainTradeDomainResponse
+tradeDomain($body): \Panthera\Openprovider\Model\DomainTradeDomainResponse
 ```
 
 Trade domain
@@ -734,18 +734,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\DomainTradeDomainRequest(); // \OpenAPI\Client\Model\DomainTradeDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainTradeDomainRequest(); // \Panthera\Openprovider\Model\DomainTradeDomainRequest
 
 try {
     $result = $apiInstance->tradeDomain($body);
@@ -759,11 +759,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\DomainTradeDomainRequest**](../Model/DomainTradeDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainTradeDomainRequest**](../Model/DomainTradeDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainTradeDomainResponse**](../Model/DomainTradeDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainTradeDomainResponse**](../Model/DomainTradeDomainResponse.md)
 
 ### Authorization
 
@@ -781,7 +781,7 @@ try {
 ## `transferDomain()`
 
 ```php
-transferDomain($body): \OpenAPI\Client\Model\DomainTransferDomainResponse
+transferDomain($body): \Panthera\Openprovider\Model\DomainTransferDomainResponse
 ```
 
 Transfer domain
@@ -794,18 +794,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\DomainTransferDomainRequest(); // \OpenAPI\Client\Model\DomainTransferDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainTransferDomainRequest(); // \Panthera\Openprovider\Model\DomainTransferDomainRequest
 
 try {
     $result = $apiInstance->transferDomain($body);
@@ -819,11 +819,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\DomainTransferDomainRequest**](../Model/DomainTransferDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainTransferDomainRequest**](../Model/DomainTransferDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainTransferDomainResponse**](../Model/DomainTransferDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainTransferDomainResponse**](../Model/DomainTransferDomainResponse.md)
 
 ### Authorization
 
@@ -841,7 +841,7 @@ try {
 ## `tryAgainLastOperation()`
 
 ```php
-tryAgainLastOperation($id, $body): \OpenAPI\Client\Model\ResponseBoolResponse
+tryAgainLastOperation($id, $body): \Panthera\Openprovider\Model\ResponseBoolResponse
 ```
 
 Try again last operation
@@ -854,19 +854,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest(); // \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest
+$body = new \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest(); // \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest
 
 try {
     $result = $apiInstance->tryAgainLastOperation($id, $body);
@@ -881,11 +881,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\DomainTryAgainLastOperationRequest**](../Model/DomainTryAgainLastOperationRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest**](../Model/DomainTryAgainLastOperationRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
+[**\Panthera\Openprovider\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ try {
 ## `updateDomain()`
 
 ```php
-updateDomain($id, $body): \OpenAPI\Client\Model\DomainUpdateDomainResponse
+updateDomain($id, $body): \Panthera\Openprovider\Model\DomainUpdateDomainResponse
 ```
 
 Update domain
@@ -916,19 +916,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Domain id number
-$body = new \OpenAPI\Client\Model\DomainUpdateDomainRequest(); // \OpenAPI\Client\Model\DomainUpdateDomainRequest
+$body = new \Panthera\Openprovider\Model\DomainUpdateDomainRequest(); // \Panthera\Openprovider\Model\DomainUpdateDomainRequest
 
 try {
     $result = $apiInstance->updateDomain($id, $body);
@@ -943,11 +943,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Domain id number | |
-| **body** | [**\OpenAPI\Client\Model\DomainUpdateDomainRequest**](../Model/DomainUpdateDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\DomainUpdateDomainRequest**](../Model/DomainUpdateDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainUpdateDomainResponse**](../Model/DomainUpdateDomainResponse.md)
+[**\Panthera\Openprovider\Model\DomainUpdateDomainResponse**](../Model/DomainUpdateDomainResponse.md)
 
 ### Authorization
 

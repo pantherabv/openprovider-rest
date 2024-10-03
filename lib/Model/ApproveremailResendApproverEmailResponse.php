@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ApproveremailResendApproverEmailResponse Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class ApproveremailResendApproverEmailResponse implements ModelInterface, ArrayA
       */
     protected static $openAPITypes = [
         'code' => 'int',
-        'data' => '\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponseData',
+        'data' => '\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponseData',
         'desc' => 'string',
         'maintenance' => 'bool',
-        'warnings' => '\OpenAPI\Client\Model\ErrorWarning[]'
+        'warnings' => '\Panthera\Openprovider\Model\ErrorWarning[]'
     ];
 
     /**
@@ -347,7 +347,7 @@ class ApproveremailResendApproverEmailResponse implements ModelInterface, ArrayA
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\ApproveremailResendApproverEmailResponseData|null
+     * @return \Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponseData|null
      */
     public function getData()
     {
@@ -357,7 +357,7 @@ class ApproveremailResendApproverEmailResponse implements ModelInterface, ArrayA
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\ApproveremailResendApproverEmailResponseData|null $data data
+     * @param \Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponseData|null $data data
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class ApproveremailResendApproverEmailResponse implements ModelInterface, ArrayA
     /**
      * Gets warnings
      *
-     * @return \OpenAPI\Client\Model\ErrorWarning[]|null
+     * @return \Panthera\Openprovider\Model\ErrorWarning[]|null
      */
     public function getWarnings()
     {
@@ -438,7 +438,7 @@ class ApproveremailResendApproverEmailResponse implements ModelInterface, ArrayA
     /**
      * Sets warnings
      *
-     * @param \OpenAPI\Client\Model\ErrorWarning[]|null $warnings warnings
+     * @param \Panthera\Openprovider\Model\ErrorWarning[]|null $warnings warnings
      *
      * @return self
      */

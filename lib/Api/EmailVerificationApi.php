@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * EmailVerificationApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -146,9 +146,9 @@ class EmailVerificationApi
      * @param  int $offset The offset. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDomainEmailVerifications'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailListDomainVerificationsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailListDomainVerificationsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listDomainEmailVerifications($domain_id = null, $domain = null, $email = null, $handle = null, $status = null, $description = null, $is_suspended = null, $response_type = null, $response_to = null, $limit = null, $offset = null, string $contentType = self::contentTypes['listDomainEmailVerifications'][0])
     {
@@ -174,9 +174,9 @@ class EmailVerificationApi
      * @param  int $offset The offset. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDomainEmailVerifications'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailListDomainVerificationsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailListDomainVerificationsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDomainEmailVerificationsWithHttpInfo($domain_id = null, $domain = null, $email = null, $handle = null, $status = null, $description = null, $is_suspended = null, $response_type = null, $response_to = null, $limit = null, $offset = null, string $contentType = self::contentTypes['listDomainEmailVerifications'][0])
     {
@@ -219,11 +219,11 @@ class EmailVerificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailListDomainVerificationsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailListDomainVerificationsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailListDomainVerificationsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailListDomainVerificationsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -241,16 +241,16 @@ class EmailVerificationApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailListDomainVerificationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailListDomainVerificationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -268,13 +268,13 @@ class EmailVerificationApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailListDomainVerificationsResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailListDomainVerificationsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -307,7 +307,7 @@ class EmailVerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailListDomainVerificationsResponse',
+                        '\Panthera\Openprovider\Model\EmailListDomainVerificationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -315,7 +315,7 @@ class EmailVerificationApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -379,7 +379,7 @@ class EmailVerificationApi
      */
     public function listDomainEmailVerificationsAsyncWithHttpInfo($domain_id = null, $domain = null, $email = null, $handle = null, $status = null, $description = null, $is_suspended = null, $response_type = null, $response_to = null, $limit = null, $offset = null, string $contentType = self::contentTypes['listDomainEmailVerifications'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailListDomainVerificationsResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailListDomainVerificationsResponse';
         $request = $this->listDomainEmailVerificationsRequest($domain_id, $domain, $email, $handle, $status, $description, $is_suspended, $response_type, $response_to, $limit, $offset, $contentType);
 
         return $this->client
@@ -625,12 +625,12 @@ class EmailVerificationApi
      *
      * Restart email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailRestartEmailVerificationRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\EmailRestartEmailVerificationRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartEmailVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailRestartEmailVerificationResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function restartEmailVerification($body, string $contentType = self::contentTypes['restartEmailVerification'][0])
     {
@@ -643,12 +643,12 @@ class EmailVerificationApi
      *
      * Restart email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailRestartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailRestartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartEmailVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailRestartEmailVerificationResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function restartEmailVerificationWithHttpInfo($body, string $contentType = self::contentTypes['restartEmailVerification'][0])
     {
@@ -691,11 +691,11 @@ class EmailVerificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailRestartEmailVerificationResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailRestartEmailVerificationResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -713,16 +713,16 @@ class EmailVerificationApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailRestartEmailVerificationResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -740,13 +740,13 @@ class EmailVerificationApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailRestartEmailVerificationResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -779,7 +779,7 @@ class EmailVerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailRestartEmailVerificationResponse',
+                        '\Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -787,7 +787,7 @@ class EmailVerificationApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -802,7 +802,7 @@ class EmailVerificationApi
      *
      * Restart email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailRestartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailRestartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartEmailVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -823,7 +823,7 @@ class EmailVerificationApi
      *
      * Restart email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailRestartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailRestartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartEmailVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -831,7 +831,7 @@ class EmailVerificationApi
      */
     public function restartEmailVerificationAsyncWithHttpInfo($body, string $contentType = self::contentTypes['restartEmailVerification'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailRestartEmailVerificationResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailRestartEmailVerificationResponse';
         $request = $this->restartEmailVerificationRequest($body, $contentType);
 
         return $this->client
@@ -873,7 +873,7 @@ class EmailVerificationApi
     /**
      * Create request for operation 'restartEmailVerification'
      *
-     * @param  \OpenAPI\Client\Model\EmailRestartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailRestartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restartEmailVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -971,12 +971,12 @@ class EmailVerificationApi
      *
      * Start email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailStartEmailVerificationRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\EmailStartEmailVerificationRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startEmailVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailStartEmailVerificationResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailStartEmailVerificationResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function startEmailVerification($body, string $contentType = self::contentTypes['startEmailVerification'][0])
     {
@@ -989,12 +989,12 @@ class EmailVerificationApi
      *
      * Start email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailStartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailStartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startEmailVerification'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailStartEmailVerificationResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailStartEmailVerificationResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function startEmailVerificationWithHttpInfo($body, string $contentType = self::contentTypes['startEmailVerification'][0])
     {
@@ -1037,11 +1037,11 @@ class EmailVerificationApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailStartEmailVerificationResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailStartEmailVerificationResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailStartEmailVerificationResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailStartEmailVerificationResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1059,16 +1059,16 @@ class EmailVerificationApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailStartEmailVerificationResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailStartEmailVerificationResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1086,13 +1086,13 @@ class EmailVerificationApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailStartEmailVerificationResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailStartEmailVerificationResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1125,7 +1125,7 @@ class EmailVerificationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailStartEmailVerificationResponse',
+                        '\Panthera\Openprovider\Model\EmailStartEmailVerificationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1133,7 +1133,7 @@ class EmailVerificationApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1148,7 +1148,7 @@ class EmailVerificationApi
      *
      * Start email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailStartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailStartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startEmailVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1169,7 +1169,7 @@ class EmailVerificationApi
      *
      * Start email verification
      *
-     * @param  \OpenAPI\Client\Model\EmailStartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailStartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startEmailVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1177,7 +1177,7 @@ class EmailVerificationApi
      */
     public function startEmailVerificationAsyncWithHttpInfo($body, string $contentType = self::contentTypes['startEmailVerification'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailStartEmailVerificationResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailStartEmailVerificationResponse';
         $request = $this->startEmailVerificationRequest($body, $contentType);
 
         return $this->client
@@ -1219,7 +1219,7 @@ class EmailVerificationApi
     /**
      * Create request for operation 'startEmailVerification'
      *
-     * @param  \OpenAPI\Client\Model\EmailStartEmailVerificationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailStartEmailVerificationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['startEmailVerification'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

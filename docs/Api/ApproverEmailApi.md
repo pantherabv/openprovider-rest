@@ -1,4 +1,4 @@
-# OpenAPI\Client\ApproverEmailApi
+# Panthera\Openprovider\ApproverEmailApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `listApproverEmails()`
 
 ```php
-listApproverEmails($product_id, $domain): \OpenAPI\Client\Model\ApproveremailListApproverEmailsResponse
+listApproverEmails($product_id, $domain): \Panthera\Openprovider\Model\ApproveremailListApproverEmailsResponse
 ```
 
 List approver emails
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ApproverEmailApi(
+$apiInstance = new Panthera\Openprovider\Api\ApproverEmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApproveremailListApproverEmailsResponse**](../Model/ApproveremailListApproverEmailsResponse.md)
+[**\Panthera\Openprovider\Model\ApproveremailListApproverEmailsResponse**](../Model/ApproveremailListApproverEmailsResponse.md)
 
 ### Authorization
 

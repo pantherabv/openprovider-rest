@@ -1,4 +1,4 @@
-# OpenAPI\Client\AuthApi
+# Panthera\Openprovider\AuthApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `login()`
 
 ```php
-login($body): \OpenAPI\Client\Model\AuthLoginResponse
+login($body): \Panthera\Openprovider\Model\AuthLoginResponse
 ```
 
 Login with username and password
@@ -23,18 +23,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AuthApi(
+$apiInstance = new Panthera\Openprovider\Api\AuthApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\AuthLoginRequest(); // \OpenAPI\Client\Model\AuthLoginRequest
+$body = new \Panthera\Openprovider\Model\AuthLoginRequest(); // \Panthera\Openprovider\Model\AuthLoginRequest
 
 try {
     $result = $apiInstance->login($body);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\AuthLoginRequest**](../Model/AuthLoginRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\AuthLoginRequest**](../Model/AuthLoginRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AuthLoginResponse**](../Model/AuthLoginResponse.md)
+[**\Panthera\Openprovider\Model\AuthLoginResponse**](../Model/AuthLoginResponse.md)
 
 ### Authorization
 

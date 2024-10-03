@@ -1,4 +1,4 @@
-# OpenAPI\Client\ContactServiceApi
+# Panthera\Openprovider\ContactServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createContact()`
 
 ```php
-createContact($body): \OpenAPI\Client\Model\ContactCreateContactResponse
+createContact($body): \Panthera\Openprovider\Model\ContactCreateContactResponse
 ```
 
 Create contact
@@ -27,18 +27,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ContactServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ContactServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\ContactCreateContactRequest(); // \OpenAPI\Client\Model\ContactCreateContactRequest
+$body = new \Panthera\Openprovider\Model\ContactCreateContactRequest(); // \Panthera\Openprovider\Model\ContactCreateContactRequest
 
 try {
     $result = $apiInstance->createContact($body);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\ContactCreateContactRequest**](../Model/ContactCreateContactRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ContactCreateContactRequest**](../Model/ContactCreateContactRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContactCreateContactResponse**](../Model/ContactCreateContactResponse.md)
+[**\Panthera\Openprovider\Model\ContactCreateContactResponse**](../Model/ContactCreateContactResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `deleteContact()`
 
 ```php
-deleteContact($id): \OpenAPI\Client\Model\ContactDeleteContactResponse
+deleteContact($id): \Panthera\Openprovider\Model\ContactDeleteContactResponse
 ```
 
 Delete contact
@@ -87,12 +87,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ContactServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ContactServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContactDeleteContactResponse**](../Model/ContactDeleteContactResponse.md)
+[**\Panthera\Openprovider\Model\ContactDeleteContactResponse**](../Model/ContactDeleteContactResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ try {
 ## `getContact()`
 
 ```php
-getContact($id, $with_additional_data): \OpenAPI\Client\Model\ContactGetContactResponse
+getContact($id, $with_additional_data): \Panthera\Openprovider\Model\ContactGetContactResponse
 ```
 
 Get contact
@@ -147,12 +147,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ContactServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ContactServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContactGetContactResponse**](../Model/ContactGetContactResponse.md)
+[**\Panthera\Openprovider\Model\ContactGetContactResponse**](../Model/ContactGetContactResponse.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ try {
 ## `listContacts()`
 
 ```php
-listContacts($limit, $offset, $order, $order_by, $email_pattern, $last_name_pattern, $company_name_pattern, $username_pattern, $role, $with_additional_data): \OpenAPI\Client\Model\ContactListContactsResponse
+listContacts($limit, $offset, $order, $order_by, $email_pattern, $last_name_pattern, $company_name_pattern, $username_pattern, $role, $with_additional_data): \Panthera\Openprovider\Model\ContactListContactsResponse
 ```
 
 List contacts
@@ -209,12 +209,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ContactServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ContactServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContactListContactsResponse**](../Model/ContactListContactsResponse.md)
+[**\Panthera\Openprovider\Model\ContactListContactsResponse**](../Model/ContactListContactsResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ try {
 ## `updateContact()`
 
 ```php
-updateContact($id, $body): \OpenAPI\Client\Model\ContactUpdateContactResponse
+updateContact($id, $body): \Panthera\Openprovider\Model\ContactUpdateContactResponse
 ```
 
 Update contact
@@ -287,19 +287,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ContactServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ContactServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object ID
-$body = new \OpenAPI\Client\Model\ContactUpdateContactRequest(); // \OpenAPI\Client\Model\ContactUpdateContactRequest
+$body = new \Panthera\Openprovider\Model\ContactUpdateContactRequest(); // \Panthera\Openprovider\Model\ContactUpdateContactRequest
 
 try {
     $result = $apiInstance->updateContact($id, $body);
@@ -314,11 +314,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object ID | |
-| **body** | [**\OpenAPI\Client\Model\ContactUpdateContactRequest**](../Model/ContactUpdateContactRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ContactUpdateContactRequest**](../Model/ContactUpdateContactRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ContactUpdateContactResponse**](../Model/ContactUpdateContactResponse.md)
+[**\Panthera\Openprovider\Model\ContactUpdateContactResponse**](../Model/ContactUpdateContactResponse.md)
 
 ### Authorization
 

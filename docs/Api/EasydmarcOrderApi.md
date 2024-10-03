@@ -1,4 +1,4 @@
-# OpenAPI\Client\EasydmarcOrderApi
+# Panthera\Openprovider\EasydmarcOrderApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createEasyDmarc()`
 
 ```php
-createEasyDmarc($body): \OpenAPI\Client\Model\OrderCreateEasyDmarcResponse
+createEasyDmarc($body): \Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse
 ```
 
 Create easy dmarc
@@ -28,18 +28,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EasydmarcOrderApi(
+$apiInstance = new Panthera\Openprovider\Api\EasydmarcOrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest(); // \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest
+$body = new \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest(); // \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest
 
 try {
     $result = $apiInstance->createEasyDmarc($body);
@@ -53,11 +53,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\OrderCreateEasyDmarcRequest**](../Model/OrderCreateEasyDmarcRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest**](../Model/OrderCreateEasyDmarcRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse**](../Model/OrderCreateEasyDmarcResponse.md)
+[**\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse**](../Model/OrderCreateEasyDmarcResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `deleteEasyDmarc()`
 
 ```php
-deleteEasyDmarc($id): \OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse
+deleteEasyDmarc($id): \Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse
 ```
 
 Delete easy dmarc
@@ -88,12 +88,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EasydmarcOrderApi(
+$apiInstance = new Panthera\Openprovider\Api\EasydmarcOrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse**](../Model/OrderDeleteEasyDmarcResponse.md)
+[**\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse**](../Model/OrderDeleteEasyDmarcResponse.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ try {
 ## `getEasyDmarc()`
 
 ```php
-getEasyDmarc($domain_name, $domain_extension): \OpenAPI\Client\Model\OrderGetEasyDmarcResponse
+getEasyDmarc($domain_name, $domain_extension): \Panthera\Openprovider\Model\OrderGetEasyDmarcResponse
 ```
 
 Get easy dmarc
@@ -148,12 +148,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EasydmarcOrderApi(
+$apiInstance = new Panthera\Openprovider\Api\EasydmarcOrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderGetEasyDmarcResponse**](../Model/OrderGetEasyDmarcResponse.md)
+[**\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse**](../Model/OrderGetEasyDmarcResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ try {
 ## `getEasyDmarcSso()`
 
 ```php
-getEasyDmarcSso($id, $type): \OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse
+getEasyDmarcSso($id, $type): \Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse
 ```
 
 Get easy dmarc sso
@@ -210,12 +210,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EasydmarcOrderApi(
+$apiInstance = new Panthera\Openprovider\Api\EasydmarcOrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -241,7 +241,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse**](../Model/OrderGetEasyDmarcSsoResponse.md)
+[**\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse**](../Model/OrderGetEasyDmarcSsoResponse.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ try {
 ## `listEasyDmarc()`
 
 ```php
-listEasyDmarc($limit, $offset, $order_by_id, $status, $domain_name, $domain_extension): \OpenAPI\Client\Model\OrderListEasyDmarcResponse
+listEasyDmarc($limit, $offset, $order_by_id, $status, $domain_name, $domain_extension): \Panthera\Openprovider\Model\OrderListEasyDmarcResponse
 ```
 
 List easy dmarc
@@ -272,12 +272,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EasydmarcOrderApi(
+$apiInstance = new Panthera\Openprovider\Api\EasydmarcOrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -311,7 +311,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderListEasyDmarcResponse**](../Model/OrderListEasyDmarcResponse.md)
+[**\Panthera\Openprovider\Model\OrderListEasyDmarcResponse**](../Model/OrderListEasyDmarcResponse.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ try {
 ## `retryEasyDmarc()`
 
 ```php
-retryEasyDmarc($id, $body): \OpenAPI\Client\Model\OrderRetryEasyDmarcResponse
+retryEasyDmarc($id, $body): \Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse
 ```
 
 Retry easy dmarc
@@ -342,19 +342,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EasydmarcOrderApi(
+$apiInstance = new Panthera\Openprovider\Api\EasydmarcOrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Easydmarc id (order number)
-$body = new \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest(); // \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest
+$body = new \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest(); // \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest
 
 try {
     $result = $apiInstance->retryEasyDmarc($id, $body);
@@ -369,11 +369,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Easydmarc id (order number) | |
-| **body** | [**\OpenAPI\Client\Model\OrderRetryEasyDmarcRequest**](../Model/OrderRetryEasyDmarcRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest**](../Model/OrderRetryEasyDmarcRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse**](../Model/OrderRetryEasyDmarcResponse.md)
+[**\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse**](../Model/OrderRetryEasyDmarcResponse.md)
 
 ### Authorization
 

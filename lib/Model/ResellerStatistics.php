@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ResellerStatistics Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,14 +57,14 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'currency' => '\OpenAPI\Client\Model\StatisticsCurrencyStatistics',
-        'customer' => '\OpenAPI\Client\Model\StatisticsCustomerStatistics',
-        'dns' => '\OpenAPI\Client\Model\StatisticsDnsStatistics',
-        'domain' => '\OpenAPI\Client\Model\StatisticsDomainStatistics',
+        'currency' => '\Panthera\Openprovider\Model\StatisticsCurrencyStatistics',
+        'customer' => '\Panthera\Openprovider\Model\StatisticsCustomerStatistics',
+        'dns' => '\Panthera\Openprovider\Model\StatisticsDnsStatistics',
+        'domain' => '\Panthera\Openprovider\Model\StatisticsDomainStatistics',
         'level' => 'int',
-        'license' => '\OpenAPI\Client\Model\StatisticsLicenseStatistics',
-        'spam_experts' => '\OpenAPI\Client\Model\StatisticsSpamExpertsStatistics',
-        'ssl' => '\OpenAPI\Client\Model\StatisticsSslStatistics'
+        'license' => '\Panthera\Openprovider\Model\StatisticsLicenseStatistics',
+        'spam_experts' => '\Panthera\Openprovider\Model\StatisticsSpamExpertsStatistics',
+        'ssl' => '\Panthera\Openprovider\Model\StatisticsSslStatistics'
     ];
 
     /**
@@ -341,7 +341,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets currency
      *
-     * @return \OpenAPI\Client\Model\StatisticsCurrencyStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsCurrencyStatistics|null
      */
     public function getCurrency()
     {
@@ -351,7 +351,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets currency
      *
-     * @param \OpenAPI\Client\Model\StatisticsCurrencyStatistics|null $currency currency
+     * @param \Panthera\Openprovider\Model\StatisticsCurrencyStatistics|null $currency currency
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\StatisticsCustomerStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsCustomerStatistics|null
      */
     public function getCustomer()
     {
@@ -378,7 +378,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\StatisticsCustomerStatistics|null $customer customer
+     * @param \Panthera\Openprovider\Model\StatisticsCustomerStatistics|null $customer customer
      *
      * @return self
      */
@@ -395,7 +395,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets dns
      *
-     * @return \OpenAPI\Client\Model\StatisticsDnsStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsDnsStatistics|null
      */
     public function getDns()
     {
@@ -405,7 +405,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets dns
      *
-     * @param \OpenAPI\Client\Model\StatisticsDnsStatistics|null $dns dns
+     * @param \Panthera\Openprovider\Model\StatisticsDnsStatistics|null $dns dns
      *
      * @return self
      */
@@ -422,7 +422,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\StatisticsDomainStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsDomainStatistics|null
      */
     public function getDomain()
     {
@@ -432,7 +432,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\StatisticsDomainStatistics|null $domain domain
+     * @param \Panthera\Openprovider\Model\StatisticsDomainStatistics|null $domain domain
      *
      * @return self
      */
@@ -476,7 +476,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets license
      *
-     * @return \OpenAPI\Client\Model\StatisticsLicenseStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsLicenseStatistics|null
      */
     public function getLicense()
     {
@@ -486,7 +486,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets license
      *
-     * @param \OpenAPI\Client\Model\StatisticsLicenseStatistics|null $license license
+     * @param \Panthera\Openprovider\Model\StatisticsLicenseStatistics|null $license license
      *
      * @return self
      */
@@ -503,7 +503,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets spam_experts
      *
-     * @return \OpenAPI\Client\Model\StatisticsSpamExpertsStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsSpamExpertsStatistics|null
      */
     public function getSpamExperts()
     {
@@ -513,7 +513,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets spam_experts
      *
-     * @param \OpenAPI\Client\Model\StatisticsSpamExpertsStatistics|null $spam_experts spam_experts
+     * @param \Panthera\Openprovider\Model\StatisticsSpamExpertsStatistics|null $spam_experts spam_experts
      *
      * @return self
      */
@@ -530,7 +530,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets ssl
      *
-     * @return \OpenAPI\Client\Model\StatisticsSslStatistics|null
+     * @return \Panthera\Openprovider\Model\StatisticsSslStatistics|null
      */
     public function getSsl()
     {
@@ -540,7 +540,7 @@ class ResellerStatistics implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets ssl
      *
-     * @param \OpenAPI\Client\Model\StatisticsSslStatistics|null $ssl ssl
+     * @param \Panthera\Openprovider\Model\StatisticsSslStatistics|null $ssl ssl
      *
      * @return self
      */

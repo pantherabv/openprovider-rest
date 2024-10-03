@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * CustomerApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerCreateCustomerRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerCreateCustomerRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerCreateCustomerResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\CustomerCreateCustomerResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createCustomer($body, string $contentType = self::contentTypes['createCustomer'][0])
     {
@@ -157,12 +157,12 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerCreateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerCreateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerCreateCustomerResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\CustomerCreateCustomerResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerWithHttpInfo($body, string $contentType = self::contentTypes['createCustomer'][0])
     {
@@ -205,11 +205,11 @@ class CustomerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerCreateCustomerResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\CustomerCreateCustomerResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerCreateCustomerResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\CustomerCreateCustomerResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerCreateCustomerResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\CustomerCreateCustomerResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerCreateCustomerResponse';
+            $returnType = '\Panthera\Openprovider\Model\CustomerCreateCustomerResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerCreateCustomerResponse',
+                        '\Panthera\Openprovider\Model\CustomerCreateCustomerResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class CustomerApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerCreateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerCreateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class CustomerApi
      *
      * Create customer
      *
-     * @param  \OpenAPI\Client\Model\CustomerCreateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerCreateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -345,7 +345,7 @@ class CustomerApi
      */
     public function createCustomerAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createCustomer'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerCreateCustomerResponse';
+        $returnType = '\Panthera\Openprovider\Model\CustomerCreateCustomerResponse';
         $request = $this->createCustomerRequest($body, $contentType);
 
         return $this->client
@@ -387,7 +387,7 @@ class CustomerApi
     /**
      * Create request for operation 'createCustomer'
      *
-     * @param  \OpenAPI\Client\Model\CustomerCreateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerCreateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -488,9 +488,9 @@ class CustomerApi
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerDeleteCustomerResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\CustomerDeleteCustomerResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteCustomer($handle, string $contentType = self::contentTypes['deleteCustomer'][0])
     {
@@ -506,9 +506,9 @@ class CustomerApi
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerDeleteCustomerResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\CustomerDeleteCustomerResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomerWithHttpInfo($handle, string $contentType = self::contentTypes['deleteCustomer'][0])
     {
@@ -551,11 +551,11 @@ class CustomerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerDeleteCustomerResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerDeleteCustomerResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -573,16 +573,16 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerDeleteCustomerResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -600,13 +600,13 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerDeleteCustomerResponse';
+            $returnType = '\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -639,7 +639,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerDeleteCustomerResponse',
+                        '\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -647,7 +647,7 @@ class CustomerApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -691,7 +691,7 @@ class CustomerApi
      */
     public function deleteCustomerAsyncWithHttpInfo($handle, string $contentType = self::contentTypes['deleteCustomer'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerDeleteCustomerResponse';
+        $returnType = '\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse';
         $request = $this->deleteCustomerRequest($handle, $contentType);
 
         return $this->client
@@ -836,9 +836,9 @@ class CustomerApi
      * @param  bool $with_additional_data Retrieves objects with (1) or without (0) additional data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerGetCustomerResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\CustomerGetCustomerResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getCustomer($handle, $with_additional_data = null, string $contentType = self::contentTypes['getCustomer'][0])
     {
@@ -855,9 +855,9 @@ class CustomerApi
      * @param  bool $with_additional_data Retrieves objects with (1) or without (0) additional data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerGetCustomerResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\CustomerGetCustomerResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerWithHttpInfo($handle, $with_additional_data = null, string $contentType = self::contentTypes['getCustomer'][0])
     {
@@ -900,11 +900,11 @@ class CustomerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerGetCustomerResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\CustomerGetCustomerResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerGetCustomerResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\CustomerGetCustomerResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -922,16 +922,16 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerGetCustomerResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\CustomerGetCustomerResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -949,13 +949,13 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerGetCustomerResponse';
+            $returnType = '\Panthera\Openprovider\Model\CustomerGetCustomerResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -988,7 +988,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerGetCustomerResponse',
+                        '\Panthera\Openprovider\Model\CustomerGetCustomerResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class CustomerApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class CustomerApi
      */
     public function getCustomerAsyncWithHttpInfo($handle, $with_additional_data = null, string $contentType = self::contentTypes['getCustomer'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerGetCustomerResponse';
+        $returnType = '\Panthera\Openprovider\Model\CustomerGetCustomerResponse';
         $request = $this->getCustomerRequest($handle, $with_additional_data, $contentType);
 
         return $this->client
@@ -1211,9 +1211,9 @@ class CustomerApi
      * @param  string[] $columns Сolumns to retrieve. Possible values: &#39;firstName&#39;, &#39;prefix&#39;, &#39;initials&#39;, &#39;lastName&#39;, &#39;companyName&#39;, &#39;email&#39;, &#39;handle&#39;, &#39;id&#39;, &#39;fullName&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCustomers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerListCustomersResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\CustomerListCustomersResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listCustomers($reseller_id = null, $limit = null, $offset = null, $order = null, $order_by = null, $email_pattern = null, $company_name_pattern = null, $last_name_pattern = null, $first_name_pattern = null, $comment_pattern = null, $handle_pattern = null, $pattern = null, $with_additional_data = null, $type = null, $columns = null, string $contentType = self::contentTypes['listCustomers'][0])
     {
@@ -1243,9 +1243,9 @@ class CustomerApi
      * @param  string[] $columns Сolumns to retrieve. Possible values: &#39;firstName&#39;, &#39;prefix&#39;, &#39;initials&#39;, &#39;lastName&#39;, &#39;companyName&#39;, &#39;email&#39;, &#39;handle&#39;, &#39;id&#39;, &#39;fullName&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCustomers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerListCustomersResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\CustomerListCustomersResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCustomersWithHttpInfo($reseller_id = null, $limit = null, $offset = null, $order = null, $order_by = null, $email_pattern = null, $company_name_pattern = null, $last_name_pattern = null, $first_name_pattern = null, $comment_pattern = null, $handle_pattern = null, $pattern = null, $with_additional_data = null, $type = null, $columns = null, string $contentType = self::contentTypes['listCustomers'][0])
     {
@@ -1288,11 +1288,11 @@ class CustomerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerListCustomersResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\CustomerListCustomersResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerListCustomersResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\CustomerListCustomersResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1310,16 +1310,16 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerListCustomersResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\CustomerListCustomersResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1337,13 +1337,13 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerListCustomersResponse';
+            $returnType = '\Panthera\Openprovider\Model\CustomerListCustomersResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1376,7 +1376,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerListCustomersResponse',
+                        '\Panthera\Openprovider\Model\CustomerListCustomersResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1384,7 +1384,7 @@ class CustomerApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1456,7 +1456,7 @@ class CustomerApi
      */
     public function listCustomersAsyncWithHttpInfo($reseller_id = null, $limit = null, $offset = null, $order = null, $order_by = null, $email_pattern = null, $company_name_pattern = null, $last_name_pattern = null, $first_name_pattern = null, $comment_pattern = null, $handle_pattern = null, $pattern = null, $with_additional_data = null, $type = null, $columns = null, string $contentType = self::contentTypes['listCustomers'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerListCustomersResponse';
+        $returnType = '\Panthera\Openprovider\Model\CustomerListCustomersResponse';
         $request = $this->listCustomersRequest($reseller_id, $limit, $offset, $order, $order_by, $email_pattern, $company_name_pattern, $last_name_pattern, $first_name_pattern, $comment_pattern, $handle_pattern, $pattern, $with_additional_data, $type, $columns, $contentType);
 
         return $this->client
@@ -1747,12 +1747,12 @@ class CustomerApi
      * Update customer
      *
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
-     * @param  \OpenAPI\Client\Model\CustomerUpdateCustomerRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CustomerUpdateCustomerResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\CustomerUpdateCustomerResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateCustomer($handle, $body, string $contentType = self::contentTypes['updateCustomer'][0])
     {
@@ -1766,12 +1766,12 @@ class CustomerApi
      * Update customer
      *
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
-     * @param  \OpenAPI\Client\Model\CustomerUpdateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CustomerUpdateCustomerResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\CustomerUpdateCustomerResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerWithHttpInfo($handle, $body, string $contentType = self::contentTypes['updateCustomer'][0])
     {
@@ -1814,11 +1814,11 @@ class CustomerApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CustomerUpdateCustomerResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CustomerUpdateCustomerResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1836,16 +1836,16 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CustomerUpdateCustomerResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1863,13 +1863,13 @@ class CustomerApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CustomerUpdateCustomerResponse';
+            $returnType = '\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1902,7 +1902,7 @@ class CustomerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CustomerUpdateCustomerResponse',
+                        '\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1910,7 +1910,7 @@ class CustomerApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1926,7 +1926,7 @@ class CustomerApi
      * Update customer
      *
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
-     * @param  \OpenAPI\Client\Model\CustomerUpdateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1948,7 +1948,7 @@ class CustomerApi
      * Update customer
      *
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
-     * @param  \OpenAPI\Client\Model\CustomerUpdateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1956,7 +1956,7 @@ class CustomerApi
      */
     public function updateCustomerAsyncWithHttpInfo($handle, $body, string $contentType = self::contentTypes['updateCustomer'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\CustomerUpdateCustomerResponse';
+        $returnType = '\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse';
         $request = $this->updateCustomerRequest($handle, $body, $contentType);
 
         return $this->client
@@ -1999,7 +1999,7 @@ class CustomerApi
      * Create request for operation 'updateCustomer'
      *
      * @param  string $handle Customer unique identifier or handle, which can be created via CreateCustomer API method (required)
-     * @param  \OpenAPI\Client\Model\CustomerUpdateCustomerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

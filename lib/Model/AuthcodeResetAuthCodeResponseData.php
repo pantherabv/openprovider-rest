@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * AuthcodeResetAuthCodeResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class AuthcodeResetAuthCodeResponseData implements ModelInterface, ArrayAccess, 
       */
     protected static $openAPITypes = [
         'auth_code' => 'string',
-        'auth_info' => '\OpenAPI\Client\Model\AuthcodeAuthInfo',
+        'auth_info' => '\Panthera\Openprovider\Model\AuthcodeAuthInfo',
         'domain_roid' => 'string',
         'epp_statuses' => 'string[]',
-        'rgp_statuses' => '\OpenAPI\Client\Model\AuthcodeRgpStatuses',
+        'rgp_statuses' => '\Panthera\Openprovider\Model\AuthcodeRgpStatuses',
         'success' => 'bool',
         'type' => 'string'
     ];
@@ -361,7 +361,7 @@ class AuthcodeResetAuthCodeResponseData implements ModelInterface, ArrayAccess, 
     /**
      * Gets auth_info
      *
-     * @return \OpenAPI\Client\Model\AuthcodeAuthInfo|null
+     * @return \Panthera\Openprovider\Model\AuthcodeAuthInfo|null
      */
     public function getAuthInfo()
     {
@@ -371,7 +371,7 @@ class AuthcodeResetAuthCodeResponseData implements ModelInterface, ArrayAccess, 
     /**
      * Sets auth_info
      *
-     * @param \OpenAPI\Client\Model\AuthcodeAuthInfo|null $auth_info auth_info
+     * @param \Panthera\Openprovider\Model\AuthcodeAuthInfo|null $auth_info auth_info
      *
      * @return self
      */
@@ -442,7 +442,7 @@ class AuthcodeResetAuthCodeResponseData implements ModelInterface, ArrayAccess, 
     /**
      * Gets rgp_statuses
      *
-     * @return \OpenAPI\Client\Model\AuthcodeRgpStatuses|null
+     * @return \Panthera\Openprovider\Model\AuthcodeRgpStatuses|null
      */
     public function getRgpStatuses()
     {
@@ -452,7 +452,7 @@ class AuthcodeResetAuthCodeResponseData implements ModelInterface, ArrayAccess, 
     /**
      * Sets rgp_statuses
      *
-     * @param \OpenAPI\Client\Model\AuthcodeRgpStatuses|null $rgp_statuses rgp_statuses
+     * @param \Panthera\Openprovider\Model\AuthcodeRgpStatuses|null $rgp_statuses rgp_statuses
      *
      * @return self
      */

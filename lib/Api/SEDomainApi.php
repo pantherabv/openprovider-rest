@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SEDomainApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class SEDomainApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\SeDomainCreateDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainCreateDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createDomainMixin8($body, string $contentType = self::contentTypes['createDomainMixin8'][0])
     {
@@ -154,12 +154,12 @@ class SEDomainApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\SeDomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDomainMixin8WithHttpInfo($body, string $contentType = self::contentTypes['createDomainMixin8'][0])
     {
@@ -202,11 +202,11 @@ class SEDomainApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResponseBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResponseBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResponseBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResponseBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,16 +224,16 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResponseBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResponseBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -251,13 +251,13 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -290,7 +290,7 @@ class SEDomainApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseBoolResponse',
+                        '\Panthera\Openprovider\Model\ResponseBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class SEDomainApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -313,7 +313,7 @@ class SEDomainApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\SeDomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomainMixin8'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -334,7 +334,7 @@ class SEDomainApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\SeDomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomainMixin8'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -342,7 +342,7 @@ class SEDomainApi
      */
     public function createDomainMixin8AsyncWithHttpInfo($body, string $contentType = self::contentTypes['createDomainMixin8'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
         $request = $this->createDomainMixin8Request($body, $contentType);
 
         return $this->client
@@ -384,7 +384,7 @@ class SEDomainApi
     /**
      * Create request for operation 'createDomainMixin8'
      *
-     * @param  \OpenAPI\Client\Model\SeDomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomainMixin8'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -486,9 +486,9 @@ class SEDomainApi
      * @param  bool $bundle Indicates if old subscriptions backward compatibility is used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteDomainMixin8($domain_name, $bundle = null, string $contentType = self::contentTypes['deleteDomainMixin8'][0])
     {
@@ -505,9 +505,9 @@ class SEDomainApi
      * @param  bool $bundle Indicates if old subscriptions backward compatibility is used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteDomainMixin8WithHttpInfo($domain_name, $bundle = null, string $contentType = self::contentTypes['deleteDomainMixin8'][0])
     {
@@ -550,11 +550,11 @@ class SEDomainApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResponseBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResponseBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResponseBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResponseBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -572,16 +572,16 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResponseBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResponseBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -599,13 +599,13 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -638,7 +638,7 @@ class SEDomainApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseBoolResponse',
+                        '\Panthera\Openprovider\Model\ResponseBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -646,7 +646,7 @@ class SEDomainApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -692,7 +692,7 @@ class SEDomainApi
      */
     public function deleteDomainMixin8AsyncWithHttpInfo($domain_name, $bundle = null, string $contentType = self::contentTypes['deleteDomainMixin8'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
         $request = $this->deleteDomainMixin8Request($domain_name, $bundle, $contentType);
 
         return $this->client
@@ -849,9 +849,9 @@ class SEDomainApi
      * @param  bool $bundle Indicates if old subscriptions backward compatibility is used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SeDomainGetDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\SeDomainGetDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getDomainMixin8($domain_name, $with_records = false, $bundle = null, string $contentType = self::contentTypes['getDomainMixin8'][0])
     {
@@ -869,9 +869,9 @@ class SEDomainApi
      * @param  bool $bundle Indicates if old subscriptions backward compatibility is used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SeDomainGetDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\SeDomainGetDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDomainMixin8WithHttpInfo($domain_name, $with_records = false, $bundle = null, string $contentType = self::contentTypes['getDomainMixin8'][0])
     {
@@ -914,11 +914,11 @@ class SEDomainApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SeDomainGetDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\SeDomainGetDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SeDomainGetDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\SeDomainGetDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -936,16 +936,16 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SeDomainGetDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\SeDomainGetDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -963,13 +963,13 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SeDomainGetDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\SeDomainGetDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1002,7 +1002,7 @@ class SEDomainApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SeDomainGetDomainResponse',
+                        '\Panthera\Openprovider\Model\SeDomainGetDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1010,7 +1010,7 @@ class SEDomainApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1058,7 +1058,7 @@ class SEDomainApi
      */
     public function getDomainMixin8AsyncWithHttpInfo($domain_name, $with_records = false, $bundle = null, string $contentType = self::contentTypes['getDomainMixin8'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SeDomainGetDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\SeDomainGetDomainResponse';
         $request = $this->getDomainMixin8Request($domain_name, $with_records, $bundle, $contentType);
 
         return $this->client
@@ -1222,12 +1222,12 @@ class SEDomainApi
      * Update domain
      *
      * @param  string $domain_name Domain full name (required)
-     * @param  \OpenAPI\Client\Model\SeDomainUpdateDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateDomainMixin8($domain_name, $body, string $contentType = self::contentTypes['updateDomainMixin8'][0])
     {
@@ -1241,12 +1241,12 @@ class SEDomainApi
      * Update domain
      *
      * @param  string $domain_name Domain full name (required)
-     * @param  \OpenAPI\Client\Model\SeDomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomainMixin8'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDomainMixin8WithHttpInfo($domain_name, $body, string $contentType = self::contentTypes['updateDomainMixin8'][0])
     {
@@ -1289,11 +1289,11 @@ class SEDomainApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResponseBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResponseBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResponseBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResponseBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1311,16 +1311,16 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResponseBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResponseBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1338,13 +1338,13 @@ class SEDomainApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1377,7 +1377,7 @@ class SEDomainApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseBoolResponse',
+                        '\Panthera\Openprovider\Model\ResponseBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1385,7 +1385,7 @@ class SEDomainApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1401,7 +1401,7 @@ class SEDomainApi
      * Update domain
      *
      * @param  string $domain_name Domain full name (required)
-     * @param  \OpenAPI\Client\Model\SeDomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomainMixin8'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1423,7 +1423,7 @@ class SEDomainApi
      * Update domain
      *
      * @param  string $domain_name Domain full name (required)
-     * @param  \OpenAPI\Client\Model\SeDomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomainMixin8'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1431,7 +1431,7 @@ class SEDomainApi
      */
     public function updateDomainMixin8AsyncWithHttpInfo($domain_name, $body, string $contentType = self::contentTypes['updateDomainMixin8'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
         $request = $this->updateDomainMixin8Request($domain_name, $body, $contentType);
 
         return $this->client
@@ -1474,7 +1474,7 @@ class SEDomainApi
      * Create request for operation 'updateDomainMixin8'
      *
      * @param  string $domain_name Domain full name (required)
-     * @param  \OpenAPI\Client\Model\SeDomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomainMixin8'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

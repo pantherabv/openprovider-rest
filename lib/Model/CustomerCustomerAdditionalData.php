@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * CustomerCustomerAdditionalData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class CustomerCustomerAdditionalData implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'attached_files' => '\OpenAPI\Client\Model\CustomerFile[]',
+        'attached_files' => '\Panthera\Openprovider\Model\CustomerFile[]',
         'birth_address' => 'string',
         'birth_city' => 'string',
         'birth_country' => 'string',
@@ -418,7 +418,7 @@ class CustomerCustomerAdditionalData implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets attached_files
      *
-     * @return \OpenAPI\Client\Model\CustomerFile[]|null
+     * @return \Panthera\Openprovider\Model\CustomerFile[]|null
      */
     public function getAttachedFiles()
     {
@@ -428,7 +428,7 @@ class CustomerCustomerAdditionalData implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets attached_files
      *
-     * @param \OpenAPI\Client\Model\CustomerFile[]|null $attached_files attached_files
+     * @param \Panthera\Openprovider\Model\CustomerFile[]|null $attached_files attached_files
      *
      * @return self
      */

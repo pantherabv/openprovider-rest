@@ -1,4 +1,4 @@
-# OpenAPI\Client\TransactionApi
+# Panthera\Openprovider\TransactionApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `listTransactions()`
 
 ```php
-listTransactions($limit, $offset, $order, $order_by, $start_creation_date, $end_creation_date, $filter_for_subject): \OpenAPI\Client\Model\TransactionListTransactionsResponse
+listTransactions($limit, $offset, $order, $order_by, $start_creation_date, $end_creation_date, $filter_for_subject): \Panthera\Openprovider\Model\TransactionListTransactionsResponse
 ```
 
 List transactions
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionApi(
+$apiInstance = new Panthera\Openprovider\Api\TransactionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -64,7 +64,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionListTransactionsResponse**](../Model/TransactionListTransactionsResponse.md)
+[**\Panthera\Openprovider\Model\TransactionListTransactionsResponse**](../Model/TransactionListTransactionsResponse.md)
 
 ### Authorization
 

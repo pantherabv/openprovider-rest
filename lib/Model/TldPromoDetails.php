@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TldPromoDetails Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class TldPromoDetails implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'end_date' => 'string',
-        'non_promo_price' => '\OpenAPI\Client\Model\TldPrice',
+        'non_promo_price' => '\Panthera\Openprovider\Model\TldPrice',
         'start_date' => 'string'
     ];
 
@@ -333,7 +333,7 @@ class TldPromoDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets non_promo_price
      *
-     * @return \OpenAPI\Client\Model\TldPrice|null
+     * @return \Panthera\Openprovider\Model\TldPrice|null
      */
     public function getNonPromoPrice()
     {
@@ -343,7 +343,7 @@ class TldPromoDetails implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets non_promo_price
      *
-     * @param \OpenAPI\Client\Model\TldPrice|null $non_promo_price non_promo_price
+     * @param \Panthera\Openprovider\Model\TldPrice|null $non_promo_price non_promo_price
      *
      * @return self
      */

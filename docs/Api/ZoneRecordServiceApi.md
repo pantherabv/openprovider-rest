@@ -1,4 +1,4 @@
-# OpenAPI\Client\ZoneRecordServiceApi
+# Panthera\Openprovider\ZoneRecordServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `listZoneRecords()`
 
 ```php
-listZoneRecords($name, $zone_id, $limit, $offset, $order_by_type, $order_by_name, $order_by_value, $order_by_ttl, $order_by_prio, $record_name_pattern, $value_pattern, $type, $prio, $ttl, $zone_provider): \OpenAPI\Client\Model\RecordListZoneRecordsResponse
+listZoneRecords($name, $zone_id, $limit, $offset, $order_by_type, $order_by_name, $order_by_value, $order_by_ttl, $order_by_prio, $record_name_pattern, $value_pattern, $type, $prio, $ttl, $zone_provider): \Panthera\Openprovider\Model\RecordListZoneRecordsResponse
 ```
 
 List zone records
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ZoneRecordServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ZoneRecordServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -80,7 +80,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RecordListZoneRecordsResponse**](../Model/RecordListZoneRecordsResponse.md)
+[**\Panthera\Openprovider\Model\RecordListZoneRecordsResponse**](../Model/RecordListZoneRecordsResponse.md)
 
 ### Authorization
 

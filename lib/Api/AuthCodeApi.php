@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * AuthCodeApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,9 +137,9 @@ class AuthCodeApi
      * @param  string $sending_type Indicates how authcode should be provisioned to domain owner. For ru / xn--p1ai domains only. Possible values: sms, email letter. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAuthCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getAuthCode($id, $domain_name = null, $domain_extension = null, $auth_code_type = null, $sending_type = null, string $contentType = self::contentTypes['getAuthCode'][0])
     {
@@ -159,9 +159,9 @@ class AuthCodeApi
      * @param  string $sending_type Indicates how authcode should be provisioned to domain owner. For ru / xn--p1ai domains only. Possible values: sms, email letter. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAuthCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuthCodeWithHttpInfo($id, $domain_name = null, $domain_extension = null, $auth_code_type = null, $sending_type = null, string $contentType = self::contentTypes['getAuthCode'][0])
     {
@@ -204,11 +204,11 @@ class AuthCodeApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -226,16 +226,16 @@ class AuthCodeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -253,13 +253,13 @@ class AuthCodeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse';
+            $returnType = '\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -292,7 +292,7 @@ class AuthCodeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse',
+                        '\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -300,7 +300,7 @@ class AuthCodeApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -352,7 +352,7 @@ class AuthCodeApi
      */
     public function getAuthCodeAsyncWithHttpInfo($id, $domain_name = null, $domain_extension = null, $auth_code_type = null, $sending_type = null, string $contentType = self::contentTypes['getAuthCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AuthcodeGetAuthCodeResponse';
+        $returnType = '\Panthera\Openprovider\Model\AuthcodeGetAuthCodeResponse';
         $request = $this->getAuthCodeRequest($id, $domain_name, $domain_extension, $auth_code_type, $sending_type, $contentType);
 
         return $this->client
@@ -538,12 +538,12 @@ class AuthCodeApi
      * Reset auth code
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetAuthCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function resetAuthCode($id, $body, string $contentType = self::contentTypes['resetAuthCode'][0])
     {
@@ -557,12 +557,12 @@ class AuthCodeApi
      * Reset auth code
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetAuthCode'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetAuthCodeWithHttpInfo($id, $body, string $contentType = self::contentTypes['resetAuthCode'][0])
     {
@@ -605,11 +605,11 @@ class AuthCodeApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -627,16 +627,16 @@ class AuthCodeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -654,13 +654,13 @@ class AuthCodeApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse';
+            $returnType = '\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -693,7 +693,7 @@ class AuthCodeApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse',
+                        '\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -701,7 +701,7 @@ class AuthCodeApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -717,7 +717,7 @@ class AuthCodeApi
      * Reset auth code
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetAuthCode'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -739,7 +739,7 @@ class AuthCodeApi
      * Reset auth code
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetAuthCode'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -747,7 +747,7 @@ class AuthCodeApi
      */
     public function resetAuthCodeAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['resetAuthCode'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AuthcodeResetAuthCodeResponse';
+        $returnType = '\Panthera\Openprovider\Model\AuthcodeResetAuthCodeResponse';
         $request = $this->resetAuthCodeRequest($id, $body, $contentType);
 
         return $this->client
@@ -790,7 +790,7 @@ class AuthCodeApi
      * Create request for operation 'resetAuthCode'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\AuthcodeResetAuthCodeRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\AuthcodeResetAuthCodeRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resetAuthCode'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

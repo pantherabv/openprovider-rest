@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * StatisticsSslStatistics Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class StatisticsSslStatistics implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'by_status' => '\OpenAPI\Client\Model\StatisticsSslStatisticsByStatus',
+        'by_status' => '\Panthera\Openprovider\Model\StatisticsSslStatisticsByStatus',
         'total' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class StatisticsSslStatistics implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets by_status
      *
-     * @return \OpenAPI\Client\Model\StatisticsSslStatisticsByStatus|null
+     * @return \Panthera\Openprovider\Model\StatisticsSslStatisticsByStatus|null
      */
     public function getByStatus()
     {
@@ -309,7 +309,7 @@ class StatisticsSslStatistics implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets by_status
      *
-     * @param \OpenAPI\Client\Model\StatisticsSslStatisticsByStatus|null $by_status by_status
+     * @param \Panthera\Openprovider\Model\StatisticsSslStatisticsByStatus|null $by_status by_status
      *
      * @return self
      */

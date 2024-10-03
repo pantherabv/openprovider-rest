@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainTransferDomainRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,18 +58,18 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'accept_premium_fee' => 'float',
-        'additional_data' => '\OpenAPI\Client\Model\DomainTransferAdditionalData',
+        'additional_data' => '\Panthera\Openprovider\Model\DomainTransferAdditionalData',
         'admin_handle' => 'string',
         'at' => 'string',
         'auth_code' => 'string',
         'autorenew' => 'string',
         'billing_handle' => 'string',
         'comments' => 'string',
-        'dnssec_keys' => '\OpenAPI\Client\Model\DomainDnssecKey[]',
-        'domain' => '\OpenAPI\Client\Model\DomainDomain',
+        'dnssec_keys' => '\Panthera\Openprovider\Model\DomainDnssecKey[]',
+        'domain' => '\Panthera\Openprovider\Model\DomainDomain',
         'is_dnssec_enabled' => 'bool',
         'is_private_whois_enabled' => 'bool',
-        'name_servers' => '\OpenAPI\Client\Model\DomainNameserver[]',
+        'name_servers' => '\Panthera\Openprovider\Model\DomainNameserver[]',
         'ns_group' => 'string',
         'ns_template_id' => 'int',
         'ns_template_name' => 'string',
@@ -473,7 +473,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\DomainTransferAdditionalData|null
+     * @return \Panthera\Openprovider\Model\DomainTransferAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -483,7 +483,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\DomainTransferAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\DomainTransferAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -662,7 +662,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets dnssec_keys
      *
-     * @return \OpenAPI\Client\Model\DomainDnssecKey[]|null
+     * @return \Panthera\Openprovider\Model\DomainDnssecKey[]|null
      */
     public function getDnssecKeys()
     {
@@ -672,7 +672,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets dnssec_keys
      *
-     * @param \OpenAPI\Client\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
+     * @param \Panthera\Openprovider\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
      *
      * @return self
      */
@@ -689,7 +689,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\DomainDomain|null
+     * @return \Panthera\Openprovider\Model\DomainDomain|null
      */
     public function getDomain()
     {
@@ -699,7 +699,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\DomainDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\DomainDomain|null $domain domain
      *
      * @return self
      */
@@ -770,7 +770,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets name_servers
      *
-     * @return \OpenAPI\Client\Model\DomainNameserver[]|null
+     * @return \Panthera\Openprovider\Model\DomainNameserver[]|null
      */
     public function getNameServers()
     {
@@ -780,7 +780,7 @@ class DomainTransferDomainRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets name_servers
      *
-     * @param \OpenAPI\Client\Model\DomainNameserver[]|null $name_servers name_servers
+     * @param \Panthera\Openprovider\Model\DomainNameserver[]|null $name_servers name_servers
      *
      * @return self
      */

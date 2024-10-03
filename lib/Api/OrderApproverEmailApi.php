@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OrderApproverEmailApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,12 +131,12 @@ class OrderApproverEmailApi
      * Resend approver email
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendApproverEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function resendApproverEmail($id, $body, string $contentType = self::contentTypes['resendApproverEmail'][0])
     {
@@ -150,12 +150,12 @@ class OrderApproverEmailApi
      * Resend approver email
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendApproverEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function resendApproverEmailWithHttpInfo($id, $body, string $contentType = self::contentTypes['resendApproverEmail'][0])
     {
@@ -198,11 +198,11 @@ class OrderApproverEmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,16 +220,16 @@ class OrderApproverEmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -247,13 +247,13 @@ class OrderApproverEmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse';
+            $returnType = '\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -286,7 +286,7 @@ class OrderApproverEmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse',
+                        '\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -294,7 +294,7 @@ class OrderApproverEmailApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -310,7 +310,7 @@ class OrderApproverEmailApi
      * Resend approver email
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendApproverEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -332,7 +332,7 @@ class OrderApproverEmailApi
      * Resend approver email
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendApproverEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -340,7 +340,7 @@ class OrderApproverEmailApi
      */
     public function resendApproverEmailAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['resendApproverEmail'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse';
+        $returnType = '\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse';
         $request = $this->resendApproverEmailRequest($id, $body, $contentType);
 
         return $this->client
@@ -383,7 +383,7 @@ class OrderApproverEmailApi
      * Create request for operation 'resendApproverEmail'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendApproverEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -497,12 +497,12 @@ class OrderApproverEmailApi
      * Update approver email address
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateApproverEmailAddress'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateApproverEmailAddress($id, $body, string $contentType = self::contentTypes['updateApproverEmailAddress'][0])
     {
@@ -516,12 +516,12 @@ class OrderApproverEmailApi
      * Update approver email address
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateApproverEmailAddress'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateApproverEmailAddressWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateApproverEmailAddress'][0])
     {
@@ -564,11 +564,11 @@ class OrderApproverEmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -586,16 +586,16 @@ class OrderApproverEmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -613,13 +613,13 @@ class OrderApproverEmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse';
+            $returnType = '\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -652,7 +652,7 @@ class OrderApproverEmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse',
+                        '\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -660,7 +660,7 @@ class OrderApproverEmailApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -676,7 +676,7 @@ class OrderApproverEmailApi
      * Update approver email address
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateApproverEmailAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -698,7 +698,7 @@ class OrderApproverEmailApi
      * Update approver email address
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateApproverEmailAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -706,7 +706,7 @@ class OrderApproverEmailApi
      */
     public function updateApproverEmailAddressAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateApproverEmailAddress'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse';
+        $returnType = '\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse';
         $request = $this->updateApproverEmailAddressRequest($id, $body, $contentType);
 
         return $this->client
@@ -749,7 +749,7 @@ class OrderApproverEmailApi
      * Create request for operation 'updateApproverEmailAddress'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateApproverEmailAddress'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TransactionPrices Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class TransactionPrices implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product' => '\OpenAPI\Client\Model\TransactionPrice',
-        'reseller' => '\OpenAPI\Client\Model\TransactionPrice'
+        'product' => '\Panthera\Openprovider\Model\TransactionPrice',
+        'reseller' => '\Panthera\Openprovider\Model\TransactionPrice'
     ];
 
     /**
@@ -299,7 +299,7 @@ class TransactionPrices implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets product
      *
-     * @return \OpenAPI\Client\Model\TransactionPrice|null
+     * @return \Panthera\Openprovider\Model\TransactionPrice|null
      */
     public function getProduct()
     {
@@ -309,7 +309,7 @@ class TransactionPrices implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets product
      *
-     * @param \OpenAPI\Client\Model\TransactionPrice|null $product product
+     * @param \Panthera\Openprovider\Model\TransactionPrice|null $product product
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class TransactionPrices implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets reseller
      *
-     * @return \OpenAPI\Client\Model\TransactionPrice|null
+     * @return \Panthera\Openprovider\Model\TransactionPrice|null
      */
     public function getReseller()
     {
@@ -336,7 +336,7 @@ class TransactionPrices implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets reseller
      *
-     * @param \OpenAPI\Client\Model\TransactionPrice|null $reseller reseller
+     * @param \Panthera\Openprovider\Model\TransactionPrice|null $reseller reseller
      *
      * @return self
      */

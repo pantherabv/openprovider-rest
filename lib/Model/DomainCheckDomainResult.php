@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainCheckDomainResult Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class DomainCheckDomainResult implements ModelInterface, ArrayAccess, \JsonSeria
         'claim_key' => 'string',
         'domain' => 'string',
         'is_premium' => 'bool',
-        'premium' => '\OpenAPI\Client\Model\DomainPremiumPrice',
-        'price' => '\OpenAPI\Client\Model\DomainPriceGroup',
+        'premium' => '\Panthera\Openprovider\Model\DomainPremiumPrice',
+        'price' => '\Panthera\Openprovider\Model\DomainPriceGroup',
         'reason' => 'string',
         'status' => 'string',
         'whois' => 'string'
@@ -422,7 +422,7 @@ class DomainCheckDomainResult implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets premium
      *
-     * @return \OpenAPI\Client\Model\DomainPremiumPrice|null
+     * @return \Panthera\Openprovider\Model\DomainPremiumPrice|null
      */
     public function getPremium()
     {
@@ -432,7 +432,7 @@ class DomainCheckDomainResult implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets premium
      *
-     * @param \OpenAPI\Client\Model\DomainPremiumPrice|null $premium premium
+     * @param \Panthera\Openprovider\Model\DomainPremiumPrice|null $premium premium
      *
      * @return self
      */
@@ -449,7 +449,7 @@ class DomainCheckDomainResult implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\DomainPriceGroup|null
+     * @return \Panthera\Openprovider\Model\DomainPriceGroup|null
      */
     public function getPrice()
     {
@@ -459,7 +459,7 @@ class DomainCheckDomainResult implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\DomainPriceGroup|null $price price
+     * @param \Panthera\Openprovider\Model\DomainPriceGroup|null $price price
      *
      * @return self
      */

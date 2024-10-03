@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **activation_date** | **string** |  | [optional]
-**additional_data** | [**\OpenAPI\Client\Model\DomainAdditionalData**](DomainAdditionalData.md) |  | [optional]
+**additional_data** | [**\Panthera\Openprovider\Model\DomainAdditionalData**](DomainAdditionalData.md) |  | [optional]
 **auth_code** | **string** |  | [optional]
 **expiration_date** | **string** |  | [optional]
 **id** | **int** |  | [optional]

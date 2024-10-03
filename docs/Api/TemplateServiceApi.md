@@ -1,4 +1,4 @@
-# OpenAPI\Client\TemplateServiceApi
+# Panthera\Openprovider\TemplateServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createTemplate()`
 
 ```php
-createTemplate($body): \OpenAPI\Client\Model\TemplateCreateTemplateResponse
+createTemplate($body): \Panthera\Openprovider\Model\TemplateCreateTemplateResponse
 ```
 
 Create template
@@ -26,18 +26,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TemplateServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TemplateServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\TemplateCreateTemplateRequest(); // \OpenAPI\Client\Model\TemplateCreateTemplateRequest
+$body = new \Panthera\Openprovider\Model\TemplateCreateTemplateRequest(); // \Panthera\Openprovider\Model\TemplateCreateTemplateRequest
 
 try {
     $result = $apiInstance->createTemplate($body);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\TemplateCreateTemplateRequest**](../Model/TemplateCreateTemplateRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\TemplateCreateTemplateRequest**](../Model/TemplateCreateTemplateRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TemplateCreateTemplateResponse**](../Model/TemplateCreateTemplateResponse.md)
+[**\Panthera\Openprovider\Model\TemplateCreateTemplateResponse**](../Model/TemplateCreateTemplateResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `deleteTemplate()`
 
 ```php
-deleteTemplate($id): \OpenAPI\Client\Model\TemplateTemplateBoolResponse
+deleteTemplate($id): \Panthera\Openprovider\Model\TemplateTemplateBoolResponse
 ```
 
 Delete template
@@ -86,12 +86,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TemplateServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TemplateServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TemplateTemplateBoolResponse**](../Model/TemplateTemplateBoolResponse.md)
+[**\Panthera\Openprovider\Model\TemplateTemplateBoolResponse**](../Model/TemplateTemplateBoolResponse.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ try {
 ## `getTemplate()`
 
 ```php
-getTemplate($id): \OpenAPI\Client\Model\TemplateGetTemplateResponse
+getTemplate($id): \Panthera\Openprovider\Model\TemplateGetTemplateResponse
 ```
 
 Get template
@@ -146,12 +146,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TemplateServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TemplateServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TemplateGetTemplateResponse**](../Model/TemplateGetTemplateResponse.md)
+[**\Panthera\Openprovider\Model\TemplateGetTemplateResponse**](../Model/TemplateGetTemplateResponse.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ try {
 ## `listTemplates()`
 
 ```php
-listTemplates($limit, $offset, $order, $order_by, $with_records, $name_pattern): \OpenAPI\Client\Model\TemplateListTemplatesResponse
+listTemplates($limit, $offset, $order, $order_by, $with_records, $name_pattern): \Panthera\Openprovider\Model\TemplateListTemplatesResponse
 ```
 
 List templates
@@ -206,12 +206,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TemplateServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TemplateServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -245,7 +245,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TemplateListTemplatesResponse**](../Model/TemplateListTemplatesResponse.md)
+[**\Panthera\Openprovider\Model\TemplateListTemplatesResponse**](../Model/TemplateListTemplatesResponse.md)
 
 ### Authorization
 

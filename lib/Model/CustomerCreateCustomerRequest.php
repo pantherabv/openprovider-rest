@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * CustomerCreateCustomerRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,17 +57,17 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => '\OpenAPI\Client\Model\CustomerCustomerAdditionalData',
-        'address' => '\OpenAPI\Client\Model\ContactAddress',
+        'additional_data' => '\Panthera\Openprovider\Model\CustomerCustomerAdditionalData',
+        'address' => '\Panthera\Openprovider\Model\ContactAddress',
         'comments' => 'string',
         'company_name' => 'string',
         'email' => 'string',
-        'extension_additional_data' => '\OpenAPI\Client\Model\CustomerExtensionAdditionalData[]',
-        'fax' => '\OpenAPI\Client\Model\CustomerFax',
+        'extension_additional_data' => '\Panthera\Openprovider\Model\CustomerExtensionAdditionalData[]',
+        'fax' => '\Panthera\Openprovider\Model\CustomerFax',
         'locale' => 'string',
-        'name' => '\OpenAPI\Client\Model\ContactName',
-        'phone' => '\OpenAPI\Client\Model\ContactPhone',
-        'tags' => '\OpenAPI\Client\Model\CustomerTags[]',
+        'name' => '\Panthera\Openprovider\Model\ContactName',
+        'phone' => '\Panthera\Openprovider\Model\ContactPhone',
+        'tags' => '\Panthera\Openprovider\Model\CustomerTags[]',
         'vat' => 'string'
     ];
 
@@ -369,7 +369,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\CustomerCustomerAdditionalData|null
+     * @return \Panthera\Openprovider\Model\CustomerCustomerAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -379,7 +379,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\CustomerCustomerAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\CustomerCustomerAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\ContactAddress|null
+     * @return \Panthera\Openprovider\Model\ContactAddress|null
      */
     public function getAddress()
     {
@@ -406,7 +406,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\ContactAddress|null $address address
+     * @param \Panthera\Openprovider\Model\ContactAddress|null $address address
      *
      * @return self
      */
@@ -504,7 +504,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets extension_additional_data
      *
-     * @return \OpenAPI\Client\Model\CustomerExtensionAdditionalData[]|null
+     * @return \Panthera\Openprovider\Model\CustomerExtensionAdditionalData[]|null
      */
     public function getExtensionAdditionalData()
     {
@@ -514,7 +514,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets extension_additional_data
      *
-     * @param \OpenAPI\Client\Model\CustomerExtensionAdditionalData[]|null $extension_additional_data extension_additional_data
+     * @param \Panthera\Openprovider\Model\CustomerExtensionAdditionalData[]|null $extension_additional_data extension_additional_data
      *
      * @return self
      */
@@ -531,7 +531,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets fax
      *
-     * @return \OpenAPI\Client\Model\CustomerFax|null
+     * @return \Panthera\Openprovider\Model\CustomerFax|null
      */
     public function getFax()
     {
@@ -541,7 +541,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets fax
      *
-     * @param \OpenAPI\Client\Model\CustomerFax|null $fax fax
+     * @param \Panthera\Openprovider\Model\CustomerFax|null $fax fax
      *
      * @return self
      */
@@ -585,7 +585,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\ContactName|null
+     * @return \Panthera\Openprovider\Model\ContactName|null
      */
     public function getName()
     {
@@ -595,7 +595,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\ContactName|null $name name
+     * @param \Panthera\Openprovider\Model\ContactName|null $name name
      *
      * @return self
      */
@@ -612,7 +612,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets phone
      *
-     * @return \OpenAPI\Client\Model\ContactPhone|null
+     * @return \Panthera\Openprovider\Model\ContactPhone|null
      */
     public function getPhone()
     {
@@ -622,7 +622,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets phone
      *
-     * @param \OpenAPI\Client\Model\ContactPhone|null $phone phone
+     * @param \Panthera\Openprovider\Model\ContactPhone|null $phone phone
      *
      * @return self
      */
@@ -639,7 +639,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets tags
      *
-     * @return \OpenAPI\Client\Model\CustomerTags[]|null
+     * @return \Panthera\Openprovider\Model\CustomerTags[]|null
      */
     public function getTags()
     {
@@ -649,7 +649,7 @@ class CustomerCreateCustomerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets tags
      *
-     * @param \OpenAPI\Client\Model\CustomerTags[]|null $tags tags
+     * @param \Panthera\Openprovider\Model\CustomerTags[]|null $tags tags
      *
      * @return self
      */

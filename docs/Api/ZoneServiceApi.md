@@ -1,4 +1,4 @@
-# OpenAPI\Client\ZoneServiceApi
+# Panthera\Openprovider\ZoneServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createZone()`
 
 ```php
-createZone($body): \OpenAPI\Client\Model\ZoneZoneBoolResponse
+createZone($body): \Panthera\Openprovider\Model\ZoneZoneBoolResponse
 ```
 
 Create zone
@@ -27,18 +27,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ZoneServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ZoneServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\ZoneCreateZoneRequest(); // \OpenAPI\Client\Model\ZoneCreateZoneRequest
+$body = new \Panthera\Openprovider\Model\ZoneCreateZoneRequest(); // \Panthera\Openprovider\Model\ZoneCreateZoneRequest
 
 try {
     $result = $apiInstance->createZone($body);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\ZoneCreateZoneRequest**](../Model/ZoneCreateZoneRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ZoneCreateZoneRequest**](../Model/ZoneCreateZoneRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ZoneZoneBoolResponse**](../Model/ZoneZoneBoolResponse.md)
+[**\Panthera\Openprovider\Model\ZoneZoneBoolResponse**](../Model/ZoneZoneBoolResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `deleteZone()`
 
 ```php
-deleteZone($name, $id, $domain_name, $domain_extension, $provider): \OpenAPI\Client\Model\ZoneZoneBoolResponse
+deleteZone($name, $id, $domain_name, $domain_extension, $provider): \Panthera\Openprovider\Model\ZoneZoneBoolResponse
 ```
 
 Delete zone
@@ -87,12 +87,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ZoneServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ZoneServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -124,7 +124,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ZoneZoneBoolResponse**](../Model/ZoneZoneBoolResponse.md)
+[**\Panthera\Openprovider\Model\ZoneZoneBoolResponse**](../Model/ZoneZoneBoolResponse.md)
 
 ### Authorization
 
@@ -142,7 +142,7 @@ try {
 ## `getZone()`
 
 ```php
-getZone($name, $id, $with_records, $with_history, $with_dnskey, $provider): \OpenAPI\Client\Model\ZoneGetZoneResponse
+getZone($name, $id, $with_records, $with_history, $with_dnskey, $provider): \Panthera\Openprovider\Model\ZoneGetZoneResponse
 ```
 
 Get zone
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ZoneServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ZoneServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ZoneGetZoneResponse**](../Model/ZoneGetZoneResponse.md)
+[**\Panthera\Openprovider\Model\ZoneGetZoneResponse**](../Model/ZoneGetZoneResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ try {
 ## `listZones()`
 
 ```php
-listZones($limit, $offset, $order_by_creation_date, $order_by_modification_date, $order_by_name, $type, $name_pattern, $with_records, $with_history, $with_dnskey, $provider): \OpenAPI\Client\Model\ZoneListZonesResponse
+listZones($limit, $offset, $order_by_creation_date, $order_by_modification_date, $order_by_name, $type, $name_pattern, $with_records, $with_history, $with_dnskey, $provider): \Panthera\Openprovider\Model\ZoneListZonesResponse
 ```
 
 List zones
@@ -225,12 +225,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ZoneServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ZoneServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -274,7 +274,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ZoneListZonesResponse**](../Model/ZoneListZonesResponse.md)
+[**\Panthera\Openprovider\Model\ZoneListZonesResponse**](../Model/ZoneListZonesResponse.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ try {
 ## `updateZone()`
 
 ```php
-updateZone($name, $body): \OpenAPI\Client\Model\ZoneZoneBoolResponse
+updateZone($name, $body): \Panthera\Openprovider\Model\ZoneZoneBoolResponse
 ```
 
 Update zone
@@ -305,19 +305,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ZoneServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ZoneServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $name = 'name_example'; // string | Name of the domain to which DNS zone corresponds
-$body = new \OpenAPI\Client\Model\ZoneUpdateZoneRequest(); // \OpenAPI\Client\Model\ZoneUpdateZoneRequest
+$body = new \Panthera\Openprovider\Model\ZoneUpdateZoneRequest(); // \Panthera\Openprovider\Model\ZoneUpdateZoneRequest
 
 try {
     $result = $apiInstance->updateZone($name, $body);
@@ -332,11 +332,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **string**| Name of the domain to which DNS zone corresponds | |
-| **body** | [**\OpenAPI\Client\Model\ZoneUpdateZoneRequest**](../Model/ZoneUpdateZoneRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ZoneUpdateZoneRequest**](../Model/ZoneUpdateZoneRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ZoneZoneBoolResponse**](../Model/ZoneZoneBoolResponse.md)
+[**\Panthera\Openprovider\Model\ZoneZoneBoolResponse**](../Model/ZoneZoneBoolResponse.md)
 
 ### Authorization
 

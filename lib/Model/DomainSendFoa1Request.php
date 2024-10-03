@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainSendFoa1Request Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class DomainSendFoa1Request implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'domain' => '\OpenAPI\Client\Model\DomainDomain',
+        'domain' => '\Panthera\Openprovider\Model\DomainDomain',
         'id' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class DomainSendFoa1Request implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\DomainDomain|null
+     * @return \Panthera\Openprovider\Model\DomainDomain|null
      */
     public function getDomain()
     {
@@ -309,7 +309,7 @@ class DomainSendFoa1Request implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\DomainDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\DomainDomain|null $domain domain
      *
      * @return self
      */

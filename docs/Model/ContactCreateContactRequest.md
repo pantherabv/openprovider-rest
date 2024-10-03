@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**additional_data** | [**\OpenAPI\Client\Model\ContactAdditionalData**](ContactAdditionalData.md) |  | [optional]
-**address** | [**\OpenAPI\Client\Model\ContactAddress**](ContactAddress.md) |  | [optional]
+**additional_data** | [**\Panthera\Openprovider\Model\ContactAdditionalData**](ContactAdditionalData.md) |  | [optional]
+**address** | [**\Panthera\Openprovider\Model\ContactAddress**](ContactAddress.md) |  | [optional]
 **api_access_enabled** | **bool** |  | [optional]
 **comments** | **string** |  | [optional]
 **company_name** | **string** |  | [optional]
@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 **is_active** | **bool** |  | [optional]
 **kpp** | **string** |  | [optional]
 **locale** | **string** |  | [optional]
-**name** | [**\OpenAPI\Client\Model\ContactName**](ContactName.md) |  | [optional]
+**name** | [**\Panthera\Openprovider\Model\ContactName**](ContactName.md) |  | [optional]
 **password** | **string** |  | [optional]
-**phone** | [**\OpenAPI\Client\Model\ContactPhone**](ContactPhone.md) |  | [optional]
+**phone** | [**\Panthera\Openprovider\Model\ContactPhone**](ContactPhone.md) |  | [optional]
 **role** | **string** |  | [optional]
 **username** | **string** |  | [optional]
 **vat** | **string** |  | [optional]

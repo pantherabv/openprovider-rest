@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainPremiumPrice Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DomainPremiumPrice implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'currency' => 'string',
-        'price' => '\OpenAPI\Client\Model\DomainOperationPrice'
+        'price' => '\Panthera\Openprovider\Model\DomainOperationPrice'
     ];
 
     /**
@@ -326,7 +326,7 @@ class DomainPremiumPrice implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\DomainOperationPrice|null
+     * @return \Panthera\Openprovider\Model\DomainOperationPrice|null
      */
     public function getPrice()
     {
@@ -336,7 +336,7 @@ class DomainPremiumPrice implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\DomainOperationPrice|null $price price
+     * @param \Panthera\Openprovider\Model\DomainOperationPrice|null $price price
      *
      * @return self
      */

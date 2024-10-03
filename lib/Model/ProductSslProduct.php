@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ProductSslProduct Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -73,18 +73,18 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
         'is_sgc_supported' => 'bool',
         'is_wildcard_multidomain_supported' => 'bool',
         'is_wildcard_supported' => 'bool',
-        'level_prices' => '\OpenAPI\Client\Model\ProductSslProductLevelPrices[]',
+        'level_prices' => '\Panthera\Openprovider\Model\ProductSslProductLevelPrices[]',
         'max_domains' => 'int',
         'max_period' => 'int',
         'name' => 'string',
         'number_of_domains' => 'int',
         'order_module' => 'string',
-        'prices' => '\OpenAPI\Client\Model\ProductSslProductPrices[]',
+        'prices' => '\Panthera\Openprovider\Model\ProductSslProductPrices[]',
         'root' => 'string',
         'sub_category' => 'string',
-        'supported_software' => '\OpenAPI\Client\Model\ProductSslProductSupportedSoftware[]',
+        'supported_software' => '\Panthera\Openprovider\Model\ProductSslProductSupportedSoftware[]',
         'validation_method' => 'string',
-        'warranty' => '\OpenAPI\Client\Model\ProductSslProductWarranty'
+        'warranty' => '\Panthera\Openprovider\Model\ProductSslProductWarranty'
     ];
 
     /**
@@ -913,7 +913,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets level_prices
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductLevelPrices[]|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductLevelPrices[]|null
      */
     public function getLevelPrices()
     {
@@ -923,7 +923,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets level_prices
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductLevelPrices[]|null $level_prices level_prices
+     * @param \Panthera\Openprovider\Model\ProductSslProductLevelPrices[]|null $level_prices level_prices
      *
      * @return self
      */
@@ -1075,7 +1075,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets prices
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductPrices[]|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductPrices[]|null
      */
     public function getPrices()
     {
@@ -1085,7 +1085,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets prices
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductPrices[]|null $prices prices
+     * @param \Panthera\Openprovider\Model\ProductSslProductPrices[]|null $prices prices
      *
      * @return self
      */
@@ -1156,7 +1156,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets supported_software
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductSupportedSoftware[]|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductSupportedSoftware[]|null
      */
     public function getSupportedSoftware()
     {
@@ -1166,7 +1166,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets supported_software
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductSupportedSoftware[]|null $supported_software supported_software
+     * @param \Panthera\Openprovider\Model\ProductSslProductSupportedSoftware[]|null $supported_software supported_software
      *
      * @return self
      */
@@ -1210,7 +1210,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets warranty
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductWarranty|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductWarranty|null
      */
     public function getWarranty()
     {
@@ -1220,7 +1220,7 @@ class ProductSslProduct implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets warranty
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductWarranty|null $warranty warranty
+     * @param \Panthera\Openprovider\Model\ProductSslProductWarranty|null $warranty warranty
      *
      * @return self
      */

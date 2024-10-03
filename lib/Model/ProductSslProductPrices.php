@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ProductSslProductPrices Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'extra_domain_price' => '\OpenAPI\Client\Model\ProductSslProductPriceGroup',
-        'extra_wildcard_domain_price' => '\OpenAPI\Client\Model\ProductSslProductPriceGroup',
+        'extra_domain_price' => '\Panthera\Openprovider\Model\ProductSslProductPriceGroup',
+        'extra_wildcard_domain_price' => '\Panthera\Openprovider\Model\ProductSslProductPriceGroup',
         'period' => 'int',
-        'price' => '\OpenAPI\Client\Model\ProductSslProductPriceGroup'
+        'price' => '\Panthera\Openprovider\Model\ProductSslProductPriceGroup'
     ];
 
     /**
@@ -313,7 +313,7 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets extra_domain_price
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductPriceGroup|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductPriceGroup|null
      */
     public function getExtraDomainPrice()
     {
@@ -323,7 +323,7 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets extra_domain_price
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductPriceGroup|null $extra_domain_price extra_domain_price
+     * @param \Panthera\Openprovider\Model\ProductSslProductPriceGroup|null $extra_domain_price extra_domain_price
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets extra_wildcard_domain_price
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductPriceGroup|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductPriceGroup|null
      */
     public function getExtraWildcardDomainPrice()
     {
@@ -350,7 +350,7 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets extra_wildcard_domain_price
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductPriceGroup|null $extra_wildcard_domain_price extra_wildcard_domain_price
+     * @param \Panthera\Openprovider\Model\ProductSslProductPriceGroup|null $extra_wildcard_domain_price extra_wildcard_domain_price
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductPriceGroup|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductPriceGroup|null
      */
     public function getPrice()
     {
@@ -404,7 +404,7 @@ class ProductSslProductPrices implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductPriceGroup|null $price price
+     * @param \Panthera\Openprovider\Model\ProductSslProductPriceGroup|null $price price
      *
      * @return self
      */

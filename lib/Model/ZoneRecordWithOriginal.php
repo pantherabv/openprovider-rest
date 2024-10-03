@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZoneRecordWithOriginal Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class ZoneRecordWithOriginal implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'original_record' => '\OpenAPI\Client\Model\ZoneRecord',
-        'record' => '\OpenAPI\Client\Model\ZoneRecord'
+        'original_record' => '\Panthera\Openprovider\Model\ZoneRecord',
+        'record' => '\Panthera\Openprovider\Model\ZoneRecord'
     ];
 
     /**
@@ -299,7 +299,7 @@ class ZoneRecordWithOriginal implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets original_record
      *
-     * @return \OpenAPI\Client\Model\ZoneRecord|null
+     * @return \Panthera\Openprovider\Model\ZoneRecord|null
      */
     public function getOriginalRecord()
     {
@@ -309,7 +309,7 @@ class ZoneRecordWithOriginal implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets original_record
      *
-     * @param \OpenAPI\Client\Model\ZoneRecord|null $original_record original_record
+     * @param \Panthera\Openprovider\Model\ZoneRecord|null $original_record original_record
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class ZoneRecordWithOriginal implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets record
      *
-     * @return \OpenAPI\Client\Model\ZoneRecord|null
+     * @return \Panthera\Openprovider\Model\ZoneRecord|null
      */
     public function getRecord()
     {
@@ -336,7 +336,7 @@ class ZoneRecordWithOriginal implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets record
      *
-     * @param \OpenAPI\Client\Model\ZoneRecord|null $record record
+     * @param \Panthera\Openprovider\Model\ZoneRecord|null $record record
      *
      * @return self
      */

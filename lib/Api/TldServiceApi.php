@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TldServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,9 +141,9 @@ class TldServiceApi
      * @param  string[] $status Extension status. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTld'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TldGetTldResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TldGetTldResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getTld($name, $limit = null, $offset = null, $with_description = null, $with_restrictions = null, $with_price = null, $with_level_prices = null, $with_usage_count = null, $status = null, string $contentType = self::contentTypes['getTld'][0])
     {
@@ -167,9 +167,9 @@ class TldServiceApi
      * @param  string[] $status Extension status. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTld'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TldGetTldResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TldGetTldResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTldWithHttpInfo($name, $limit = null, $offset = null, $with_description = null, $with_restrictions = null, $with_price = null, $with_level_prices = null, $with_usage_count = null, $status = null, string $contentType = self::contentTypes['getTld'][0])
     {
@@ -212,11 +212,11 @@ class TldServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TldGetTldResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TldGetTldResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TldGetTldResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TldGetTldResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -234,16 +234,16 @@ class TldServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TldGetTldResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TldGetTldResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -261,13 +261,13 @@ class TldServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TldGetTldResponse';
+            $returnType = '\Panthera\Openprovider\Model\TldGetTldResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -300,7 +300,7 @@ class TldServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TldGetTldResponse',
+                        '\Panthera\Openprovider\Model\TldGetTldResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -308,7 +308,7 @@ class TldServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -368,7 +368,7 @@ class TldServiceApi
      */
     public function getTldAsyncWithHttpInfo($name, $limit = null, $offset = null, $with_description = null, $with_restrictions = null, $with_price = null, $with_level_prices = null, $with_usage_count = null, $status = null, string $contentType = self::contentTypes['getTld'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TldGetTldResponse';
+        $returnType = '\Panthera\Openprovider\Model\TldGetTldResponse';
         $request = $this->getTldRequest($name, $limit, $offset, $with_description, $with_restrictions, $with_price, $with_level_prices, $with_usage_count, $status, $contentType);
 
         return $this->client
@@ -616,9 +616,9 @@ class TldServiceApi
      * @param  string $application_mode Pre-registration mode. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTlds'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TldListTldsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TldListTldsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listTlds($limit = null, $offset = null, $order = null, $order_by = null, $extensions = null, $name_pattern = null, $only_names = null, $with_description = null, $with_restrictions = null, $with_usage_count = null, $with_application_mode = null, $with_price = null, $with_level_prices = null, $is_active = null, $is_new_gtld = null, $status = null, $application_mode = null, string $contentType = self::contentTypes['listTlds'][0])
     {
@@ -650,9 +650,9 @@ class TldServiceApi
      * @param  string $application_mode Pre-registration mode. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTlds'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TldListTldsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TldListTldsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTldsWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $extensions = null, $name_pattern = null, $only_names = null, $with_description = null, $with_restrictions = null, $with_usage_count = null, $with_application_mode = null, $with_price = null, $with_level_prices = null, $is_active = null, $is_new_gtld = null, $status = null, $application_mode = null, string $contentType = self::contentTypes['listTlds'][0])
     {
@@ -695,11 +695,11 @@ class TldServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TldListTldsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TldListTldsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TldListTldsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TldListTldsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -717,16 +717,16 @@ class TldServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TldListTldsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TldListTldsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -744,13 +744,13 @@ class TldServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TldListTldsResponse';
+            $returnType = '\Panthera\Openprovider\Model\TldListTldsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -783,7 +783,7 @@ class TldServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TldListTldsResponse',
+                        '\Panthera\Openprovider\Model\TldListTldsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -791,7 +791,7 @@ class TldServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -867,7 +867,7 @@ class TldServiceApi
      */
     public function listTldsAsyncWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $extensions = null, $name_pattern = null, $only_names = null, $with_description = null, $with_restrictions = null, $with_usage_count = null, $with_application_mode = null, $with_price = null, $with_level_prices = null, $is_active = null, $is_new_gtld = null, $status = null, $application_mode = null, string $contentType = self::contentTypes['listTlds'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TldListTldsResponse';
+        $returnType = '\Panthera\Openprovider\Model\TldListTldsResponse';
         $request = $this->listTldsRequest($limit, $offset, $order, $order_by, $extensions, $name_pattern, $only_names, $with_description, $with_restrictions, $with_usage_count, $with_application_mode, $with_price, $with_level_prices, $is_active, $is_new_gtld, $status, $application_mode, $contentType);
 
         return $this->client

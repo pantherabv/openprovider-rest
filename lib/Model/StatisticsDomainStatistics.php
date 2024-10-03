@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * StatisticsDomainStatistics Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class StatisticsDomainStatistics implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'by_status' => '\OpenAPI\Client\Model\StatisticsDomainStatisticsByStatus',
+        'by_status' => '\Panthera\Openprovider\Model\StatisticsDomainStatisticsByStatus',
         'total' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class StatisticsDomainStatistics implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets by_status
      *
-     * @return \OpenAPI\Client\Model\StatisticsDomainStatisticsByStatus|null
+     * @return \Panthera\Openprovider\Model\StatisticsDomainStatisticsByStatus|null
      */
     public function getByStatus()
     {
@@ -309,7 +309,7 @@ class StatisticsDomainStatistics implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets by_status
      *
-     * @param \OpenAPI\Client\Model\StatisticsDomainStatisticsByStatus|null $by_status by_status
+     * @param \Panthera\Openprovider\Model\StatisticsDomainStatisticsByStatus|null $by_status by_status
      *
      * @return self
      */

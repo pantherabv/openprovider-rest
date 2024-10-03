@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TldPriceWithPromoInfo Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,9 +57,9 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product' => '\OpenAPI\Client\Model\TldPriceInCurrency',
-        'promotion_details' => '\OpenAPI\Client\Model\TldPromoDetails',
-        'reseller' => '\OpenAPI\Client\Model\TldPriceInCurrency'
+        'product' => '\Panthera\Openprovider\Model\TldPriceInCurrency',
+        'promotion_details' => '\Panthera\Openprovider\Model\TldPromoDetails',
+        'reseller' => '\Panthera\Openprovider\Model\TldPriceInCurrency'
     ];
 
     /**
@@ -306,7 +306,7 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets product
      *
-     * @return \OpenAPI\Client\Model\TldPriceInCurrency|null
+     * @return \Panthera\Openprovider\Model\TldPriceInCurrency|null
      */
     public function getProduct()
     {
@@ -316,7 +316,7 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets product
      *
-     * @param \OpenAPI\Client\Model\TldPriceInCurrency|null $product product
+     * @param \Panthera\Openprovider\Model\TldPriceInCurrency|null $product product
      *
      * @return self
      */
@@ -333,7 +333,7 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets promotion_details
      *
-     * @return \OpenAPI\Client\Model\TldPromoDetails|null
+     * @return \Panthera\Openprovider\Model\TldPromoDetails|null
      */
     public function getPromotionDetails()
     {
@@ -343,7 +343,7 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets promotion_details
      *
-     * @param \OpenAPI\Client\Model\TldPromoDetails|null $promotion_details promotion_details
+     * @param \Panthera\Openprovider\Model\TldPromoDetails|null $promotion_details promotion_details
      *
      * @return self
      */
@@ -360,7 +360,7 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets reseller
      *
-     * @return \OpenAPI\Client\Model\TldPriceInCurrency|null
+     * @return \Panthera\Openprovider\Model\TldPriceInCurrency|null
      */
     public function getReseller()
     {
@@ -370,7 +370,7 @@ class TldPriceWithPromoInfo implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets reseller
      *
-     * @param \OpenAPI\Client\Model\TldPriceInCurrency|null $reseller reseller
+     * @param \Panthera\Openprovider\Model\TldPriceInCurrency|null $reseller reseller
      *
      * @return self
      */

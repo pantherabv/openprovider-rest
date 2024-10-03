@@ -1,4 +1,4 @@
-# OpenAPI\Client\LicenseServiceApi
+# Panthera\Openprovider\LicenseServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -24,7 +24,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createPleskLicense()`
 
 ```php
-createPleskLicense($body): \OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse
+createPleskLicense($body): \Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse
 ```
 
 Create plesk license
@@ -37,18 +37,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest(); // \OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest
+$body = new \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest(); // \Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest
 
 try {
     $result = $apiInstance->createPleskLicense($body);
@@ -62,11 +62,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\LicenseCreatePleskLicenseRequest**](../Model/LicenseCreatePleskLicenseRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\LicenseCreatePleskLicenseRequest**](../Model/LicenseCreatePleskLicenseRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseCreatePleskLicenseResponse**](../Model/LicenseCreatePleskLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseCreatePleskLicenseResponse**](../Model/LicenseCreatePleskLicenseResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ try {
 ## `createVirtuozzoLicense()`
 
 ```php
-createVirtuozzoLicense($body): \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse
+createVirtuozzoLicense($body): \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse
 ```
 
 Create virtuozzo license
@@ -97,18 +97,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest(); // \OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest
+$body = new \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest(); // \Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest
 
 try {
     $result = $apiInstance->createVirtuozzoLicense($body);
@@ -122,11 +122,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseRequest**](../Model/LicenseCreateVirtuozzoLicenseRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseRequest**](../Model/LicenseCreateVirtuozzoLicenseRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseCreateVirtuozzoLicenseResponse**](../Model/LicenseCreateVirtuozzoLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseCreateVirtuozzoLicenseResponse**](../Model/LicenseCreateVirtuozzoLicenseResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `deletePleskLicense()`
 
 ```php
-deletePleskLicense($key_id): \OpenAPI\Client\Model\LicenseDeleteLicenseResponse
+deletePleskLicense($key_id): \Panthera\Openprovider\Model\LicenseDeleteLicenseResponse
 ```
 
 Delete plesk license
@@ -157,12 +157,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseDeleteLicenseResponse**](../Model/LicenseDeleteLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse**](../Model/LicenseDeleteLicenseResponse.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ try {
 ## `deleteVirtuozzoLicense()`
 
 ```php
-deleteVirtuozzoLicense($key_id): \OpenAPI\Client\Model\LicenseDeleteLicenseResponse
+deleteVirtuozzoLicense($key_id): \Panthera\Openprovider\Model\LicenseDeleteLicenseResponse
 ```
 
 Delete virtuozzo license
@@ -217,12 +217,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -246,7 +246,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseDeleteLicenseResponse**](../Model/LicenseDeleteLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseDeleteLicenseResponse**](../Model/LicenseDeleteLicenseResponse.md)
 
 ### Authorization
 
@@ -264,7 +264,7 @@ try {
 ## `getPleskKey()`
 
 ```php
-getPleskKey($key_id): \OpenAPI\Client\Model\LicenseGetLicenseKeyResponse
+getPleskKey($key_id): \Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse
 ```
 
 Get plesk key
@@ -277,12 +277,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -306,7 +306,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse**](../Model/LicenseGetLicenseKeyResponse.md)
+[**\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse**](../Model/LicenseGetLicenseKeyResponse.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ try {
 ## `getPleskLicense()`
 
 ```php
-getPleskLicense($key_id): \OpenAPI\Client\Model\LicenseGetLicenseResponse
+getPleskLicense($key_id): \Panthera\Openprovider\Model\LicenseGetLicenseResponse
 ```
 
 Get plesk license
@@ -337,12 +337,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -366,7 +366,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseGetLicenseResponse**](../Model/LicenseGetLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseGetLicenseResponse**](../Model/LicenseGetLicenseResponse.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ try {
 ## `getVirtuozzoKey()`
 
 ```php
-getVirtuozzoKey($key_id): \OpenAPI\Client\Model\LicenseGetLicenseKeyResponse
+getVirtuozzoKey($key_id): \Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse
 ```
 
 Get virtuozzo key
@@ -397,12 +397,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -426,7 +426,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseGetLicenseKeyResponse**](../Model/LicenseGetLicenseKeyResponse.md)
+[**\Panthera\Openprovider\Model\LicenseGetLicenseKeyResponse**](../Model/LicenseGetLicenseKeyResponse.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ try {
 ## `getVirtuozzoLicense()`
 
 ```php
-getVirtuozzoLicense($key_id): \OpenAPI\Client\Model\LicenseGetLicenseResponse
+getVirtuozzoLicense($key_id): \Panthera\Openprovider\Model\LicenseGetLicenseResponse
 ```
 
 Get virtuozzo license
@@ -457,12 +457,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -486,7 +486,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseGetLicenseResponse**](../Model/LicenseGetLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseGetLicenseResponse**](../Model/LicenseGetLicenseResponse.md)
 
 ### Authorization
 
@@ -504,7 +504,7 @@ try {
 ## `listItems()`
 
 ```php
-listItems($limit, $offset, $order_by_id, $order_by_key_id, $order_by_title, $order_by_product, $order_by_status, $order_by_key_number, $order_by_expiration_date, $product): \OpenAPI\Client\Model\LicenseListItemsResponse
+listItems($limit, $offset, $order_by_id, $order_by_key_id, $order_by_title, $order_by_product, $order_by_status, $order_by_key_number, $order_by_expiration_date, $product): \Panthera\Openprovider\Model\LicenseListItemsResponse
 ```
 
 List items
@@ -517,12 +517,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -564,7 +564,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseListItemsResponse**](../Model/LicenseListItemsResponse.md)
+[**\Panthera\Openprovider\Model\LicenseListItemsResponse**](../Model/LicenseListItemsResponse.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ try {
 ## `listLicensesWithPriceVersion()`
 
 ```php
-listLicensesWithPriceVersion($limit, $offset, $order_by_id, $order_by_key_id, $order_by_title, $order_by_product, $order_by_status, $order_by_key_number, $order_by_expiration_date, $product, $key_number, $title_pattern, $key_number_pattern, $parent_key_id, $status): \OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse
+listLicensesWithPriceVersion($limit, $offset, $order_by_id, $order_by_key_id, $order_by_title, $order_by_product, $order_by_status, $order_by_key_number, $order_by_expiration_date, $product, $key_number, $title_pattern, $key_number_pattern, $parent_key_id, $status): \Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse
 ```
 
 List licenses with price version
@@ -595,12 +595,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -652,7 +652,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseListLicensesWithPriceVersionResponse**](../Model/LicenseListLicensesWithPriceVersionResponse.md)
+[**\Panthera\Openprovider\Model\LicenseListLicensesWithPriceVersionResponse**](../Model/LicenseListLicensesWithPriceVersionResponse.md)
 
 ### Authorization
 
@@ -670,7 +670,7 @@ try {
 ## `listPleskLicenses()`
 
 ```php
-listPleskLicenses($limit, $offset, $key_id, $key_number, $title_pattern, $key_number_pattern, $parent_key_id): \OpenAPI\Client\Model\LicenseListLicensesResponse
+listPleskLicenses($limit, $offset, $key_id, $key_number, $title_pattern, $key_number_pattern, $parent_key_id): \Panthera\Openprovider\Model\LicenseListLicensesResponse
 ```
 
 List plesk licenses
@@ -683,12 +683,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -724,7 +724,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseListLicensesResponse**](../Model/LicenseListLicensesResponse.md)
+[**\Panthera\Openprovider\Model\LicenseListLicensesResponse**](../Model/LicenseListLicensesResponse.md)
 
 ### Authorization
 
@@ -742,7 +742,7 @@ try {
 ## `listVirtuozzoLicenses()`
 
 ```php
-listVirtuozzoLicenses($limit, $offset, $key_id, $key_number, $title_pattern, $key_number_pattern, $parent_key_id): \OpenAPI\Client\Model\LicenseListLicensesResponse
+listVirtuozzoLicenses($limit, $offset, $key_id, $key_number, $title_pattern, $key_number_pattern, $parent_key_id): \Panthera\Openprovider\Model\LicenseListLicensesResponse
 ```
 
 List virtuozzo licenses
@@ -755,12 +755,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -796,7 +796,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseListLicensesResponse**](../Model/LicenseListLicensesResponse.md)
+[**\Panthera\Openprovider\Model\LicenseListLicensesResponse**](../Model/LicenseListLicensesResponse.md)
 
 ### Authorization
 
@@ -814,7 +814,7 @@ try {
 ## `resetHwid()`
 
 ```php
-resetHwid($product, $key_id, $body): \OpenAPI\Client\Model\LicenseResetHwidResponse
+resetHwid($product, $key_id, $body): \Panthera\Openprovider\Model\LicenseResetHwidResponse
 ```
 
 Reset hwid
@@ -827,12 +827,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -840,7 +840,7 @@ $apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
 );
 $product = 'product_example'; // string | Product type (only Plesk is available)
 $key_id = 56; // int | License key ID
-$body = new \OpenAPI\Client\Model\LicenseResetHwidRequest(); // \OpenAPI\Client\Model\LicenseResetHwidRequest
+$body = new \Panthera\Openprovider\Model\LicenseResetHwidRequest(); // \Panthera\Openprovider\Model\LicenseResetHwidRequest
 
 try {
     $result = $apiInstance->resetHwid($product, $key_id, $body);
@@ -856,11 +856,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **product** | **string**| Product type (only Plesk is available) | |
 | **key_id** | **int**| License key ID | |
-| **body** | [**\OpenAPI\Client\Model\LicenseResetHwidRequest**](../Model/LicenseResetHwidRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\LicenseResetHwidRequest**](../Model/LicenseResetHwidRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseResetHwidResponse**](../Model/LicenseResetHwidResponse.md)
+[**\Panthera\Openprovider\Model\LicenseResetHwidResponse**](../Model/LicenseResetHwidResponse.md)
 
 ### Authorization
 
@@ -878,7 +878,7 @@ try {
 ## `updatePleskLicense()`
 
 ```php
-updatePleskLicense($key_id, $body): \OpenAPI\Client\Model\LicenseUpdateLicenseResponse
+updatePleskLicense($key_id, $body): \Panthera\Openprovider\Model\LicenseUpdateLicenseResponse
 ```
 
 Update plesk license
@@ -891,19 +891,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $key_id = 56; // int | License key ID
-$body = new \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest(); // \OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest
+$body = new \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest(); // \Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest
 
 try {
     $result = $apiInstance->updatePleskLicense($key_id, $body);
@@ -918,11 +918,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **key_id** | **int**| License key ID | |
-| **body** | [**\OpenAPI\Client\Model\LicenseUpdatePleskLicenseRequest**](../Model/LicenseUpdatePleskLicenseRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\LicenseUpdatePleskLicenseRequest**](../Model/LicenseUpdatePleskLicenseRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseUpdateLicenseResponse**](../Model/LicenseUpdateLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse**](../Model/LicenseUpdateLicenseResponse.md)
 
 ### Authorization
 
@@ -940,7 +940,7 @@ try {
 ## `updateVirtuozzoLicense()`
 
 ```php
-updateVirtuozzoLicense($key_id, $body): \OpenAPI\Client\Model\LicenseUpdateLicenseResponse
+updateVirtuozzoLicense($key_id, $body): \Panthera\Openprovider\Model\LicenseUpdateLicenseResponse
 ```
 
 Update virtuozzo license
@@ -953,19 +953,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LicenseServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\LicenseServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $key_id = 56; // int | License key ID
-$body = new \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest(); // \OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest
+$body = new \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest(); // \Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest
 
 try {
     $result = $apiInstance->updateVirtuozzoLicense($key_id, $body);
@@ -980,11 +980,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **key_id** | **int**| License key ID | |
-| **body** | [**\OpenAPI\Client\Model\LicenseUpdateVirtuozzoLicenseRequest**](../Model/LicenseUpdateVirtuozzoLicenseRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\LicenseUpdateVirtuozzoLicenseRequest**](../Model/LicenseUpdateVirtuozzoLicenseRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LicenseUpdateLicenseResponse**](../Model/LicenseUpdateLicenseResponse.md)
+[**\Panthera\Openprovider\Model\LicenseUpdateLicenseResponse**](../Model/LicenseUpdateLicenseResponse.md)
 
 ### Authorization
 

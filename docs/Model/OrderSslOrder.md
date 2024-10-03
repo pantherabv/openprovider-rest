@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active_date** | **string** |  | [optional]
-**additional_data** | [**\OpenAPI\Client\Model\OrderSslOrderAdditionalData[]**](OrderSslOrderAdditionalData.md) |  | [optional]
+**additional_data** | [**\Panthera\Openprovider\Model\OrderSslOrderAdditionalData[]**](OrderSslOrderAdditionalData.md) |  | [optional]
 **administrative_handle** | **string** |  | [optional]
 **autorenew** | **string** |  | [optional]
 **billing_handle** | **string** |  | [optional]
@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **certificate** | **string** |  | [optional]
 **common_name** | **string** |  | [optional]
 **csr** | **string** |  | [optional]
-**domain_validation_methods** | [**\OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]**](OrderSslOrderDomainValidationMethods.md) |  | [optional]
-**domain_validation_statuses** | [**\OpenAPI\Client\Model\OrderSslOrderDomainValidationStatuses**](OrderSslOrderDomainValidationStatuses.md) |  | [optional]
+**domain_validation_methods** | [**\Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]**](OrderSslOrderDomainValidationMethods.md) |  | [optional]
+**domain_validation_statuses** | [**\Panthera\Openprovider\Model\OrderSslOrderDomainValidationStatuses**](OrderSslOrderDomainValidationStatuses.md) |  | [optional]
 **email_approver** | **string** |  | [optional]
 **email_reissue** | **string** |  | [optional]
 **expiration_date** | **string** |  | [optional]
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **host_names** | **string[]** |  | [optional]
 **id** | **int** |  | [optional]
 **intermediate_certificate** | **string** |  | [optional]
-**options** | [**\OpenAPI\Client\Model\OrderSslOrderOptions**](OrderSslOrderOptions.md) |  | [optional]
+**options** | [**\Panthera\Openprovider\Model\OrderSslOrderOptions**](OrderSslOrderOptions.md) |  | [optional]
 **order_date** | **string** |  | [optional]
 **order_ends_at** | **string** |  | [optional]
 **organization_handle** | **string** |  | [optional]

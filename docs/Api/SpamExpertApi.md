@@ -1,4 +1,4 @@
-# OpenAPI\Client\SpamExpertApi
+# Panthera\Openprovider\SpamExpertApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `generateLoginURL()`
 
 ```php
-generateLoginURL($body): \OpenAPI\Client\Model\SpamExpertGenerateLoginURLResponse
+generateLoginURL($body): \Panthera\Openprovider\Model\SpamExpertGenerateLoginURLResponse
 ```
 
 Generate login url
@@ -23,18 +23,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SpamExpertApi(
+$apiInstance = new Panthera\Openprovider\Api\SpamExpertApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\SpamExpertGenerateLoginURLRequest(); // \OpenAPI\Client\Model\SpamExpertGenerateLoginURLRequest
+$body = new \Panthera\Openprovider\Model\SpamExpertGenerateLoginURLRequest(); // \Panthera\Openprovider\Model\SpamExpertGenerateLoginURLRequest
 
 try {
     $result = $apiInstance->generateLoginURL($body);
@@ -48,11 +48,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\SpamExpertGenerateLoginURLRequest**](../Model/SpamExpertGenerateLoginURLRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\SpamExpertGenerateLoginURLRequest**](../Model/SpamExpertGenerateLoginURLRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SpamExpertGenerateLoginURLResponse**](../Model/SpamExpertGenerateLoginURLResponse.md)
+[**\Panthera\Openprovider\Model\SpamExpertGenerateLoginURLResponse**](../Model/SpamExpertGenerateLoginURLResponse.md)
 
 ### Authorization
 

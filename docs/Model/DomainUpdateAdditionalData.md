@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **auth_code** | **string** |  | [optional]
 **company_registration_number** | **string** |  | [optional]
 **customer_uin** | **string** |  | [optional]
-**customer_uin_doc_type** | [**\OpenAPI\Client\Model\DomainUINDocumentType**](DomainUINDocumentType.md) |  | [optional]
+**customer_uin_doc_type** | [**\Panthera\Openprovider\Model\DomainUINDocumentType**](DomainUINDocumentType.md) |  | [optional]
 **domain_name_variants** | **string[]** |  | [optional]
 **intended_use** | **string** |  | [optional]
 **law_acceptance** | **string** |  | [optional]

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**\OpenAPI\Client\Model\ZoneZone[]**](ZoneZone.md) |  | [optional]
+**results** | [**\Panthera\Openprovider\Model\ZoneZone[]**](ZoneZone.md) |  | [optional]
 **total** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

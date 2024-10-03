@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrderApi
+# Panthera\Openprovider\OrderApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `cancelOrder()`
 
 ```php
-cancelOrder($id, $body): \OpenAPI\Client\Model\OrderCancelOrderResponse
+cancelOrder($id, $body): \Panthera\Openprovider\Model\OrderCancelOrderResponse
 ```
 
 Cancel order
@@ -29,19 +29,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\OrderCancelOrderRequest(); // \OpenAPI\Client\Model\OrderCancelOrderRequest
+$body = new \Panthera\Openprovider\Model\OrderCancelOrderRequest(); // \Panthera\Openprovider\Model\OrderCancelOrderRequest
 
 try {
     $result = $apiInstance->cancelOrder($id, $body);
@@ -56,11 +56,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\OrderCancelOrderRequest**](../Model/OrderCancelOrderRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderCancelOrderRequest**](../Model/OrderCancelOrderRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderCancelOrderResponse**](../Model/OrderCancelOrderResponse.md)
+[**\Panthera\Openprovider\Model\OrderCancelOrderResponse**](../Model/OrderCancelOrderResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `createOrder()`
 
 ```php
-createOrder($body): \OpenAPI\Client\Model\OrderCreateOrderResponse
+createOrder($body): \Panthera\Openprovider\Model\OrderCreateOrderResponse
 ```
 
 Create order
@@ -91,18 +91,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\OrderCreateOrderRequest(); // \OpenAPI\Client\Model\OrderCreateOrderRequest
+$body = new \Panthera\Openprovider\Model\OrderCreateOrderRequest(); // \Panthera\Openprovider\Model\OrderCreateOrderRequest
 
 try {
     $result = $apiInstance->createOrder($body);
@@ -116,11 +116,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\OrderCreateOrderRequest**](../Model/OrderCreateOrderRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderCreateOrderRequest**](../Model/OrderCreateOrderRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderCreateOrderResponse**](../Model/OrderCreateOrderResponse.md)
+[**\Panthera\Openprovider\Model\OrderCreateOrderResponse**](../Model/OrderCreateOrderResponse.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ try {
 ## `getOrder()`
 
 ```php
-getOrder($id): \OpenAPI\Client\Model\OrderGetOrderResponse
+getOrder($id): \Panthera\Openprovider\Model\OrderGetOrderResponse
 ```
 
 Get order
@@ -151,12 +151,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderGetOrderResponse**](../Model/OrderGetOrderResponse.md)
+[**\Panthera\Openprovider\Model\OrderGetOrderResponse**](../Model/OrderGetOrderResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ try {
 ## `listOrders()`
 
 ```php
-listOrders($limit, $offset, $order_by_common_name, $order_by_order_date, $order_by_active_date, $order_by_expiration_date, $order_by_status, $order_by_product_name, $common_name_pattern, $status, $contact_handle, $show_expiring): \OpenAPI\Client\Model\OrderListOrdersResponse
+listOrders($limit, $offset, $order_by_common_name, $order_by_order_date, $order_by_active_date, $order_by_expiration_date, $order_by_status, $order_by_product_name, $common_name_pattern, $status, $contact_handle, $show_expiring): \Panthera\Openprovider\Model\OrderListOrdersResponse
 ```
 
 List orders
@@ -211,12 +211,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -262,7 +262,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderListOrdersResponse**](../Model/OrderListOrdersResponse.md)
+[**\Panthera\Openprovider\Model\OrderListOrdersResponse**](../Model/OrderListOrdersResponse.md)
 
 ### Authorization
 
@@ -280,7 +280,7 @@ try {
 ## `reissueOrder()`
 
 ```php
-reissueOrder($id, $body): \OpenAPI\Client\Model\OrderReissueOrderResponse
+reissueOrder($id, $body): \Panthera\Openprovider\Model\OrderReissueOrderResponse
 ```
 
 Reissue order
@@ -293,19 +293,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\OrderReissueOrderRequest(); // \OpenAPI\Client\Model\OrderReissueOrderRequest
+$body = new \Panthera\Openprovider\Model\OrderReissueOrderRequest(); // \Panthera\Openprovider\Model\OrderReissueOrderRequest
 
 try {
     $result = $apiInstance->reissueOrder($id, $body);
@@ -320,11 +320,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\OrderReissueOrderRequest**](../Model/OrderReissueOrderRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderReissueOrderRequest**](../Model/OrderReissueOrderRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderReissueOrderResponse**](../Model/OrderReissueOrderResponse.md)
+[**\Panthera\Openprovider\Model\OrderReissueOrderResponse**](../Model/OrderReissueOrderResponse.md)
 
 ### Authorization
 
@@ -342,7 +342,7 @@ try {
 ## `renewOrder()`
 
 ```php
-renewOrder($id, $body): \OpenAPI\Client\Model\OrderRenewOrderResponse
+renewOrder($id, $body): \Panthera\Openprovider\Model\OrderRenewOrderResponse
 ```
 
 Renew order
@@ -355,19 +355,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\OrderRenewOrderRequest(); // \OpenAPI\Client\Model\OrderRenewOrderRequest
+$body = new \Panthera\Openprovider\Model\OrderRenewOrderRequest(); // \Panthera\Openprovider\Model\OrderRenewOrderRequest
 
 try {
     $result = $apiInstance->renewOrder($id, $body);
@@ -382,11 +382,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\OrderRenewOrderRequest**](../Model/OrderRenewOrderRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderRenewOrderRequest**](../Model/OrderRenewOrderRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderRenewOrderResponse**](../Model/OrderRenewOrderResponse.md)
+[**\Panthera\Openprovider\Model\OrderRenewOrderResponse**](../Model/OrderRenewOrderResponse.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ try {
 ## `updateOrder()`
 
 ```php
-updateOrder($id, $body): \OpenAPI\Client\Model\OrderUpdateOrderResponse
+updateOrder($id, $body): \Panthera\Openprovider\Model\OrderUpdateOrderResponse
 ```
 
 Update order
@@ -417,19 +417,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\OrderUpdateOrderRequest(); // \OpenAPI\Client\Model\OrderUpdateOrderRequest
+$body = new \Panthera\Openprovider\Model\OrderUpdateOrderRequest(); // \Panthera\Openprovider\Model\OrderUpdateOrderRequest
 
 try {
     $result = $apiInstance->updateOrder($id, $body);
@@ -444,11 +444,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\OrderUpdateOrderRequest**](../Model/OrderUpdateOrderRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OrderUpdateOrderRequest**](../Model/OrderUpdateOrderRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OrderUpdateOrderResponse**](../Model/OrderUpdateOrderResponse.md)
+[**\Panthera\Openprovider\Model\OrderUpdateOrderResponse**](../Model/OrderUpdateOrderResponse.md)
 
 ### Authorization
 

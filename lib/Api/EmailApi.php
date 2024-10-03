@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * EmailApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class EmailApi
      *
      * Create email
      *
-     * @param  \OpenAPI\Client\Model\EmailCreateEmailRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\EmailCreateEmailRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailCreateEmailResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailCreateEmailResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createEmail($body, string $contentType = self::contentTypes['createEmail'][0])
     {
@@ -154,12 +154,12 @@ class EmailApi
      *
      * Create email
      *
-     * @param  \OpenAPI\Client\Model\EmailCreateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailCreateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailCreateEmailResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailCreateEmailResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEmailWithHttpInfo($body, string $contentType = self::contentTypes['createEmail'][0])
     {
@@ -202,11 +202,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailCreateEmailResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailCreateEmailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailCreateEmailResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailCreateEmailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,16 +224,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailCreateEmailResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailCreateEmailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -251,13 +251,13 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailCreateEmailResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailCreateEmailResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -290,7 +290,7 @@ class EmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailCreateEmailResponse',
+                        '\Panthera\Openprovider\Model\EmailCreateEmailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class EmailApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -313,7 +313,7 @@ class EmailApi
      *
      * Create email
      *
-     * @param  \OpenAPI\Client\Model\EmailCreateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailCreateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -334,7 +334,7 @@ class EmailApi
      *
      * Create email
      *
-     * @param  \OpenAPI\Client\Model\EmailCreateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailCreateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -342,7 +342,7 @@ class EmailApi
      */
     public function createEmailAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createEmail'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailCreateEmailResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailCreateEmailResponse';
         $request = $this->createEmailRequest($body, $contentType);
 
         return $this->client
@@ -384,7 +384,7 @@ class EmailApi
     /**
      * Create request for operation 'createEmail'
      *
-     * @param  \OpenAPI\Client\Model\EmailCreateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailCreateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -485,9 +485,9 @@ class EmailApi
      * @param  int $id Object ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailDeleteEmailResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailDeleteEmailResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteEmail($id, string $contentType = self::contentTypes['deleteEmail'][0])
     {
@@ -503,9 +503,9 @@ class EmailApi
      * @param  int $id Object ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailDeleteEmailResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailDeleteEmailResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEmailWithHttpInfo($id, string $contentType = self::contentTypes['deleteEmail'][0])
     {
@@ -548,11 +548,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailDeleteEmailResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailDeleteEmailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailDeleteEmailResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailDeleteEmailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -570,16 +570,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailDeleteEmailResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailDeleteEmailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -597,13 +597,13 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailDeleteEmailResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailDeleteEmailResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -636,7 +636,7 @@ class EmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailDeleteEmailResponse',
+                        '\Panthera\Openprovider\Model\EmailDeleteEmailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,7 +644,7 @@ class EmailApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class EmailApi
      */
     public function deleteEmailAsyncWithHttpInfo($id, string $contentType = self::contentTypes['deleteEmail'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailDeleteEmailResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailDeleteEmailResponse';
         $request = $this->deleteEmailRequest($id, $contentType);
 
         return $this->client
@@ -837,9 +837,9 @@ class EmailApi
      * @param  bool $is_system Is system. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEmails'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailListEmailsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailListEmailsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listEmails($id = null, $name = null, $group = null, $limit = null, $offset = null, $is_system = null, string $contentType = self::contentTypes['listEmails'][0])
     {
@@ -860,9 +860,9 @@ class EmailApi
      * @param  bool $is_system Is system. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEmails'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailListEmailsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailListEmailsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEmailsWithHttpInfo($id = null, $name = null, $group = null, $limit = null, $offset = null, $is_system = null, string $contentType = self::contentTypes['listEmails'][0])
     {
@@ -905,11 +905,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailListEmailsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailListEmailsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailListEmailsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailListEmailsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -927,16 +927,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailListEmailsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailListEmailsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -954,13 +954,13 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailListEmailsResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailListEmailsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -993,7 +993,7 @@ class EmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailListEmailsResponse',
+                        '\Panthera\Openprovider\Model\EmailListEmailsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1001,7 +1001,7 @@ class EmailApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1055,7 +1055,7 @@ class EmailApi
      */
     public function listEmailsAsyncWithHttpInfo($id = null, $name = null, $group = null, $limit = null, $offset = null, $is_system = null, string $contentType = self::contentTypes['listEmails'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailListEmailsResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailListEmailsResponse';
         $request = $this->listEmailsRequest($id, $name, $group, $limit, $offset, $is_system, $contentType);
 
         return $this->client
@@ -1247,12 +1247,12 @@ class EmailApi
      * Update email
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\EmailUpdateEmailRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\EmailUpdateEmailRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailUpdateEmailResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\EmailUpdateEmailResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateEmail($id, $body, string $contentType = self::contentTypes['updateEmail'][0])
     {
@@ -1266,12 +1266,12 @@ class EmailApi
      * Update email
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\EmailUpdateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailUpdateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmail'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailUpdateEmailResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\EmailUpdateEmailResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateEmailWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateEmail'][0])
     {
@@ -1314,11 +1314,11 @@ class EmailApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailUpdateEmailResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\EmailUpdateEmailResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailUpdateEmailResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\EmailUpdateEmailResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1336,16 +1336,16 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailUpdateEmailResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\EmailUpdateEmailResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1363,13 +1363,13 @@ class EmailApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailUpdateEmailResponse';
+            $returnType = '\Panthera\Openprovider\Model\EmailUpdateEmailResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1402,7 +1402,7 @@ class EmailApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailUpdateEmailResponse',
+                        '\Panthera\Openprovider\Model\EmailUpdateEmailResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1410,7 +1410,7 @@ class EmailApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1426,7 +1426,7 @@ class EmailApi
      * Update email
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\EmailUpdateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailUpdateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1448,7 +1448,7 @@ class EmailApi
      * Update email
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\EmailUpdateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailUpdateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1456,7 +1456,7 @@ class EmailApi
      */
     public function updateEmailAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateEmail'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailUpdateEmailResponse';
+        $returnType = '\Panthera\Openprovider\Model\EmailUpdateEmailResponse';
         $request = $this->updateEmailRequest($id, $body, $contentType);
 
         return $this->client
@@ -1499,7 +1499,7 @@ class EmailApi
      * Create request for operation 'updateEmail'
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\EmailUpdateEmailRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\EmailUpdateEmailRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateEmail'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TemplateServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,12 +136,12 @@ class TemplateServiceApi
      *
      * Create template
      *
-     * @param  \OpenAPI\Client\Model\TemplateCreateTemplateRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\TemplateCreateTemplateRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTemplate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TemplateCreateTemplateResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TemplateCreateTemplateResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createTemplate($body, string $contentType = self::contentTypes['createTemplate'][0])
     {
@@ -154,12 +154,12 @@ class TemplateServiceApi
      *
      * Create template
      *
-     * @param  \OpenAPI\Client\Model\TemplateCreateTemplateRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\TemplateCreateTemplateRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTemplate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TemplateCreateTemplateResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TemplateCreateTemplateResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTemplateWithHttpInfo($body, string $contentType = self::contentTypes['createTemplate'][0])
     {
@@ -202,11 +202,11 @@ class TemplateServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TemplateCreateTemplateResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TemplateCreateTemplateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TemplateCreateTemplateResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TemplateCreateTemplateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,16 +224,16 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TemplateCreateTemplateResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TemplateCreateTemplateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -251,13 +251,13 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TemplateCreateTemplateResponse';
+            $returnType = '\Panthera\Openprovider\Model\TemplateCreateTemplateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -290,7 +290,7 @@ class TemplateServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TemplateCreateTemplateResponse',
+                        '\Panthera\Openprovider\Model\TemplateCreateTemplateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class TemplateServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -313,7 +313,7 @@ class TemplateServiceApi
      *
      * Create template
      *
-     * @param  \OpenAPI\Client\Model\TemplateCreateTemplateRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\TemplateCreateTemplateRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTemplate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -334,7 +334,7 @@ class TemplateServiceApi
      *
      * Create template
      *
-     * @param  \OpenAPI\Client\Model\TemplateCreateTemplateRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\TemplateCreateTemplateRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTemplate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -342,7 +342,7 @@ class TemplateServiceApi
      */
     public function createTemplateAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createTemplate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TemplateCreateTemplateResponse';
+        $returnType = '\Panthera\Openprovider\Model\TemplateCreateTemplateResponse';
         $request = $this->createTemplateRequest($body, $contentType);
 
         return $this->client
@@ -384,7 +384,7 @@ class TemplateServiceApi
     /**
      * Create request for operation 'createTemplate'
      *
-     * @param  \OpenAPI\Client\Model\TemplateCreateTemplateRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\TemplateCreateTemplateRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createTemplate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -485,9 +485,9 @@ class TemplateServiceApi
      * @param  int $id Template ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTemplate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TemplateTemplateBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TemplateTemplateBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteTemplate($id, string $contentType = self::contentTypes['deleteTemplate'][0])
     {
@@ -503,9 +503,9 @@ class TemplateServiceApi
      * @param  int $id Template ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteTemplate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TemplateTemplateBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TemplateTemplateBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTemplateWithHttpInfo($id, string $contentType = self::contentTypes['deleteTemplate'][0])
     {
@@ -548,11 +548,11 @@ class TemplateServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TemplateTemplateBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TemplateTemplateBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TemplateTemplateBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TemplateTemplateBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -570,16 +570,16 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TemplateTemplateBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TemplateTemplateBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -597,13 +597,13 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TemplateTemplateBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\TemplateTemplateBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -636,7 +636,7 @@ class TemplateServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TemplateTemplateBoolResponse',
+                        '\Panthera\Openprovider\Model\TemplateTemplateBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,7 +644,7 @@ class TemplateServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class TemplateServiceApi
      */
     public function deleteTemplateAsyncWithHttpInfo($id, string $contentType = self::contentTypes['deleteTemplate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TemplateTemplateBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\TemplateTemplateBoolResponse';
         $request = $this->deleteTemplateRequest($id, $contentType);
 
         return $this->client
@@ -832,9 +832,9 @@ class TemplateServiceApi
      * @param  int $id Template ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTemplate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TemplateGetTemplateResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TemplateGetTemplateResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getTemplate($id, string $contentType = self::contentTypes['getTemplate'][0])
     {
@@ -850,9 +850,9 @@ class TemplateServiceApi
      * @param  int $id Template ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTemplate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TemplateGetTemplateResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TemplateGetTemplateResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTemplateWithHttpInfo($id, string $contentType = self::contentTypes['getTemplate'][0])
     {
@@ -895,11 +895,11 @@ class TemplateServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TemplateGetTemplateResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TemplateGetTemplateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TemplateGetTemplateResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TemplateGetTemplateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -917,16 +917,16 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TemplateGetTemplateResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TemplateGetTemplateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -944,13 +944,13 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TemplateGetTemplateResponse';
+            $returnType = '\Panthera\Openprovider\Model\TemplateGetTemplateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -983,7 +983,7 @@ class TemplateServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TemplateGetTemplateResponse',
+                        '\Panthera\Openprovider\Model\TemplateGetTemplateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -991,7 +991,7 @@ class TemplateServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1035,7 +1035,7 @@ class TemplateServiceApi
      */
     public function getTemplateAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getTemplate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TemplateGetTemplateResponse';
+        $returnType = '\Panthera\Openprovider\Model\TemplateGetTemplateResponse';
         $request = $this->getTemplateRequest($id, $contentType);
 
         return $this->client
@@ -1184,9 +1184,9 @@ class TemplateServiceApi
      * @param  string $name_pattern Template name pattern. Wildcard (*)can be used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTemplates'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TemplateListTemplatesResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TemplateListTemplatesResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listTemplates($limit = 100, $offset = null, $order = 'asc', $order_by = 'name', $with_records = false, $name_pattern = null, string $contentType = self::contentTypes['listTemplates'][0])
     {
@@ -1207,9 +1207,9 @@ class TemplateServiceApi
      * @param  string $name_pattern Template name pattern. Wildcard (*)can be used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTemplates'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TemplateListTemplatesResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TemplateListTemplatesResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTemplatesWithHttpInfo($limit = 100, $offset = null, $order = 'asc', $order_by = 'name', $with_records = false, $name_pattern = null, string $contentType = self::contentTypes['listTemplates'][0])
     {
@@ -1252,11 +1252,11 @@ class TemplateServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TemplateListTemplatesResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TemplateListTemplatesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TemplateListTemplatesResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TemplateListTemplatesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1274,16 +1274,16 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TemplateListTemplatesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TemplateListTemplatesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1301,13 +1301,13 @@ class TemplateServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TemplateListTemplatesResponse';
+            $returnType = '\Panthera\Openprovider\Model\TemplateListTemplatesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1340,7 +1340,7 @@ class TemplateServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TemplateListTemplatesResponse',
+                        '\Panthera\Openprovider\Model\TemplateListTemplatesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1348,7 +1348,7 @@ class TemplateServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1402,7 +1402,7 @@ class TemplateServiceApi
      */
     public function listTemplatesAsyncWithHttpInfo($limit = 100, $offset = null, $order = 'asc', $order_by = 'name', $with_records = false, $name_pattern = null, string $contentType = self::contentTypes['listTemplates'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TemplateListTemplatesResponse';
+        $returnType = '\Panthera\Openprovider\Model\TemplateListTemplatesResponse';
         $request = $this->listTemplatesRequest($limit, $offset, $order, $order_by, $with_records, $name_pattern, $contentType);
 
         return $this->client

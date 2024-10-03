@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * NsGroupGroup Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class NsGroupGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'domain_count' => 'int',
         'id' => 'int',
-        'name_servers' => '\OpenAPI\Client\Model\NsGroupNameServersSet[]',
+        'name_servers' => '\Panthera\Openprovider\Model\NsGroupNameServersSet[]',
         'ns_count' => 'int',
         'ns_group' => 'string'
     ];
@@ -374,7 +374,7 @@ class NsGroupGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets name_servers
      *
-     * @return \OpenAPI\Client\Model\NsGroupNameServersSet[]|null
+     * @return \Panthera\Openprovider\Model\NsGroupNameServersSet[]|null
      */
     public function getNameServers()
     {
@@ -384,7 +384,7 @@ class NsGroupGroup implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name_servers
      *
-     * @param \OpenAPI\Client\Model\NsGroupNameServersSet[]|null $name_servers name_servers
+     * @param \Panthera\Openprovider\Model\NsGroupNameServersSet[]|null $name_servers name_servers
      *
      * @return self
      */

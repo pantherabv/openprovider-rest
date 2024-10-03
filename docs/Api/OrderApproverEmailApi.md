@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrderApproverEmailApi
+# Panthera\Openprovider\OrderApproverEmailApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `resendApproverEmail()`
 
 ```php
-resendApproverEmail($id, $body): \OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse
+resendApproverEmail($id, $body): \Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse
 ```
 
 Resend approver email
@@ -24,19 +24,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApproverEmailApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApproverEmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest(); // \OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest
+$body = new \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest(); // \Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest
 
 try {
     $result = $apiInstance->resendApproverEmail($id, $body);
@@ -51,11 +51,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\ApproveremailResendApproverEmailRequest**](../Model/ApproveremailResendApproverEmailRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ApproveremailResendApproverEmailRequest**](../Model/ApproveremailResendApproverEmailRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApproveremailResendApproverEmailResponse**](../Model/ApproveremailResendApproverEmailResponse.md)
+[**\Panthera\Openprovider\Model\ApproveremailResendApproverEmailResponse**](../Model/ApproveremailResendApproverEmailResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `updateApproverEmailAddress()`
 
 ```php
-updateApproverEmailAddress($id, $body): \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse
+updateApproverEmailAddress($id, $body): \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse
 ```
 
 Update approver email address
@@ -86,19 +86,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApproverEmailApi(
+$apiInstance = new Panthera\Openprovider\Api\OrderApproverEmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest(); // \OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest
+$body = new \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest(); // \Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest
 
 try {
     $result = $apiInstance->updateApproverEmailAddress($id, $body);
@@ -113,11 +113,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressRequest**](../Model/ApproveremailUpdateApproverEmailAddressRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressRequest**](../Model/ApproveremailUpdateApproverEmailAddressRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApproveremailUpdateApproverEmailAddressResponse**](../Model/ApproveremailUpdateApproverEmailAddressResponse.md)
+[**\Panthera\Openprovider\Model\ApproveremailUpdateApproverEmailAddressResponse**](../Model/ApproveremailUpdateApproverEmailAddressResponse.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainPriceServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -134,9 +134,9 @@ class DomainPriceServiceApi
      * @param  int $period Operation period. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrice'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PriceGetPriceResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\PriceGetPriceResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getPrice($domain_name = null, $domain_extension = null, $operation = null, $additional_data_idn_script = null, $period = null, string $contentType = self::contentTypes['getPrice'][0])
     {
@@ -156,9 +156,9 @@ class DomainPriceServiceApi
      * @param  int $period Operation period. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getPrice'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PriceGetPriceResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\PriceGetPriceResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceWithHttpInfo($domain_name = null, $domain_extension = null, $operation = null, $additional_data_idn_script = null, $period = null, string $contentType = self::contentTypes['getPrice'][0])
     {
@@ -201,11 +201,11 @@ class DomainPriceServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PriceGetPriceResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\PriceGetPriceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PriceGetPriceResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\PriceGetPriceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,16 +223,16 @@ class DomainPriceServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PriceGetPriceResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\PriceGetPriceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -250,13 +250,13 @@ class DomainPriceServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PriceGetPriceResponse';
+            $returnType = '\Panthera\Openprovider\Model\PriceGetPriceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -289,7 +289,7 @@ class DomainPriceServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PriceGetPriceResponse',
+                        '\Panthera\Openprovider\Model\PriceGetPriceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -297,7 +297,7 @@ class DomainPriceServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -349,7 +349,7 @@ class DomainPriceServiceApi
      */
     public function getPriceAsyncWithHttpInfo($domain_name = null, $domain_extension = null, $operation = null, $additional_data_idn_script = null, $period = null, string $contentType = self::contentTypes['getPrice'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PriceGetPriceResponse';
+        $returnType = '\Panthera\Openprovider\Model\PriceGetPriceResponse';
         $request = $this->getPriceRequest($domain_name, $domain_extension, $operation, $additional_data_idn_script, $period, $contentType);
 
         return $this->client

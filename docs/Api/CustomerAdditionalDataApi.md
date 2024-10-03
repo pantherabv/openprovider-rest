@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomerAdditionalDataApi
+# Panthera\Openprovider\CustomerAdditionalDataApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getData()`
 
 ```php
-getData($domain_name, $domain_extension): \OpenAPI\Client\Model\CustomerGetDataResponse
+getData($domain_name, $domain_extension): \Panthera\Openprovider\Model\CustomerGetDataResponse
 ```
 
 Get data
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerAdditionalDataApi(
+$apiInstance = new Panthera\Openprovider\Api\CustomerAdditionalDataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerGetDataResponse**](../Model/CustomerGetDataResponse.md)
+[**\Panthera\Openprovider\Model\CustomerGetDataResponse**](../Model/CustomerGetDataResponse.md)
 
 ### Authorization
 

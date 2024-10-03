@@ -1,4 +1,4 @@
-# OpenAPI\Client\TldServiceApi
+# Panthera\Openprovider\TldServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getTld()`
 
 ```php
-getTld($name, $limit, $offset, $with_description, $with_restrictions, $with_price, $with_level_prices, $with_usage_count, $status): \OpenAPI\Client\Model\TldGetTldResponse
+getTld($name, $limit, $offset, $with_description, $with_restrictions, $with_price, $with_level_prices, $with_usage_count, $status): \Panthera\Openprovider\Model\TldGetTldResponse
 ```
 
 Get tld
@@ -24,12 +24,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TldServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TldServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -69,7 +69,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TldGetTldResponse**](../Model/TldGetTldResponse.md)
+[**\Panthera\Openprovider\Model\TldGetTldResponse**](../Model/TldGetTldResponse.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ try {
 ## `listTlds()`
 
 ```php
-listTlds($limit, $offset, $order, $order_by, $extensions, $name_pattern, $only_names, $with_description, $with_restrictions, $with_usage_count, $with_application_mode, $with_price, $with_level_prices, $is_active, $is_new_gtld, $status, $application_mode): \OpenAPI\Client\Model\TldListTldsResponse
+listTlds($limit, $offset, $order, $order_by, $extensions, $name_pattern, $only_names, $with_description, $with_restrictions, $with_usage_count, $with_application_mode, $with_price, $with_level_prices, $is_active, $is_new_gtld, $status, $application_mode): \Panthera\Openprovider\Model\TldListTldsResponse
 ```
 
 List tlds
@@ -100,12 +100,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TldServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TldServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -161,7 +161,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TldListTldsResponse**](../Model/TldListTldsResponse.md)
+[**\Panthera\Openprovider\Model\TldListTldsResponse**](../Model/TldListTldsResponse.md)
 
 ### Authorization
 

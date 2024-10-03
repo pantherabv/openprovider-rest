@@ -1,4 +1,4 @@
-# OpenAPI\Client\SEDomainApi
+# Panthera\Openprovider\SEDomainApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createDomainMixin8()`
 
 ```php
-createDomainMixin8($body): \OpenAPI\Client\Model\ResponseBoolResponse
+createDomainMixin8($body): \Panthera\Openprovider\Model\ResponseBoolResponse
 ```
 
 Create domain
@@ -26,18 +26,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SEDomainApi(
+$apiInstance = new Panthera\Openprovider\Api\SEDomainApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\SeDomainCreateDomainRequest(); // \OpenAPI\Client\Model\SeDomainCreateDomainRequest
+$body = new \Panthera\Openprovider\Model\SeDomainCreateDomainRequest(); // \Panthera\Openprovider\Model\SeDomainCreateDomainRequest
 
 try {
     $result = $apiInstance->createDomainMixin8($body);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\SeDomainCreateDomainRequest**](../Model/SeDomainCreateDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\SeDomainCreateDomainRequest**](../Model/SeDomainCreateDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
+[**\Panthera\Openprovider\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `deleteDomainMixin8()`
 
 ```php
-deleteDomainMixin8($domain_name, $bundle): \OpenAPI\Client\Model\ResponseBoolResponse
+deleteDomainMixin8($domain_name, $bundle): \Panthera\Openprovider\Model\ResponseBoolResponse
 ```
 
 Delete domain
@@ -86,12 +86,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SEDomainApi(
+$apiInstance = new Panthera\Openprovider\Api\SEDomainApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
+[**\Panthera\Openprovider\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ try {
 ## `getDomainMixin8()`
 
 ```php
-getDomainMixin8($domain_name, $with_records, $bundle): \OpenAPI\Client\Model\SeDomainGetDomainResponse
+getDomainMixin8($domain_name, $with_records, $bundle): \Panthera\Openprovider\Model\SeDomainGetDomainResponse
 ```
 
 Get domain
@@ -148,12 +148,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SEDomainApi(
+$apiInstance = new Panthera\Openprovider\Api\SEDomainApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -181,7 +181,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\SeDomainGetDomainResponse**](../Model/SeDomainGetDomainResponse.md)
+[**\Panthera\Openprovider\Model\SeDomainGetDomainResponse**](../Model/SeDomainGetDomainResponse.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ try {
 ## `updateDomainMixin8()`
 
 ```php
-updateDomainMixin8($domain_name, $body): \OpenAPI\Client\Model\ResponseBoolResponse
+updateDomainMixin8($domain_name, $body): \Panthera\Openprovider\Model\ResponseBoolResponse
 ```
 
 Update domain
@@ -212,19 +212,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\SEDomainApi(
+$apiInstance = new Panthera\Openprovider\Api\SEDomainApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $domain_name = 'domain_name_example'; // string | Domain full name
-$body = new \OpenAPI\Client\Model\SeDomainUpdateDomainRequest(); // \OpenAPI\Client\Model\SeDomainUpdateDomainRequest
+$body = new \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest(); // \Panthera\Openprovider\Model\SeDomainUpdateDomainRequest
 
 try {
     $result = $apiInstance->updateDomainMixin8($domain_name, $body);
@@ -239,11 +239,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **domain_name** | **string**| Domain full name | |
-| **body** | [**\OpenAPI\Client\Model\SeDomainUpdateDomainRequest**](../Model/SeDomainUpdateDomainRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\SeDomainUpdateDomainRequest**](../Model/SeDomainUpdateDomainRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
+[**\Panthera\Openprovider\Model\ResponseBoolResponse**](../Model/ResponseBoolResponse.md)
 
 ### Authorization
 

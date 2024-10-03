@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TransactionApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,9 +136,9 @@ class TransactionApi
      * @param  string $filter_for_subject The filter for subject. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTransactions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionListTransactionsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\TransactionListTransactionsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listTransactions($limit = null, $offset = null, $order = null, $order_by = null, $start_creation_date = null, $end_creation_date = null, $filter_for_subject = null, string $contentType = self::contentTypes['listTransactions'][0])
     {
@@ -160,9 +160,9 @@ class TransactionApi
      * @param  string $filter_for_subject The filter for subject. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listTransactions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionListTransactionsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\TransactionListTransactionsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listTransactionsWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $start_creation_date = null, $end_creation_date = null, $filter_for_subject = null, string $contentType = self::contentTypes['listTransactions'][0])
     {
@@ -205,11 +205,11 @@ class TransactionApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TransactionListTransactionsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\TransactionListTransactionsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TransactionListTransactionsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\TransactionListTransactionsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class TransactionApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TransactionListTransactionsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\TransactionListTransactionsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class TransactionApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TransactionListTransactionsResponse';
+            $returnType = '\Panthera\Openprovider\Model\TransactionListTransactionsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class TransactionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionListTransactionsResponse',
+                        '\Panthera\Openprovider\Model\TransactionListTransactionsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class TransactionApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -357,7 +357,7 @@ class TransactionApi
      */
     public function listTransactionsAsyncWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $start_creation_date = null, $end_creation_date = null, $filter_for_subject = null, string $contentType = self::contentTypes['listTransactions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionListTransactionsResponse';
+        $returnType = '\Panthera\Openprovider\Model\TransactionListTransactionsResponse';
         $request = $this->listTransactionsRequest($limit, $offset, $order, $order_by, $start_creation_date, $end_creation_date, $filter_for_subject, $contentType);
 
         return $this->client

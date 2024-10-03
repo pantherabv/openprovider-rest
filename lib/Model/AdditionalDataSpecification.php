@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * AdditionalDataSpecification Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class AdditionalDataSpecification implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'description' => 'string',
         'name' => 'string',
-        'options' => '\OpenAPI\Client\Model\AdditionalDataSelectOption[]',
+        'options' => '\Panthera\Openprovider\Model\AdditionalDataSelectOption[]',
         'required' => 'bool',
         'type' => 'string'
     ];
@@ -374,7 +374,7 @@ class AdditionalDataSpecification implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets options
      *
-     * @return \OpenAPI\Client\Model\AdditionalDataSelectOption[]|null
+     * @return \Panthera\Openprovider\Model\AdditionalDataSelectOption[]|null
      */
     public function getOptions()
     {
@@ -384,7 +384,7 @@ class AdditionalDataSpecification implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets options
      *
-     * @param \OpenAPI\Client\Model\AdditionalDataSelectOption[]|null $options options
+     * @param \Panthera\Openprovider\Model\AdditionalDataSelectOption[]|null $options options
      *
      * @return self
      */

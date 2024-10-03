@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **autorenew** | **string** |  | [optional] [default to 'off']
 **csr** | **string** |  | [optional]
 **domain_amount** | **int** |  | [optional]
-**domain_validation_methods** | [**\OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]**](OrderSslOrderDomainValidationMethods.md) |  | [optional]
+**domain_validation_methods** | [**\Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]**](OrderSslOrderDomainValidationMethods.md) |  | [optional]
 **enable_dns_automation** | **bool** |  | [optional] [default to false]
 **host_names** | **string[]** |  | [optional]
 **organization_handle** | **string** |  | [optional]

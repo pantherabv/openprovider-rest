@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * InvoiceInvoice Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class InvoiceInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\InvoicePrices',
+        'amount' => '\Panthera\Openprovider\Model\InvoicePrices',
         'attachment_url' => 'string',
         'creation_date' => 'string',
         'id' => 'int',
@@ -327,7 +327,7 @@ class InvoiceInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\InvoicePrices|null
+     * @return \Panthera\Openprovider\Model\InvoicePrices|null
      */
     public function getAmount()
     {
@@ -337,7 +337,7 @@ class InvoiceInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\InvoicePrices|null $amount amount
+     * @param \Panthera\Openprovider\Model\InvoicePrices|null $amount amount
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\EmailApi
+# Panthera\Openprovider\EmailApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createEmail()`
 
 ```php
-createEmail($body): \OpenAPI\Client\Model\EmailCreateEmailResponse
+createEmail($body): \Panthera\Openprovider\Model\EmailCreateEmailResponse
 ```
 
 Create email
@@ -26,18 +26,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailApi(
+$apiInstance = new Panthera\Openprovider\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\EmailCreateEmailRequest(); // \OpenAPI\Client\Model\EmailCreateEmailRequest
+$body = new \Panthera\Openprovider\Model\EmailCreateEmailRequest(); // \Panthera\Openprovider\Model\EmailCreateEmailRequest
 
 try {
     $result = $apiInstance->createEmail($body);
@@ -51,11 +51,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\EmailCreateEmailRequest**](../Model/EmailCreateEmailRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\EmailCreateEmailRequest**](../Model/EmailCreateEmailRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailCreateEmailResponse**](../Model/EmailCreateEmailResponse.md)
+[**\Panthera\Openprovider\Model\EmailCreateEmailResponse**](../Model/EmailCreateEmailResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `deleteEmail()`
 
 ```php
-deleteEmail($id): \OpenAPI\Client\Model\EmailDeleteEmailResponse
+deleteEmail($id): \Panthera\Openprovider\Model\EmailDeleteEmailResponse
 ```
 
 Delete email
@@ -86,12 +86,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailApi(
+$apiInstance = new Panthera\Openprovider\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailDeleteEmailResponse**](../Model/EmailDeleteEmailResponse.md)
+[**\Panthera\Openprovider\Model\EmailDeleteEmailResponse**](../Model/EmailDeleteEmailResponse.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ try {
 ## `listEmails()`
 
 ```php
-listEmails($id, $name, $group, $limit, $offset, $is_system): \OpenAPI\Client\Model\EmailListEmailsResponse
+listEmails($id, $name, $group, $limit, $offset, $is_system): \Panthera\Openprovider\Model\EmailListEmailsResponse
 ```
 
 List emails
@@ -146,12 +146,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailApi(
+$apiInstance = new Panthera\Openprovider\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailListEmailsResponse**](../Model/EmailListEmailsResponse.md)
+[**\Panthera\Openprovider\Model\EmailListEmailsResponse**](../Model/EmailListEmailsResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ try {
 ## `updateEmail()`
 
 ```php
-updateEmail($id, $body): \OpenAPI\Client\Model\EmailUpdateEmailResponse
+updateEmail($id, $body): \Panthera\Openprovider\Model\EmailUpdateEmailResponse
 ```
 
 Update email
@@ -216,19 +216,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailApi(
+$apiInstance = new Panthera\Openprovider\Api\EmailApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object ID
-$body = new \OpenAPI\Client\Model\EmailUpdateEmailRequest(); // \OpenAPI\Client\Model\EmailUpdateEmailRequest
+$body = new \Panthera\Openprovider\Model\EmailUpdateEmailRequest(); // \Panthera\Openprovider\Model\EmailUpdateEmailRequest
 
 try {
     $result = $apiInstance->updateEmail($id, $body);
@@ -243,11 +243,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object ID | |
-| **body** | [**\OpenAPI\Client\Model\EmailUpdateEmailRequest**](../Model/EmailUpdateEmailRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\EmailUpdateEmailRequest**](../Model/EmailUpdateEmailRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailUpdateEmailResponse**](../Model/EmailUpdateEmailResponse.md)
+[**\Panthera\Openprovider\Model\EmailUpdateEmailResponse**](../Model/EmailUpdateEmailResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# OpenAPI\Client\DomainPriceServiceApi
+# Panthera\Openprovider\DomainPriceServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getPrice()`
 
 ```php
-getPrice($domain_name, $domain_extension, $operation, $additional_data_idn_script, $period): \OpenAPI\Client\Model\PriceGetPriceResponse
+getPrice($domain_name, $domain_extension, $operation, $additional_data_idn_script, $period): \Panthera\Openprovider\Model\PriceGetPriceResponse
 ```
 
 Get price
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\DomainPriceServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\DomainPriceServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PriceGetPriceResponse**](../Model/PriceGetPriceResponse.md)
+[**\Panthera\Openprovider\Model\PriceGetPriceResponse**](../Model/PriceGetPriceResponse.md)
 
 ### Authorization
 

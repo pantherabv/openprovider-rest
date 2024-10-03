@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OrderRetryEasyDmarcResponse Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,9 +58,9 @@ class OrderRetryEasyDmarcResponse implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'code' => 'int',
-        'data' => '\OpenAPI\Client\Model\OrderEasyDmarcOrder',
+        'data' => '\Panthera\Openprovider\Model\OrderEasyDmarcOrder',
         'desc' => 'string',
-        'warnings' => '\OpenAPI\Client\Model\ErrorWarning[]'
+        'warnings' => '\Panthera\Openprovider\Model\ErrorWarning[]'
     ];
 
     /**
@@ -340,7 +340,7 @@ class OrderRetryEasyDmarcResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets data
      *
-     * @return \OpenAPI\Client\Model\OrderEasyDmarcOrder|null
+     * @return \Panthera\Openprovider\Model\OrderEasyDmarcOrder|null
      */
     public function getData()
     {
@@ -350,7 +350,7 @@ class OrderRetryEasyDmarcResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets data
      *
-     * @param \OpenAPI\Client\Model\OrderEasyDmarcOrder|null $data data
+     * @param \Panthera\Openprovider\Model\OrderEasyDmarcOrder|null $data data
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class OrderRetryEasyDmarcResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets warnings
      *
-     * @return \OpenAPI\Client\Model\ErrorWarning[]|null
+     * @return \Panthera\Openprovider\Model\ErrorWarning[]|null
      */
     public function getWarnings()
     {
@@ -404,7 +404,7 @@ class OrderRetryEasyDmarcResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets warnings
      *
-     * @param \OpenAPI\Client\Model\ErrorWarning[]|null $warnings warnings
+     * @param \Panthera\Openprovider\Model\ErrorWarning[]|null $warnings warnings
      *
      * @return self
      */

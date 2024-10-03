@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auth_code_type** | **string** |  | [optional]
-**domain** | [**\OpenAPI\Client\Model\DomainDomain**](DomainDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\DomainDomain**](DomainDomain.md) |  | [optional]
 **id** | **int** |  | [optional]
 **sending_type** | **string** |  | [optional]
 

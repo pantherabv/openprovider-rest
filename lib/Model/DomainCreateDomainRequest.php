@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainCreateDomainRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPITypes = [
         'accept_eap_fee' => 'float',
         'accept_premium_fee' => 'float',
-        'additional_data' => '\OpenAPI\Client\Model\DomainAdditionalData',
+        'additional_data' => '\Panthera\Openprovider\Model\DomainAdditionalData',
         'admin_handle' => 'string',
         'application_mode' => 'string',
         'application_notice_id' => 'string',
@@ -68,14 +68,14 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
         'autorenew' => 'string',
         'billing_handle' => 'string',
         'comments' => 'string',
-        'dnssec_keys' => '\OpenAPI\Client\Model\DomainDnssecKey[]',
-        'domain' => '\OpenAPI\Client\Model\DomainDomain',
+        'dnssec_keys' => '\Panthera\Openprovider\Model\DomainDnssecKey[]',
+        'domain' => '\Panthera\Openprovider\Model\DomainDomain',
         'is_dnssec_enabled' => 'bool',
         'is_easy_dmarc_enabled' => 'bool',
         'is_private_whois_enabled' => 'bool',
         'is_sectigo_dns_enabled' => 'bool',
         'is_spamexperts_enabled' => 'bool',
-        'name_servers' => '\OpenAPI\Client\Model\DomainNameserver[]',
+        'name_servers' => '\Panthera\Openprovider\Model\DomainNameserver[]',
         'ns_group' => 'string',
         'ns_template_id' => 'int',
         'ns_template_name' => 'string',
@@ -549,7 +549,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\DomainAdditionalData|null
+     * @return \Panthera\Openprovider\Model\DomainAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -559,7 +559,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\DomainAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\DomainAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -792,7 +792,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets dnssec_keys
      *
-     * @return \OpenAPI\Client\Model\DomainDnssecKey[]|null
+     * @return \Panthera\Openprovider\Model\DomainDnssecKey[]|null
      */
     public function getDnssecKeys()
     {
@@ -802,7 +802,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets dnssec_keys
      *
-     * @param \OpenAPI\Client\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
+     * @param \Panthera\Openprovider\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
      *
      * @return self
      */
@@ -819,7 +819,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\DomainDomain|null
+     * @return \Panthera\Openprovider\Model\DomainDomain|null
      */
     public function getDomain()
     {
@@ -829,7 +829,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\DomainDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\DomainDomain|null $domain domain
      *
      * @return self
      */
@@ -981,7 +981,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets name_servers
      *
-     * @return \OpenAPI\Client\Model\DomainNameserver[]|null
+     * @return \Panthera\Openprovider\Model\DomainNameserver[]|null
      */
     public function getNameServers()
     {
@@ -991,7 +991,7 @@ class DomainCreateDomainRequest implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets name_servers
      *
-     * @param \OpenAPI\Client\Model\DomainNameserver[]|null $name_servers name_servers
+     * @param \Panthera\Openprovider\Model\DomainNameserver[]|null $name_servers name_servers
      *
      * @return self
      */

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain** | [**\OpenAPI\Client\Model\DomainDomain**](DomainDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\DomainDomain**](DomainDomain.md) |  | [optional]
 **id** | **int** |  | [optional]
 **period** | **int** |  | [optional]
 

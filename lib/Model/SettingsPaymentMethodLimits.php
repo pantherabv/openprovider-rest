@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SettingsPaymentMethodLimits Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class SettingsPaymentMethodLimits implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'maximum' => '\OpenAPI\Client\Model\SettingsPaymentMethodLimit',
-        'minimum' => '\OpenAPI\Client\Model\SettingsPaymentMethodLimit'
+        'maximum' => '\Panthera\Openprovider\Model\SettingsPaymentMethodLimit',
+        'minimum' => '\Panthera\Openprovider\Model\SettingsPaymentMethodLimit'
     ];
 
     /**
@@ -299,7 +299,7 @@ class SettingsPaymentMethodLimits implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets maximum
      *
-     * @return \OpenAPI\Client\Model\SettingsPaymentMethodLimit|null
+     * @return \Panthera\Openprovider\Model\SettingsPaymentMethodLimit|null
      */
     public function getMaximum()
     {
@@ -309,7 +309,7 @@ class SettingsPaymentMethodLimits implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets maximum
      *
-     * @param \OpenAPI\Client\Model\SettingsPaymentMethodLimit|null $maximum maximum
+     * @param \Panthera\Openprovider\Model\SettingsPaymentMethodLimit|null $maximum maximum
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class SettingsPaymentMethodLimits implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets minimum
      *
-     * @return \OpenAPI\Client\Model\SettingsPaymentMethodLimit|null
+     * @return \Panthera\Openprovider\Model\SettingsPaymentMethodLimit|null
      */
     public function getMinimum()
     {
@@ -336,7 +336,7 @@ class SettingsPaymentMethodLimits implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets minimum
      *
-     * @param \OpenAPI\Client\Model\SettingsPaymentMethodLimit|null $minimum minimum
+     * @param \Panthera\Openprovider\Model\SettingsPaymentMethodLimit|null $minimum minimum
      *
      * @return self
      */

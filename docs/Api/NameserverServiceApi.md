@@ -1,4 +1,4 @@
-# OpenAPI\Client\NameserverServiceApi
+# Panthera\Openprovider\NameserverServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createNameserver()`
 
 ```php
-createNameserver($body): \OpenAPI\Client\Model\NameserverCreateNameserverResponse
+createNameserver($body): \Panthera\Openprovider\Model\NameserverCreateNameserverResponse
 ```
 
 Create nameserver
@@ -27,18 +27,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NameserverServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NameserverServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\NameserverNameserver(); // \OpenAPI\Client\Model\NameserverNameserver
+$body = new \Panthera\Openprovider\Model\NameserverNameserver(); // \Panthera\Openprovider\Model\NameserverNameserver
 
 try {
     $result = $apiInstance->createNameserver($body);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\NameserverNameserver**](../Model/NameserverNameserver.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\NameserverNameserver**](../Model/NameserverNameserver.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NameserverCreateNameserverResponse**](../Model/NameserverCreateNameserverResponse.md)
+[**\Panthera\Openprovider\Model\NameserverCreateNameserverResponse**](../Model/NameserverCreateNameserverResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `deleteNameserver()`
 
 ```php
-deleteNameserver($name): \OpenAPI\Client\Model\NameserverNameserverBoolResponse
+deleteNameserver($name): \Panthera\Openprovider\Model\NameserverNameserverBoolResponse
 ```
 
 Delete nameserver
@@ -87,12 +87,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NameserverServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NameserverServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NameserverNameserverBoolResponse**](../Model/NameserverNameserverBoolResponse.md)
+[**\Panthera\Openprovider\Model\NameserverNameserverBoolResponse**](../Model/NameserverNameserverBoolResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ try {
 ## `getNameserver()`
 
 ```php
-getNameserver($name): \OpenAPI\Client\Model\NameserverGetNameserverResponse
+getNameserver($name): \Panthera\Openprovider\Model\NameserverGetNameserverResponse
 ```
 
 Get nameserver
@@ -147,12 +147,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NameserverServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NameserverServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -176,7 +176,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NameserverGetNameserverResponse**](../Model/NameserverGetNameserverResponse.md)
+[**\Panthera\Openprovider\Model\NameserverGetNameserverResponse**](../Model/NameserverGetNameserverResponse.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ try {
 ## `listNameservers()`
 
 ```php
-listNameservers($name, $ip, $ip6, $pattern, $limit, $offset, $order, $order_by): \OpenAPI\Client\Model\NameserverListNameserversResponse
+listNameservers($name, $ip, $ip6, $pattern, $limit, $offset, $order, $order_by): \Panthera\Openprovider\Model\NameserverListNameserversResponse
 ```
 
 List nameservers
@@ -207,12 +207,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NameserverServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NameserverServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -250,7 +250,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NameserverListNameserversResponse**](../Model/NameserverListNameserversResponse.md)
+[**\Panthera\Openprovider\Model\NameserverListNameserversResponse**](../Model/NameserverListNameserversResponse.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ try {
 ## `updateNameserver()`
 
 ```php
-updateNameserver($name, $body): \OpenAPI\Client\Model\NameserverNameserverBoolResponse
+updateNameserver($name, $body): \Panthera\Openprovider\Model\NameserverNameserverBoolResponse
 ```
 
 Update nameserver
@@ -281,19 +281,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NameserverServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NameserverServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $name = 'name_example'; // string | Nameserver name
-$body = new \OpenAPI\Client\Model\NameserverNameserver(); // \OpenAPI\Client\Model\NameserverNameserver
+$body = new \Panthera\Openprovider\Model\NameserverNameserver(); // \Panthera\Openprovider\Model\NameserverNameserver
 
 try {
     $result = $apiInstance->updateNameserver($name, $body);
@@ -308,11 +308,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **string**| Nameserver name | |
-| **body** | [**\OpenAPI\Client\Model\NameserverNameserver**](../Model/NameserverNameserver.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\NameserverNameserver**](../Model/NameserverNameserver.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NameserverNameserverBoolResponse**](../Model/NameserverNameserverBoolResponse.md)
+[**\Panthera\Openprovider\Model\NameserverNameserverBoolResponse**](../Model/NameserverNameserverBoolResponse.md)
 
 ### Authorization
 

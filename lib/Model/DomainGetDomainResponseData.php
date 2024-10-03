@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainGetDomainResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'abuse_details' => '\OpenAPI\Client\Model\DomainAbuseDetails',
+        'abuse_details' => '\Panthera\Openprovider\Model\DomainAbuseDetails',
         'active_date' => 'string',
-        'additional_data' => '\OpenAPI\Client\Model\DomainAdditionalData',
+        'additional_data' => '\Panthera\Openprovider\Model\DomainAdditionalData',
         'admin_handle' => 'string',
-        'api_history' => '\OpenAPI\Client\Model\DomainApiHistory[]',
+        'api_history' => '\Panthera\Openprovider\Model\DomainApiHistory[]',
         'application_id' => 'string',
         'application_mode' => 'string',
         'application_mode_expiration_date' => 'string',
@@ -78,13 +78,13 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
         'delete_status' => 'string',
         'deleted_at' => 'string',
         'dnssec' => 'string',
-        'dnssec_keys' => '\OpenAPI\Client\Model\DomainDnssecKey[]',
-        'domain' => '\OpenAPI\Client\Model\DomainDomain',
+        'dnssec_keys' => '\Panthera\Openprovider\Model\DomainDnssecKey[]',
+        'domain' => '\Panthera\Openprovider\Model\DomainDomain',
         'expiration_date' => 'string',
         'hard_quarantine_expiry_date' => 'string',
         'has_active_sectigo_zone' => 'bool',
         'has_history' => 'bool',
-        'history' => '\OpenAPI\Client\Model\DomainHistory[]',
+        'history' => '\Panthera\Openprovider\Model\DomainHistory[]',
         'id' => 'int',
         'internal_auth_code' => 'string',
         'is_abusive' => 'bool',
@@ -102,18 +102,18 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
         'is_spamexperts_enabled' => 'bool',
         'last_changed' => 'string',
         'modify_owner_allowed' => 'bool',
-        'name_servers' => '\OpenAPI\Client\Model\DomainNameserver[]',
+        'name_servers' => '\Panthera\Openprovider\Model\DomainNameserver[]',
         'ns_group' => 'string',
         'ns_template_id' => 'int',
         'ns_template_name' => 'string',
         'nsgroup_id' => 'int',
         'order_date' => 'string',
-        'owner' => '\OpenAPI\Client\Model\DomainOwner',
+        'owner' => '\Panthera\Openprovider\Model\DomainOwner',
         'owner_company_name' => 'string',
         'owner_handle' => 'string',
         'quarantine_expiration_date' => 'string',
         'registry_expiration_date' => 'string',
-        'registry_statuses' => '\OpenAPI\Client\Model\DomainRegistryStatuses',
+        'registry_statuses' => '\Panthera\Openprovider\Model\DomainRegistryStatuses',
         'renew' => 'int',
         'renewal_date' => 'string',
         'reseller_handle' => 'string',
@@ -135,7 +135,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
         'verification_email_name' => 'string',
         'verification_email_status' => 'string',
         'verification_email_status_description' => 'string',
-        'whois_privacy_data' => '\OpenAPI\Client\Model\DomainWhoisPrivacyData'
+        'whois_privacy_data' => '\Panthera\Openprovider\Model\DomainWhoisPrivacyData'
     ];
 
     /**
@@ -838,7 +838,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets abuse_details
      *
-     * @return \OpenAPI\Client\Model\DomainAbuseDetails|null
+     * @return \Panthera\Openprovider\Model\DomainAbuseDetails|null
      */
     public function getAbuseDetails()
     {
@@ -848,7 +848,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets abuse_details
      *
-     * @param \OpenAPI\Client\Model\DomainAbuseDetails|null $abuse_details abuse_details
+     * @param \Panthera\Openprovider\Model\DomainAbuseDetails|null $abuse_details abuse_details
      *
      * @return self
      */
@@ -892,7 +892,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\DomainAdditionalData|null
+     * @return \Panthera\Openprovider\Model\DomainAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -902,7 +902,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\DomainAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\DomainAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -946,7 +946,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets api_history
      *
-     * @return \OpenAPI\Client\Model\DomainApiHistory[]|null
+     * @return \Panthera\Openprovider\Model\DomainApiHistory[]|null
      */
     public function getApiHistory()
     {
@@ -956,7 +956,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets api_history
      *
-     * @param \OpenAPI\Client\Model\DomainApiHistory[]|null $api_history api_history
+     * @param \Panthera\Openprovider\Model\DomainApiHistory[]|null $api_history api_history
      *
      * @return self
      */
@@ -1405,7 +1405,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets dnssec_keys
      *
-     * @return \OpenAPI\Client\Model\DomainDnssecKey[]|null
+     * @return \Panthera\Openprovider\Model\DomainDnssecKey[]|null
      */
     public function getDnssecKeys()
     {
@@ -1415,7 +1415,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets dnssec_keys
      *
-     * @param \OpenAPI\Client\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
+     * @param \Panthera\Openprovider\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
      *
      * @return self
      */
@@ -1432,7 +1432,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\DomainDomain|null
+     * @return \Panthera\Openprovider\Model\DomainDomain|null
      */
     public function getDomain()
     {
@@ -1442,7 +1442,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\DomainDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\DomainDomain|null $domain domain
      *
      * @return self
      */
@@ -1567,7 +1567,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets history
      *
-     * @return \OpenAPI\Client\Model\DomainHistory[]|null
+     * @return \Panthera\Openprovider\Model\DomainHistory[]|null
      */
     public function getHistory()
     {
@@ -1577,7 +1577,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets history
      *
-     * @param \OpenAPI\Client\Model\DomainHistory[]|null $history history
+     * @param \Panthera\Openprovider\Model\DomainHistory[]|null $history history
      *
      * @return self
      */
@@ -2053,7 +2053,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets name_servers
      *
-     * @return \OpenAPI\Client\Model\DomainNameserver[]|null
+     * @return \Panthera\Openprovider\Model\DomainNameserver[]|null
      */
     public function getNameServers()
     {
@@ -2063,7 +2063,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets name_servers
      *
-     * @param \OpenAPI\Client\Model\DomainNameserver[]|null $name_servers name_servers
+     * @param \Panthera\Openprovider\Model\DomainNameserver[]|null $name_servers name_servers
      *
      * @return self
      */
@@ -2215,7 +2215,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets owner
      *
-     * @return \OpenAPI\Client\Model\DomainOwner|null
+     * @return \Panthera\Openprovider\Model\DomainOwner|null
      */
     public function getOwner()
     {
@@ -2225,7 +2225,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets owner
      *
-     * @param \OpenAPI\Client\Model\DomainOwner|null $owner owner
+     * @param \Panthera\Openprovider\Model\DomainOwner|null $owner owner
      *
      * @return self
      */
@@ -2350,7 +2350,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets registry_statuses
      *
-     * @return \OpenAPI\Client\Model\DomainRegistryStatuses|null
+     * @return \Panthera\Openprovider\Model\DomainRegistryStatuses|null
      */
     public function getRegistryStatuses()
     {
@@ -2360,7 +2360,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets registry_statuses
      *
-     * @param \OpenAPI\Client\Model\DomainRegistryStatuses|null $registry_statuses registry_statuses
+     * @param \Panthera\Openprovider\Model\DomainRegistryStatuses|null $registry_statuses registry_statuses
      *
      * @return self
      */
@@ -2944,7 +2944,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets whois_privacy_data
      *
-     * @return \OpenAPI\Client\Model\DomainWhoisPrivacyData|null
+     * @return \Panthera\Openprovider\Model\DomainWhoisPrivacyData|null
      */
     public function getWhoisPrivacyData()
     {
@@ -2954,7 +2954,7 @@ class DomainGetDomainResponseData implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets whois_privacy_data
      *
-     * @param \OpenAPI\Client\Model\DomainWhoisPrivacyData|null $whois_privacy_data whois_privacy_data
+     * @param \Panthera\Openprovider\Model\DomainWhoisPrivacyData|null $whois_privacy_data whois_privacy_data
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ProductSslProductLevelPrices Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ProductSslProductLevelPrices implements ModelInterface, ArrayAccess, \Json
     protected static $openAPITypes = [
         'level' => 'int',
         'name' => 'string',
-        'prices' => '\OpenAPI\Client\Model\ProductSslProductPrices[]'
+        'prices' => '\Panthera\Openprovider\Model\ProductSslProductPrices[]'
     ];
 
     /**
@@ -360,7 +360,7 @@ class ProductSslProductLevelPrices implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets prices
      *
-     * @return \OpenAPI\Client\Model\ProductSslProductPrices[]|null
+     * @return \Panthera\Openprovider\Model\ProductSslProductPrices[]|null
      */
     public function getPrices()
     {
@@ -370,7 +370,7 @@ class ProductSslProductLevelPrices implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets prices
      *
-     * @param \OpenAPI\Client\Model\ProductSslProductPrices[]|null $prices prices
+     * @param \Panthera\Openprovider\Model\ProductSslProductPrices[]|null $prices prices
      *
      * @return self
      */

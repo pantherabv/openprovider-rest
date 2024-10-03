@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * CustomerListCustomersResponseDataResults Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,23 +57,23 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => '\OpenAPI\Client\Model\CustomerCustomerAdditionalData',
-        'address' => '\OpenAPI\Client\Model\ContactAddress',
+        'additional_data' => '\Panthera\Openprovider\Model\CustomerCustomerAdditionalData',
+        'address' => '\Panthera\Openprovider\Model\ContactAddress',
         'comments' => 'string',
         'comments_last_changed_at' => 'string',
         'company_name' => 'string',
         'deleted_at' => 'string',
         'email' => 'string',
         'email_verification_status' => 'string',
-        'extension_additional_data' => '\OpenAPI\Client\Model\CustomerExtensionAdditionalData[]',
+        'extension_additional_data' => '\Panthera\Openprovider\Model\CustomerExtensionAdditionalData[]',
         'handle' => 'string',
         'id' => 'int',
         'is_deleted' => 'bool',
         'locale' => 'string',
-        'name' => '\OpenAPI\Client\Model\ContactName',
-        'phone' => '\OpenAPI\Client\Model\ContactPhone',
+        'name' => '\Panthera\Openprovider\Model\ContactName',
+        'phone' => '\Panthera\Openprovider\Model\ContactPhone',
         'reseller_id' => 'int',
-        'tags' => '\OpenAPI\Client\Model\CustomerTags[]'
+        'tags' => '\Panthera\Openprovider\Model\CustomerTags[]'
     ];
 
     /**
@@ -404,7 +404,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\CustomerCustomerAdditionalData|null
+     * @return \Panthera\Openprovider\Model\CustomerCustomerAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -414,7 +414,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\CustomerCustomerAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\CustomerCustomerAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -431,7 +431,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\ContactAddress|null
+     * @return \Panthera\Openprovider\Model\ContactAddress|null
      */
     public function getAddress()
     {
@@ -441,7 +441,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\ContactAddress|null $address address
+     * @param \Panthera\Openprovider\Model\ContactAddress|null $address address
      *
      * @return self
      */
@@ -620,7 +620,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Gets extension_additional_data
      *
-     * @return \OpenAPI\Client\Model\CustomerExtensionAdditionalData[]|null
+     * @return \Panthera\Openprovider\Model\CustomerExtensionAdditionalData[]|null
      */
     public function getExtensionAdditionalData()
     {
@@ -630,7 +630,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Sets extension_additional_data
      *
-     * @param \OpenAPI\Client\Model\CustomerExtensionAdditionalData[]|null $extension_additional_data extension_additional_data
+     * @param \Panthera\Openprovider\Model\CustomerExtensionAdditionalData[]|null $extension_additional_data extension_additional_data
      *
      * @return self
      */
@@ -755,7 +755,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\ContactName|null
+     * @return \Panthera\Openprovider\Model\ContactName|null
      */
     public function getName()
     {
@@ -765,7 +765,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\ContactName|null $name name
+     * @param \Panthera\Openprovider\Model\ContactName|null $name name
      *
      * @return self
      */
@@ -782,7 +782,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Gets phone
      *
-     * @return \OpenAPI\Client\Model\ContactPhone|null
+     * @return \Panthera\Openprovider\Model\ContactPhone|null
      */
     public function getPhone()
     {
@@ -792,7 +792,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Sets phone
      *
-     * @param \OpenAPI\Client\Model\ContactPhone|null $phone phone
+     * @param \Panthera\Openprovider\Model\ContactPhone|null $phone phone
      *
      * @return self
      */
@@ -836,7 +836,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Gets tags
      *
-     * @return \OpenAPI\Client\Model\CustomerTags[]|null
+     * @return \Panthera\Openprovider\Model\CustomerTags[]|null
      */
     public function getTags()
     {
@@ -846,7 +846,7 @@ class CustomerListCustomersResponseDataResults implements ModelInterface, ArrayA
     /**
      * Sets tags
      *
-     * @param \OpenAPI\Client\Model\CustomerTags[]|null $tags tags
+     * @param \Panthera\Openprovider\Model\CustomerTags[]|null $tags tags
      *
      * @return self
      */

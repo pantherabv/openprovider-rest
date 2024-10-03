@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainTradeDomainRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,15 +57,15 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => '\OpenAPI\Client\Model\DomainAdditionalData',
+        'additional_data' => '\Panthera\Openprovider\Model\DomainAdditionalData',
         'admin_handle' => 'string',
         'auth_code' => 'string',
         'autorenew' => 'string',
         'billing_handle' => 'string',
         'comments' => 'string',
-        'dnssec_keys' => '\OpenAPI\Client\Model\DomainDnssecKey[]',
-        'domain' => '\OpenAPI\Client\Model\DomainDomain',
-        'name_servers' => '\OpenAPI\Client\Model\DomainNameserver[]',
+        'dnssec_keys' => '\Panthera\Openprovider\Model\DomainDnssecKey[]',
+        'domain' => '\Panthera\Openprovider\Model\DomainDomain',
+        'name_servers' => '\Panthera\Openprovider\Model\DomainNameserver[]',
         'ns_group' => 'string',
         'ns_template_id' => 'int',
         'ns_template_name' => 'string',
@@ -404,7 +404,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\DomainAdditionalData|null
+     * @return \Panthera\Openprovider\Model\DomainAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -414,7 +414,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\DomainAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\DomainAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -566,7 +566,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets dnssec_keys
      *
-     * @return \OpenAPI\Client\Model\DomainDnssecKey[]|null
+     * @return \Panthera\Openprovider\Model\DomainDnssecKey[]|null
      */
     public function getDnssecKeys()
     {
@@ -576,7 +576,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets dnssec_keys
      *
-     * @param \OpenAPI\Client\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
+     * @param \Panthera\Openprovider\Model\DomainDnssecKey[]|null $dnssec_keys dnssec_keys
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\DomainDomain|null
+     * @return \Panthera\Openprovider\Model\DomainDomain|null
      */
     public function getDomain()
     {
@@ -603,7 +603,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\DomainDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\DomainDomain|null $domain domain
      *
      * @return self
      */
@@ -620,7 +620,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets name_servers
      *
-     * @return \OpenAPI\Client\Model\DomainNameserver[]|null
+     * @return \Panthera\Openprovider\Model\DomainNameserver[]|null
      */
     public function getNameServers()
     {
@@ -630,7 +630,7 @@ class DomainTradeDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets name_servers
      *
-     * @param \OpenAPI\Client\Model\DomainNameserver[]|null $name_servers name_servers
+     * @param \Panthera\Openprovider\Model\DomainNameserver[]|null $name_servers name_servers
      *
      * @return self
      */

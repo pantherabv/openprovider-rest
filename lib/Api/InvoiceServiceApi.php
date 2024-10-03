@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * InvoiceServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class InvoiceServiceApi
      * @param  string $end_creation_date The end creation date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceListInvoicesResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\InvoiceListInvoicesResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listInvoices($limit = null, $offset = null, $order = null, $order_by = null, $start_creation_date = null, $end_creation_date = null, string $contentType = self::contentTypes['listInvoices'][0])
     {
@@ -158,9 +158,9 @@ class InvoiceServiceApi
      * @param  string $end_creation_date The end creation date. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listInvoices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceListInvoicesResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\InvoiceListInvoicesResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInvoicesWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $start_creation_date = null, $end_creation_date = null, string $contentType = self::contentTypes['listInvoices'][0])
     {
@@ -203,11 +203,11 @@ class InvoiceServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceListInvoicesResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\InvoiceListInvoicesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceListInvoicesResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\InvoiceListInvoicesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -225,16 +225,16 @@ class InvoiceServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceListInvoicesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\InvoiceListInvoicesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -252,13 +252,13 @@ class InvoiceServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceListInvoicesResponse';
+            $returnType = '\Panthera\Openprovider\Model\InvoiceListInvoicesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -291,7 +291,7 @@ class InvoiceServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceListInvoicesResponse',
+                        '\Panthera\Openprovider\Model\InvoiceListInvoicesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -299,7 +299,7 @@ class InvoiceServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -353,7 +353,7 @@ class InvoiceServiceApi
      */
     public function listInvoicesAsyncWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $start_creation_date = null, $end_creation_date = null, string $contentType = self::contentTypes['listInvoices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceListInvoicesResponse';
+        $returnType = '\Panthera\Openprovider\Model\InvoiceListInvoicesResponse';
         $request = $this->listInvoicesRequest($limit, $offset, $order, $order_by, $start_creation_date, $end_creation_date, $contentType);
 
         return $this->client

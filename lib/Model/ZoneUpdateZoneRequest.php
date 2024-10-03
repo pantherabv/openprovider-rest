@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZoneUpdateZoneRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,14 +57,14 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'domain' => '\OpenAPI\Client\Model\ZoneDomain',
+        'domain' => '\Panthera\Openprovider\Model\ZoneDomain',
         'id' => 'int',
         'is_spamexperts_enabled' => 'bool',
         'master_ip' => 'string',
         'name' => 'string',
-        'premium_dns' => '\OpenAPI\Client\Model\ZonePremiumDnsData',
+        'premium_dns' => '\Panthera\Openprovider\Model\ZonePremiumDnsData',
         'provider' => 'string',
-        'records' => '\OpenAPI\Client\Model\ZoneRecordUpdates',
+        'records' => '\Panthera\Openprovider\Model\ZoneRecordUpdates',
         'type' => 'string'
     ];
 
@@ -348,7 +348,7 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\ZoneDomain|null
+     * @return \Panthera\Openprovider\Model\ZoneDomain|null
      */
     public function getDomain()
     {
@@ -358,7 +358,7 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\ZoneDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\ZoneDomain|null $domain domain
      *
      * @return self
      */
@@ -483,7 +483,7 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets premium_dns
      *
-     * @return \OpenAPI\Client\Model\ZonePremiumDnsData|null
+     * @return \Panthera\Openprovider\Model\ZonePremiumDnsData|null
      */
     public function getPremiumDns()
     {
@@ -493,7 +493,7 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets premium_dns
      *
-     * @param \OpenAPI\Client\Model\ZonePremiumDnsData|null $premium_dns premium_dns
+     * @param \Panthera\Openprovider\Model\ZonePremiumDnsData|null $premium_dns premium_dns
      *
      * @return self
      */
@@ -537,7 +537,7 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets records
      *
-     * @return \OpenAPI\Client\Model\ZoneRecordUpdates|null
+     * @return \Panthera\Openprovider\Model\ZoneRecordUpdates|null
      */
     public function getRecords()
     {
@@ -547,7 +547,7 @@ class ZoneUpdateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets records
      *
-     * @param \OpenAPI\Client\Model\ZoneRecordUpdates|null $records records
+     * @param \Panthera\Openprovider\Model\ZoneRecordUpdates|null $records records
      *
      * @return self
      */

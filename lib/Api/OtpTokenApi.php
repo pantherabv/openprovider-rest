@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OtpTokenApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -128,12 +128,12 @@ class OtpTokenApi
      * Create otp token
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOtpToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createOtpToken($id, $body, string $contentType = self::contentTypes['createOtpToken'][0])
     {
@@ -147,12 +147,12 @@ class OtpTokenApi
      * Create otp token
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOtpToken'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOtpTokenWithHttpInfo($id, $body, string $contentType = self::contentTypes['createOtpToken'][0])
     {
@@ -195,11 +195,11 @@ class OtpTokenApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -217,16 +217,16 @@ class OtpTokenApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -244,13 +244,13 @@ class OtpTokenApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse';
+            $returnType = '\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -283,7 +283,7 @@ class OtpTokenApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse',
+                        '\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -291,7 +291,7 @@ class OtpTokenApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -307,7 +307,7 @@ class OtpTokenApi
      * Create otp token
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOtpToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -329,7 +329,7 @@ class OtpTokenApi
      * Create otp token
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOtpToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class OtpTokenApi
      */
     public function createOtpTokenAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['createOtpToken'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse';
+        $returnType = '\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse';
         $request = $this->createOtpTokenRequest($id, $body, $contentType);
 
         return $this->client
@@ -380,7 +380,7 @@ class OtpTokenApi
      * Create request for operation 'createOtpToken'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOtpToken'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

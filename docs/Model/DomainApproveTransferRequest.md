@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **approve** | **int** |  | [optional]
 **auth_code** | **string** |  | [optional]
-**domain** | [**\OpenAPI\Client\Model\DomainDomain**](DomainDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\DomainDomain**](DomainDomain.md) |  | [optional]
 **id** | **int** |  | [optional]
 **registrar_tag** | **string** |  | [optional]
 

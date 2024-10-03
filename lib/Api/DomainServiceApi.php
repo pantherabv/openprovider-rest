@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -167,12 +167,12 @@ class DomainServiceApi
      * Approve transfer
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainApproveTransferRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainApproveTransferRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveTransfer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function approveTransfer($id, $body, string $contentType = self::contentTypes['approveTransfer'][0])
     {
@@ -186,12 +186,12 @@ class DomainServiceApi
      * Approve transfer
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainApproveTransferRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainApproveTransferRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveTransfer'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function approveTransferWithHttpInfo($id, $body, string $contentType = self::contentTypes['approveTransfer'][0])
     {
@@ -234,11 +234,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResponseBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResponseBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResponseBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResponseBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -256,16 +256,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResponseBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResponseBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -283,13 +283,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -322,7 +322,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseBoolResponse',
+                        '\Panthera\Openprovider\Model\ResponseBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -330,7 +330,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -346,7 +346,7 @@ class DomainServiceApi
      * Approve transfer
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainApproveTransferRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainApproveTransferRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveTransfer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -368,7 +368,7 @@ class DomainServiceApi
      * Approve transfer
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainApproveTransferRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainApproveTransferRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveTransfer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -376,7 +376,7 @@ class DomainServiceApi
      */
     public function approveTransferAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['approveTransfer'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
         $request = $this->approveTransferRequest($id, $body, $contentType);
 
         return $this->client
@@ -419,7 +419,7 @@ class DomainServiceApi
      * Create request for operation 'approveTransfer'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainApproveTransferRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainApproveTransferRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveTransfer'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -532,12 +532,12 @@ class DomainServiceApi
      *
      * Check domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCheckDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCheckDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainCheckDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainCheckDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function checkDomain($body, string $contentType = self::contentTypes['checkDomain'][0])
     {
@@ -550,12 +550,12 @@ class DomainServiceApi
      *
      * Check domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCheckDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCheckDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainCheckDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainCheckDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function checkDomainWithHttpInfo($body, string $contentType = self::contentTypes['checkDomain'][0])
     {
@@ -598,11 +598,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainCheckDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainCheckDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainCheckDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainCheckDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -620,16 +620,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainCheckDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainCheckDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -647,13 +647,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainCheckDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainCheckDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -686,7 +686,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainCheckDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainCheckDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -694,7 +694,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -709,7 +709,7 @@ class DomainServiceApi
      *
      * Check domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCheckDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCheckDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -730,7 +730,7 @@ class DomainServiceApi
      *
      * Check domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCheckDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCheckDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -738,7 +738,7 @@ class DomainServiceApi
      */
     public function checkDomainAsyncWithHttpInfo($body, string $contentType = self::contentTypes['checkDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainCheckDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainCheckDomainResponse';
         $request = $this->checkDomainRequest($body, $contentType);
 
         return $this->client
@@ -780,7 +780,7 @@ class DomainServiceApi
     /**
      * Create request for operation 'checkDomain'
      *
-     * @param  \OpenAPI\Client\Model\DomainCheckDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCheckDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -878,12 +878,12 @@ class DomainServiceApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCreateDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCreateDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainCreateDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainCreateDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createDomain($body, string $contentType = self::contentTypes['createDomain'][0])
     {
@@ -896,12 +896,12 @@ class DomainServiceApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainCreateDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainCreateDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDomainWithHttpInfo($body, string $contentType = self::contentTypes['createDomain'][0])
     {
@@ -944,11 +944,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainCreateDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainCreateDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainCreateDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainCreateDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -966,16 +966,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainCreateDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainCreateDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -993,13 +993,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainCreateDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainCreateDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1032,7 +1032,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainCreateDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainCreateDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1040,7 +1040,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1055,7 +1055,7 @@ class DomainServiceApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1076,7 +1076,7 @@ class DomainServiceApi
      *
      * Create domain
      *
-     * @param  \OpenAPI\Client\Model\DomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1084,7 +1084,7 @@ class DomainServiceApi
      */
     public function createDomainAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainCreateDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainCreateDomainResponse';
         $request = $this->createDomainRequest($body, $contentType);
 
         return $this->client
@@ -1126,7 +1126,7 @@ class DomainServiceApi
     /**
      * Create request for operation 'createDomain'
      *
-     * @param  \OpenAPI\Client\Model\DomainCreateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainCreateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1232,9 +1232,9 @@ class DomainServiceApi
      * @param  bool $force_delete Force delete domain even if it has glue records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainDeleteDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainDeleteDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteDomain($id, $domain_name = null, $domain_extension = null, $type = null, $skip_soft_quarantine = null, $force_delete = null, string $contentType = self::contentTypes['deleteDomain'][0])
     {
@@ -1255,9 +1255,9 @@ class DomainServiceApi
      * @param  bool $force_delete Force delete domain even if it has glue records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainDeleteDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainDeleteDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteDomainWithHttpInfo($id, $domain_name = null, $domain_extension = null, $type = null, $skip_soft_quarantine = null, $force_delete = null, string $contentType = self::contentTypes['deleteDomain'][0])
     {
@@ -1300,11 +1300,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainDeleteDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainDeleteDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainDeleteDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainDeleteDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1322,16 +1322,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainDeleteDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainDeleteDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1349,13 +1349,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainDeleteDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainDeleteDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1388,7 +1388,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainDeleteDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainDeleteDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1396,7 +1396,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1450,7 +1450,7 @@ class DomainServiceApi
      */
     public function deleteDomainAsyncWithHttpInfo($id, $domain_name = null, $domain_extension = null, $type = null, $skip_soft_quarantine = null, $force_delete = null, string $contentType = self::contentTypes['deleteDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainDeleteDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainDeleteDomainResponse';
         $request = $this->deleteDomainRequest($id, $domain_name, $domain_extension, $type, $skip_soft_quarantine, $force_delete, $contentType);
 
         return $this->client
@@ -1659,9 +1659,9 @@ class DomainServiceApi
      * @param  bool $is_deleted Indicates whether object is deleted. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainGetDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainGetDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getDomain($id, $domain_name = null, $domain_extension = null, $with_history = null, $with_api_history = null, $with_additional_data = null, $with_verification_email = null, $with_abuse_details = null, $with_whois_privacy_data = null, $with_registry_statuses = null, $is_deleted = null, string $contentType = self::contentTypes['getDomain'][0])
     {
@@ -1687,9 +1687,9 @@ class DomainServiceApi
      * @param  bool $is_deleted Indicates whether object is deleted. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainGetDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainGetDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDomainWithHttpInfo($id, $domain_name = null, $domain_extension = null, $with_history = null, $with_api_history = null, $with_additional_data = null, $with_verification_email = null, $with_abuse_details = null, $with_whois_privacy_data = null, $with_registry_statuses = null, $is_deleted = null, string $contentType = self::contentTypes['getDomain'][0])
     {
@@ -1732,11 +1732,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainGetDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainGetDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainGetDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainGetDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1754,16 +1754,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainGetDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainGetDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1781,13 +1781,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainGetDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainGetDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1820,7 +1820,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainGetDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainGetDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1828,7 +1828,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1892,7 +1892,7 @@ class DomainServiceApi
      */
     public function getDomainAsyncWithHttpInfo($id, $domain_name = null, $domain_extension = null, $with_history = null, $with_api_history = null, $with_additional_data = null, $with_verification_email = null, $with_abuse_details = null, $with_whois_privacy_data = null, $with_registry_statuses = null, $is_deleted = null, string $contentType = self::contentTypes['getDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainGetDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainGetDomainResponse';
         $request = $this->getDomainRequest($id, $domain_name, $domain_extension, $with_history, $with_api_history, $with_additional_data, $with_verification_email, $with_abuse_details, $with_whois_privacy_data, $with_registry_statuses, $is_deleted, $contentType);
 
         return $this->client
@@ -2176,9 +2176,9 @@ class DomainServiceApi
      * @param  bool $is_deleted Indicates whether object is deleted. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDomains'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainListDomainsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainListDomainsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listDomains($order_by_id = null, $order_by_domain_name = null, $order_by_domain_extension = null, $order_by_order_date = null, $order_by_active_date = null, $order_by_expiration_date = null, $order_by_renewal_date = null, $order_by_status = null, $order_by_transfer_date = null, $limit = null, $offset = null, $id = null, $extension = null, $renewal_date = null, $full_name = null, $domain_name_pattern = null, $ns_group_pattern = null, $status = null, $status_not_equal = null, $queue_status = null, $contact_handle = null, $comment_pattern = null, $with_history = null, $with_api_history = null, $with_additional_data = null, $application_mode = null, $with_verification_email = null, $with_registry_statuses = null, $response_type = null, $response_to = null, $is_deleted = null, string $contentType = self::contentTypes['listDomains'][0])
     {
@@ -2224,9 +2224,9 @@ class DomainServiceApi
      * @param  bool $is_deleted Indicates whether object is deleted. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDomains'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainListDomainsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainListDomainsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDomainsWithHttpInfo($order_by_id = null, $order_by_domain_name = null, $order_by_domain_extension = null, $order_by_order_date = null, $order_by_active_date = null, $order_by_expiration_date = null, $order_by_renewal_date = null, $order_by_status = null, $order_by_transfer_date = null, $limit = null, $offset = null, $id = null, $extension = null, $renewal_date = null, $full_name = null, $domain_name_pattern = null, $ns_group_pattern = null, $status = null, $status_not_equal = null, $queue_status = null, $contact_handle = null, $comment_pattern = null, $with_history = null, $with_api_history = null, $with_additional_data = null, $application_mode = null, $with_verification_email = null, $with_registry_statuses = null, $response_type = null, $response_to = null, $is_deleted = null, string $contentType = self::contentTypes['listDomains'][0])
     {
@@ -2269,11 +2269,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainListDomainsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainListDomainsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainListDomainsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainListDomainsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2291,16 +2291,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainListDomainsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainListDomainsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2318,13 +2318,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainListDomainsResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainListDomainsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2357,7 +2357,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainListDomainsResponse',
+                        '\Panthera\Openprovider\Model\DomainListDomainsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2365,7 +2365,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2469,7 +2469,7 @@ class DomainServiceApi
      */
     public function listDomainsAsyncWithHttpInfo($order_by_id = null, $order_by_domain_name = null, $order_by_domain_extension = null, $order_by_order_date = null, $order_by_active_date = null, $order_by_expiration_date = null, $order_by_renewal_date = null, $order_by_status = null, $order_by_transfer_date = null, $limit = null, $offset = null, $id = null, $extension = null, $renewal_date = null, $full_name = null, $domain_name_pattern = null, $ns_group_pattern = null, $status = null, $status_not_equal = null, $queue_status = null, $contact_handle = null, $comment_pattern = null, $with_history = null, $with_api_history = null, $with_additional_data = null, $application_mode = null, $with_verification_email = null, $with_registry_statuses = null, $response_type = null, $response_to = null, $is_deleted = null, string $contentType = self::contentTypes['listDomains'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainListDomainsResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainListDomainsResponse';
         $request = $this->listDomainsRequest($order_by_id, $order_by_domain_name, $order_by_domain_extension, $order_by_order_date, $order_by_active_date, $order_by_expiration_date, $order_by_renewal_date, $order_by_status, $order_by_transfer_date, $limit, $offset, $id, $extension, $renewal_date, $full_name, $domain_name_pattern, $ns_group_pattern, $status, $status_not_equal, $queue_status, $contact_handle, $comment_pattern, $with_history, $with_api_history, $with_additional_data, $application_mode, $with_verification_email, $with_registry_statuses, $response_type, $response_to, $is_deleted, $contentType);
 
         return $this->client
@@ -2936,12 +2936,12 @@ class DomainServiceApi
      * Renew domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRenewDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRenewDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainRenewDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainRenewDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function renewDomain($id, $body, string $contentType = self::contentTypes['renewDomain'][0])
     {
@@ -2955,12 +2955,12 @@ class DomainServiceApi
      * Renew domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRenewDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRenewDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainRenewDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainRenewDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function renewDomainWithHttpInfo($id, $body, string $contentType = self::contentTypes['renewDomain'][0])
     {
@@ -3003,11 +3003,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainRenewDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainRenewDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainRenewDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainRenewDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3025,16 +3025,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainRenewDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainRenewDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3052,13 +3052,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainRenewDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainRenewDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3091,7 +3091,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainRenewDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainRenewDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3099,7 +3099,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3115,7 +3115,7 @@ class DomainServiceApi
      * Renew domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRenewDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRenewDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3137,7 +3137,7 @@ class DomainServiceApi
      * Renew domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRenewDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRenewDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3145,7 +3145,7 @@ class DomainServiceApi
      */
     public function renewDomainAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['renewDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainRenewDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainRenewDomainResponse';
         $request = $this->renewDomainRequest($id, $body, $contentType);
 
         return $this->client
@@ -3188,7 +3188,7 @@ class DomainServiceApi
      * Create request for operation 'renewDomain'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRenewDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRenewDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3302,12 +3302,12 @@ class DomainServiceApi
      * Restore domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRestoreDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRestoreDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restoreDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainRestoreDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainRestoreDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function restoreDomain($id, $body, string $contentType = self::contentTypes['restoreDomain'][0])
     {
@@ -3321,12 +3321,12 @@ class DomainServiceApi
      * Restore domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRestoreDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRestoreDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restoreDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainRestoreDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainRestoreDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function restoreDomainWithHttpInfo($id, $body, string $contentType = self::contentTypes['restoreDomain'][0])
     {
@@ -3369,11 +3369,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainRestoreDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainRestoreDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainRestoreDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainRestoreDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3391,16 +3391,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainRestoreDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainRestoreDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3418,13 +3418,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainRestoreDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainRestoreDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3457,7 +3457,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainRestoreDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainRestoreDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3465,7 +3465,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3481,7 +3481,7 @@ class DomainServiceApi
      * Restore domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRestoreDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRestoreDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restoreDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3503,7 +3503,7 @@ class DomainServiceApi
      * Restore domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRestoreDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRestoreDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restoreDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3511,7 +3511,7 @@ class DomainServiceApi
      */
     public function restoreDomainAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['restoreDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainRestoreDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainRestoreDomainResponse';
         $request = $this->restoreDomainRequest($id, $body, $contentType);
 
         return $this->client
@@ -3554,7 +3554,7 @@ class DomainServiceApi
      * Create request for operation 'restoreDomain'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainRestoreDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainRestoreDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['restoreDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3668,12 +3668,12 @@ class DomainServiceApi
      * Send foa1
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainSendFoa1Request $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSendFoa1Request $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFoa1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function sendFoa1($id, $body, string $contentType = self::contentTypes['sendFoa1'][0])
     {
@@ -3687,12 +3687,12 @@ class DomainServiceApi
      * Send foa1
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainSendFoa1Request $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSendFoa1Request $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFoa1'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function sendFoa1WithHttpInfo($id, $body, string $contentType = self::contentTypes['sendFoa1'][0])
     {
@@ -3735,11 +3735,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResponseBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResponseBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResponseBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResponseBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3757,16 +3757,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResponseBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResponseBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3784,13 +3784,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3823,7 +3823,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseBoolResponse',
+                        '\Panthera\Openprovider\Model\ResponseBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3831,7 +3831,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3847,7 +3847,7 @@ class DomainServiceApi
      * Send foa1
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainSendFoa1Request $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSendFoa1Request $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFoa1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3869,7 +3869,7 @@ class DomainServiceApi
      * Send foa1
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainSendFoa1Request $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSendFoa1Request $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFoa1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -3877,7 +3877,7 @@ class DomainServiceApi
      */
     public function sendFoa1AsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['sendFoa1'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
         $request = $this->sendFoa1Request($id, $body, $contentType);
 
         return $this->client
@@ -3920,7 +3920,7 @@ class DomainServiceApi
      * Create request for operation 'sendFoa1'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainSendFoa1Request $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSendFoa1Request $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['sendFoa1'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4033,12 +4033,12 @@ class DomainServiceApi
      *
      * Suggest name domain
      *
-     * @param  \OpenAPI\Client\Model\DomainSuggestNameDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suggestNameDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainSuggestNameDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainSuggestNameDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function suggestNameDomain($body, string $contentType = self::contentTypes['suggestNameDomain'][0])
     {
@@ -4051,12 +4051,12 @@ class DomainServiceApi
      *
      * Suggest name domain
      *
-     * @param  \OpenAPI\Client\Model\DomainSuggestNameDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suggestNameDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainSuggestNameDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainSuggestNameDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function suggestNameDomainWithHttpInfo($body, string $contentType = self::contentTypes['suggestNameDomain'][0])
     {
@@ -4099,11 +4099,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainSuggestNameDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainSuggestNameDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4121,16 +4121,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainSuggestNameDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4148,13 +4148,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainSuggestNameDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4187,7 +4187,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainSuggestNameDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4195,7 +4195,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4210,7 +4210,7 @@ class DomainServiceApi
      *
      * Suggest name domain
      *
-     * @param  \OpenAPI\Client\Model\DomainSuggestNameDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suggestNameDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4231,7 +4231,7 @@ class DomainServiceApi
      *
      * Suggest name domain
      *
-     * @param  \OpenAPI\Client\Model\DomainSuggestNameDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suggestNameDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4239,7 +4239,7 @@ class DomainServiceApi
      */
     public function suggestNameDomainAsyncWithHttpInfo($body, string $contentType = self::contentTypes['suggestNameDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainSuggestNameDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainSuggestNameDomainResponse';
         $request = $this->suggestNameDomainRequest($body, $contentType);
 
         return $this->client
@@ -4281,7 +4281,7 @@ class DomainServiceApi
     /**
      * Create request for operation 'suggestNameDomain'
      *
-     * @param  \OpenAPI\Client\Model\DomainSuggestNameDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainSuggestNameDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['suggestNameDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4379,12 +4379,12 @@ class DomainServiceApi
      *
      * Trade domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTradeDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTradeDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tradeDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainTradeDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainTradeDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function tradeDomain($body, string $contentType = self::contentTypes['tradeDomain'][0])
     {
@@ -4397,12 +4397,12 @@ class DomainServiceApi
      *
      * Trade domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTradeDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTradeDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tradeDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainTradeDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainTradeDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function tradeDomainWithHttpInfo($body, string $contentType = self::contentTypes['tradeDomain'][0])
     {
@@ -4445,11 +4445,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainTradeDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainTradeDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainTradeDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainTradeDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4467,16 +4467,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainTradeDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainTradeDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4494,13 +4494,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainTradeDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainTradeDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4533,7 +4533,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainTradeDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainTradeDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4541,7 +4541,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4556,7 +4556,7 @@ class DomainServiceApi
      *
      * Trade domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTradeDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTradeDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tradeDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4577,7 +4577,7 @@ class DomainServiceApi
      *
      * Trade domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTradeDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTradeDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tradeDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4585,7 +4585,7 @@ class DomainServiceApi
      */
     public function tradeDomainAsyncWithHttpInfo($body, string $contentType = self::contentTypes['tradeDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainTradeDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainTradeDomainResponse';
         $request = $this->tradeDomainRequest($body, $contentType);
 
         return $this->client
@@ -4627,7 +4627,7 @@ class DomainServiceApi
     /**
      * Create request for operation 'tradeDomain'
      *
-     * @param  \OpenAPI\Client\Model\DomainTradeDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTradeDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tradeDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4725,12 +4725,12 @@ class DomainServiceApi
      *
      * Transfer domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTransferDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTransferDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainTransferDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainTransferDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function transferDomain($body, string $contentType = self::contentTypes['transferDomain'][0])
     {
@@ -4743,12 +4743,12 @@ class DomainServiceApi
      *
      * Transfer domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTransferDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTransferDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainTransferDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainTransferDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function transferDomainWithHttpInfo($body, string $contentType = self::contentTypes['transferDomain'][0])
     {
@@ -4791,11 +4791,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainTransferDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainTransferDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainTransferDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainTransferDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4813,16 +4813,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainTransferDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainTransferDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4840,13 +4840,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainTransferDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainTransferDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4879,7 +4879,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainTransferDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainTransferDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4887,7 +4887,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4902,7 +4902,7 @@ class DomainServiceApi
      *
      * Transfer domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTransferDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTransferDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4923,7 +4923,7 @@ class DomainServiceApi
      *
      * Transfer domain
      *
-     * @param  \OpenAPI\Client\Model\DomainTransferDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTransferDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4931,7 +4931,7 @@ class DomainServiceApi
      */
     public function transferDomainAsyncWithHttpInfo($body, string $contentType = self::contentTypes['transferDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainTransferDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainTransferDomainResponse';
         $request = $this->transferDomainRequest($body, $contentType);
 
         return $this->client
@@ -4973,7 +4973,7 @@ class DomainServiceApi
     /**
      * Create request for operation 'transferDomain'
      *
-     * @param  \OpenAPI\Client\Model\DomainTransferDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTransferDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5072,12 +5072,12 @@ class DomainServiceApi
      * Try again last operation
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tryAgainLastOperation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function tryAgainLastOperation($id, $body, string $contentType = self::contentTypes['tryAgainLastOperation'][0])
     {
@@ -5091,12 +5091,12 @@ class DomainServiceApi
      * Try again last operation
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tryAgainLastOperation'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResponseBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResponseBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function tryAgainLastOperationWithHttpInfo($id, $body, string $contentType = self::contentTypes['tryAgainLastOperation'][0])
     {
@@ -5139,11 +5139,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResponseBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResponseBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResponseBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResponseBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5161,16 +5161,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResponseBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResponseBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5188,13 +5188,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5227,7 +5227,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResponseBoolResponse',
+                        '\Panthera\Openprovider\Model\ResponseBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5235,7 +5235,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5251,7 +5251,7 @@ class DomainServiceApi
      * Try again last operation
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tryAgainLastOperation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5273,7 +5273,7 @@ class DomainServiceApi
      * Try again last operation
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tryAgainLastOperation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5281,7 +5281,7 @@ class DomainServiceApi
      */
     public function tryAgainLastOperationAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['tryAgainLastOperation'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResponseBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResponseBoolResponse';
         $request = $this->tryAgainLastOperationRequest($id, $body, $contentType);
 
         return $this->client
@@ -5324,7 +5324,7 @@ class DomainServiceApi
      * Create request for operation 'tryAgainLastOperation'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainTryAgainLastOperationRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainTryAgainLastOperationRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tryAgainLastOperation'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5438,12 +5438,12 @@ class DomainServiceApi
      * Update domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainUpdateDomainRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\DomainUpdateDomainRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainUpdateDomainResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\DomainUpdateDomainResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateDomain($id, $body, string $contentType = self::contentTypes['updateDomain'][0])
     {
@@ -5457,12 +5457,12 @@ class DomainServiceApi
      * Update domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainUpdateDomainResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\DomainUpdateDomainResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateDomainWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateDomain'][0])
     {
@@ -5505,11 +5505,11 @@ class DomainServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainUpdateDomainResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\DomainUpdateDomainResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainUpdateDomainResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\DomainUpdateDomainResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5527,16 +5527,16 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainUpdateDomainResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\DomainUpdateDomainResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5554,13 +5554,13 @@ class DomainServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainUpdateDomainResponse';
+            $returnType = '\Panthera\Openprovider\Model\DomainUpdateDomainResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5593,7 +5593,7 @@ class DomainServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainUpdateDomainResponse',
+                        '\Panthera\Openprovider\Model\DomainUpdateDomainResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5601,7 +5601,7 @@ class DomainServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5617,7 +5617,7 @@ class DomainServiceApi
      * Update domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5639,7 +5639,7 @@ class DomainServiceApi
      * Update domain
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -5647,7 +5647,7 @@ class DomainServiceApi
      */
     public function updateDomainAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateDomain'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\DomainUpdateDomainResponse';
+        $returnType = '\Panthera\Openprovider\Model\DomainUpdateDomainResponse';
         $request = $this->updateDomainRequest($id, $body, $contentType);
 
         return $this->client
@@ -5690,7 +5690,7 @@ class DomainServiceApi
      * Create request for operation 'updateDomain'
      *
      * @param  int $id Domain id number (required)
-     * @param  \OpenAPI\Client\Model\DomainUpdateDomainRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\DomainUpdateDomainRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDomain'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

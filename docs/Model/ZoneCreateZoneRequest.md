@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**domain** | [**\OpenAPI\Client\Model\ZoneDomain**](ZoneDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\ZoneDomain**](ZoneDomain.md) |  | [optional]
 **is_spamexperts_enabled** | **string** |  | [optional]
 **master_ip** | **string** |  | [optional]
 **provider** | **string** |  | [optional]
-**records** | [**\OpenAPI\Client\Model\ZoneRecord[]**](ZoneRecord.md) |  | [optional]
+**records** | [**\Panthera\Openprovider\Model\ZoneRecord[]**](ZoneRecord.md) |  | [optional]
 **secured** | **bool** |  | [optional]
 **template_name** | **string** |  | [optional]
 **type** | **string** |  | [optional]

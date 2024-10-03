@@ -1,4 +1,4 @@
-# OpenAPI\Client\ResellerServiceApi
+# Panthera\Openprovider\ResellerServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getReseller()`
 
 ```php
-getReseller($with_additional_data, $with_statistics, $with_settings, $with_contacts): \OpenAPI\Client\Model\ResellerGetResellerResponse
+getReseller($with_additional_data, $with_statistics, $with_settings, $with_contacts): \Panthera\Openprovider\Model\ResellerGetResellerResponse
 ```
 
 Get reseller
@@ -24,12 +24,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ResellerServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ResellerServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResellerGetResellerResponse**](../Model/ResellerGetResellerResponse.md)
+[**\Panthera\Openprovider\Model\ResellerGetResellerResponse**](../Model/ResellerGetResellerResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `updateReseller()`
 
 ```php
-updateReseller($id, $body): \OpenAPI\Client\Model\ResellerUpdateResellerResponse
+updateReseller($id, $body): \Panthera\Openprovider\Model\ResellerUpdateResellerResponse
 ```
 
 Update reseller
@@ -90,19 +90,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ResellerServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\ResellerServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object ID
-$body = new \OpenAPI\Client\Model\ResellerUpdateResellerRequest(); // \OpenAPI\Client\Model\ResellerUpdateResellerRequest
+$body = new \Panthera\Openprovider\Model\ResellerUpdateResellerRequest(); // \Panthera\Openprovider\Model\ResellerUpdateResellerRequest
 
 try {
     $result = $apiInstance->updateReseller($id, $body);
@@ -117,11 +117,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object ID | |
-| **body** | [**\OpenAPI\Client\Model\ResellerUpdateResellerRequest**](../Model/ResellerUpdateResellerRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\ResellerUpdateResellerRequest**](../Model/ResellerUpdateResellerRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ResellerUpdateResellerResponse**](../Model/ResellerUpdateResellerResponse.md)
+[**\Panthera\Openprovider\Model\ResellerUpdateResellerResponse**](../Model/ResellerUpdateResellerResponse.md)
 
 ### Authorization
 

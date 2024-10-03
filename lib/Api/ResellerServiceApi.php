@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ResellerServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,9 +136,9 @@ class ResellerServiceApi
      * @param  bool $with_contacts Indicates if reseller contacts should be retrieved. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReseller'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResellerGetResellerResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResellerGetResellerResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getReseller($with_additional_data = null, $with_statistics = null, $with_settings = null, $with_contacts = null, string $contentType = self::contentTypes['getReseller'][0])
     {
@@ -157,9 +157,9 @@ class ResellerServiceApi
      * @param  bool $with_contacts Indicates if reseller contacts should be retrieved. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getReseller'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResellerGetResellerResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResellerGetResellerResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getResellerWithHttpInfo($with_additional_data = null, $with_statistics = null, $with_settings = null, $with_contacts = null, string $contentType = self::contentTypes['getReseller'][0])
     {
@@ -202,11 +202,11 @@ class ResellerServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResellerGetResellerResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResellerGetResellerResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResellerGetResellerResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResellerGetResellerResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,16 +224,16 @@ class ResellerServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResellerGetResellerResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResellerGetResellerResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -251,13 +251,13 @@ class ResellerServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResellerGetResellerResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResellerGetResellerResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -290,7 +290,7 @@ class ResellerServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResellerGetResellerResponse',
+                        '\Panthera\Openprovider\Model\ResellerGetResellerResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -298,7 +298,7 @@ class ResellerServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -348,7 +348,7 @@ class ResellerServiceApi
      */
     public function getResellerAsyncWithHttpInfo($with_additional_data = null, $with_statistics = null, $with_settings = null, $with_contacts = null, string $contentType = self::contentTypes['getReseller'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResellerGetResellerResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResellerGetResellerResponse';
         $request = $this->getResellerRequest($with_additional_data, $with_statistics, $with_settings, $with_contacts, $contentType);
 
         return $this->client
@@ -518,12 +518,12 @@ class ResellerServiceApi
      * Update reseller
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ResellerUpdateResellerRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ResellerUpdateResellerRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateReseller'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ResellerUpdateResellerResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ResellerUpdateResellerResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateReseller($id, $body, string $contentType = self::contentTypes['updateReseller'][0])
     {
@@ -537,12 +537,12 @@ class ResellerServiceApi
      * Update reseller
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ResellerUpdateResellerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ResellerUpdateResellerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateReseller'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ResellerUpdateResellerResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ResellerUpdateResellerResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateResellerWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateReseller'][0])
     {
@@ -585,11 +585,11 @@ class ResellerServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ResellerUpdateResellerResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ResellerUpdateResellerResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ResellerUpdateResellerResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ResellerUpdateResellerResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -607,16 +607,16 @@ class ResellerServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ResellerUpdateResellerResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ResellerUpdateResellerResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -634,13 +634,13 @@ class ResellerServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ResellerUpdateResellerResponse';
+            $returnType = '\Panthera\Openprovider\Model\ResellerUpdateResellerResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -673,7 +673,7 @@ class ResellerServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ResellerUpdateResellerResponse',
+                        '\Panthera\Openprovider\Model\ResellerUpdateResellerResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -681,7 +681,7 @@ class ResellerServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -697,7 +697,7 @@ class ResellerServiceApi
      * Update reseller
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ResellerUpdateResellerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ResellerUpdateResellerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateReseller'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -719,7 +719,7 @@ class ResellerServiceApi
      * Update reseller
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ResellerUpdateResellerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ResellerUpdateResellerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateReseller'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -727,7 +727,7 @@ class ResellerServiceApi
      */
     public function updateResellerAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateReseller'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ResellerUpdateResellerResponse';
+        $returnType = '\Panthera\Openprovider\Model\ResellerUpdateResellerResponse';
         $request = $this->updateResellerRequest($id, $body, $contentType);
 
         return $this->client
@@ -770,7 +770,7 @@ class ResellerServiceApi
      * Create request for operation 'updateReseller'
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ResellerUpdateResellerRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ResellerUpdateResellerRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateReseller'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

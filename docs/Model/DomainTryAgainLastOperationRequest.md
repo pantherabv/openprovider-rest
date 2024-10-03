@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auth_code** | **string** |  | [optional]
-**domain** | [**\OpenAPI\Client\Model\DomainDomain**](DomainDomain.md) |  | [optional]
+**domain** | [**\Panthera\Openprovider\Model\DomainDomain**](DomainDomain.md) |  | [optional]
 **id** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

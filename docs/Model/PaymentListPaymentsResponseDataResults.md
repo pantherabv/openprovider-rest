@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | [**\OpenAPI\Client\Model\PaymentPrices**](PaymentPrices.md) |  | [optional]
+**amount** | [**\Panthera\Openprovider\Model\PaymentPrices**](PaymentPrices.md) |  | [optional]
 **confirmation_date** | **string** |  | [optional]
 **creation_date** | **string** |  | [optional]
 **id** | **int** |  | [optional]

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * EasydmarcOrderApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,12 +142,12 @@ class EasydmarcOrderApi
      *
      * Create easy dmarc
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderCreateEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createEasyDmarc($body, string $contentType = self::contentTypes['createEasyDmarc'][0])
     {
@@ -160,12 +160,12 @@ class EasydmarcOrderApi
      *
      * Create easy dmarc
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderCreateEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEasyDmarcWithHttpInfo($body, string $contentType = self::contentTypes['createEasyDmarc'][0])
     {
@@ -208,11 +208,11 @@ class EasydmarcOrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -230,16 +230,16 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -257,13 +257,13 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -296,7 +296,7 @@ class EasydmarcOrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse',
+                        '\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class EasydmarcOrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -319,7 +319,7 @@ class EasydmarcOrderApi
      *
      * Create easy dmarc
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEasyDmarc'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -340,7 +340,7 @@ class EasydmarcOrderApi
      *
      * Create easy dmarc
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEasyDmarc'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -348,7 +348,7 @@ class EasydmarcOrderApi
      */
     public function createEasyDmarcAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createEasyDmarc'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderCreateEasyDmarcResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderCreateEasyDmarcResponse';
         $request = $this->createEasyDmarcRequest($body, $contentType);
 
         return $this->client
@@ -390,7 +390,7 @@ class EasydmarcOrderApi
     /**
      * Create request for operation 'createEasyDmarc'
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEasyDmarc'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -491,9 +491,9 @@ class EasydmarcOrderApi
      * @param  int $id Easydmarc id (order number) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteEasyDmarc($id, string $contentType = self::contentTypes['deleteEasyDmarc'][0])
     {
@@ -509,9 +509,9 @@ class EasydmarcOrderApi
      * @param  int $id Easydmarc id (order number) (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEasyDmarcWithHttpInfo($id, string $contentType = self::contentTypes['deleteEasyDmarc'][0])
     {
@@ -554,11 +554,11 @@ class EasydmarcOrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -576,16 +576,16 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -603,13 +603,13 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -642,7 +642,7 @@ class EasydmarcOrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse',
+                        '\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -650,7 +650,7 @@ class EasydmarcOrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -694,7 +694,7 @@ class EasydmarcOrderApi
      */
     public function deleteEasyDmarcAsyncWithHttpInfo($id, string $contentType = self::contentTypes['deleteEasyDmarc'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderDeleteEasyDmarcResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderDeleteEasyDmarcResponse';
         $request = $this->deleteEasyDmarcRequest($id, $contentType);
 
         return $this->client
@@ -839,9 +839,9 @@ class EasydmarcOrderApi
      * @param  string $domain_extension Domain extension. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderGetEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderGetEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getEasyDmarc($domain_name = null, $domain_extension = null, string $contentType = self::contentTypes['getEasyDmarc'][0])
     {
@@ -858,9 +858,9 @@ class EasydmarcOrderApi
      * @param  string $domain_extension Domain extension. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderGetEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderGetEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEasyDmarcWithHttpInfo($domain_name = null, $domain_extension = null, string $contentType = self::contentTypes['getEasyDmarc'][0])
     {
@@ -903,11 +903,11 @@ class EasydmarcOrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderGetEasyDmarcResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderGetEasyDmarcResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -925,16 +925,16 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderGetEasyDmarcResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -952,13 +952,13 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderGetEasyDmarcResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -991,7 +991,7 @@ class EasydmarcOrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderGetEasyDmarcResponse',
+                        '\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -999,7 +999,7 @@ class EasydmarcOrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1045,7 +1045,7 @@ class EasydmarcOrderApi
      */
     public function getEasyDmarcAsyncWithHttpInfo($domain_name = null, $domain_extension = null, string $contentType = self::contentTypes['getEasyDmarc'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderGetEasyDmarcResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderGetEasyDmarcResponse';
         $request = $this->getEasyDmarcRequest($domain_name, $domain_extension, $contentType);
 
         return $this->client
@@ -1196,9 +1196,9 @@ class EasydmarcOrderApi
      * @param  string $type SSO url on behalf of the customer or reseller. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEasyDmarcSso'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getEasyDmarcSso($id, $type = null, string $contentType = self::contentTypes['getEasyDmarcSso'][0])
     {
@@ -1215,9 +1215,9 @@ class EasydmarcOrderApi
      * @param  string $type SSO url on behalf of the customer or reseller. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEasyDmarcSso'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEasyDmarcSsoWithHttpInfo($id, $type = null, string $contentType = self::contentTypes['getEasyDmarcSso'][0])
     {
@@ -1260,11 +1260,11 @@ class EasydmarcOrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1282,16 +1282,16 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1309,13 +1309,13 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1348,7 +1348,7 @@ class EasydmarcOrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse',
+                        '\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1356,7 +1356,7 @@ class EasydmarcOrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1402,7 +1402,7 @@ class EasydmarcOrderApi
      */
     public function getEasyDmarcSsoAsyncWithHttpInfo($id, $type = null, string $contentType = self::contentTypes['getEasyDmarcSso'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderGetEasyDmarcSsoResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderGetEasyDmarcSsoResponse';
         $request = $this->getEasyDmarcSsoRequest($id, $type, $contentType);
 
         return $this->client
@@ -1562,9 +1562,9 @@ class EasydmarcOrderApi
      * @param  string $domain_extension Domain extension. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderListEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderListEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listEasyDmarc($limit = 100, $offset = 0, $order_by_id = null, $status = null, $domain_name = null, $domain_extension = null, string $contentType = self::contentTypes['listEasyDmarc'][0])
     {
@@ -1585,9 +1585,9 @@ class EasydmarcOrderApi
      * @param  string $domain_extension Domain extension. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderListEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderListEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEasyDmarcWithHttpInfo($limit = 100, $offset = 0, $order_by_id = null, $status = null, $domain_name = null, $domain_extension = null, string $contentType = self::contentTypes['listEasyDmarc'][0])
     {
@@ -1630,11 +1630,11 @@ class EasydmarcOrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderListEasyDmarcResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderListEasyDmarcResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderListEasyDmarcResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderListEasyDmarcResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1652,16 +1652,16 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderListEasyDmarcResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderListEasyDmarcResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1679,13 +1679,13 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderListEasyDmarcResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderListEasyDmarcResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1718,7 +1718,7 @@ class EasydmarcOrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderListEasyDmarcResponse',
+                        '\Panthera\Openprovider\Model\OrderListEasyDmarcResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1726,7 +1726,7 @@ class EasydmarcOrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1780,7 +1780,7 @@ class EasydmarcOrderApi
      */
     public function listEasyDmarcAsyncWithHttpInfo($limit = 100, $offset = 0, $order_by_id = null, $status = null, $domain_name = null, $domain_extension = null, string $contentType = self::contentTypes['listEasyDmarc'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderListEasyDmarcResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderListEasyDmarcResponse';
         $request = $this->listEasyDmarcRequest($limit, $offset, $order_by_id, $status, $domain_name, $domain_extension, $contentType);
 
         return $this->client
@@ -1972,12 +1972,12 @@ class EasydmarcOrderApi
      * Retry easy dmarc
      *
      * @param  int $id Easydmarc id (order number) (required)
-     * @param  \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderRetryEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function retryEasyDmarc($id, $body, string $contentType = self::contentTypes['retryEasyDmarc'][0])
     {
@@ -1991,12 +1991,12 @@ class EasydmarcOrderApi
      * Retry easy dmarc
      *
      * @param  int $id Easydmarc id (order number) (required)
-     * @param  \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryEasyDmarc'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderRetryEasyDmarcResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function retryEasyDmarcWithHttpInfo($id, $body, string $contentType = self::contentTypes['retryEasyDmarc'][0])
     {
@@ -2039,11 +2039,11 @@ class EasydmarcOrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2061,16 +2061,16 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2088,13 +2088,13 @@ class EasydmarcOrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2127,7 +2127,7 @@ class EasydmarcOrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse',
+                        '\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2135,7 +2135,7 @@ class EasydmarcOrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2151,7 +2151,7 @@ class EasydmarcOrderApi
      * Retry easy dmarc
      *
      * @param  int $id Easydmarc id (order number) (required)
-     * @param  \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryEasyDmarc'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2173,7 +2173,7 @@ class EasydmarcOrderApi
      * Retry easy dmarc
      *
      * @param  int $id Easydmarc id (order number) (required)
-     * @param  \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryEasyDmarc'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2181,7 +2181,7 @@ class EasydmarcOrderApi
      */
     public function retryEasyDmarcAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['retryEasyDmarc'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderRetryEasyDmarcResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderRetryEasyDmarcResponse';
         $request = $this->retryEasyDmarcRequest($id, $body, $contentType);
 
         return $this->client
@@ -2224,7 +2224,7 @@ class EasydmarcOrderApi
      * Create request for operation 'retryEasyDmarc'
      *
      * @param  int $id Easydmarc id (order number) (required)
-     * @param  \OpenAPI\Client\Model\OrderRetryEasyDmarcRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRetryEasyDmarcRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['retryEasyDmarc'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

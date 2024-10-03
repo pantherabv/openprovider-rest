@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZoneCreateZoneRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,11 +57,11 @@ class ZoneCreateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'domain' => '\OpenAPI\Client\Model\ZoneDomain',
+        'domain' => '\Panthera\Openprovider\Model\ZoneDomain',
         'is_spamexperts_enabled' => 'string',
         'master_ip' => 'string',
         'provider' => 'string',
-        'records' => '\OpenAPI\Client\Model\ZoneRecord[]',
+        'records' => '\Panthera\Openprovider\Model\ZoneRecord[]',
         'secured' => 'bool',
         'template_name' => 'string',
         'type' => 'string'
@@ -341,7 +341,7 @@ class ZoneCreateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\ZoneDomain|null
+     * @return \Panthera\Openprovider\Model\ZoneDomain|null
      */
     public function getDomain()
     {
@@ -351,7 +351,7 @@ class ZoneCreateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\ZoneDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\ZoneDomain|null $domain domain
      *
      * @return self
      */
@@ -449,7 +449,7 @@ class ZoneCreateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets records
      *
-     * @return \OpenAPI\Client\Model\ZoneRecord[]|null
+     * @return \Panthera\Openprovider\Model\ZoneRecord[]|null
      */
     public function getRecords()
     {
@@ -459,7 +459,7 @@ class ZoneCreateZoneRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets records
      *
-     * @param \OpenAPI\Client\Model\ZoneRecord[]|null $records records
+     * @param \Panthera\Openprovider\Model\ZoneRecord[]|null $records records
      *
      * @return self
      */

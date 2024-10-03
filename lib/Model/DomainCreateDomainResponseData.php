@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainCreateDomainResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DomainCreateDomainResponseData implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'activation_date' => 'string',
-        'additional_data' => '\OpenAPI\Client\Model\DomainAdditionalData',
+        'additional_data' => '\Panthera\Openprovider\Model\DomainAdditionalData',
         'auth_code' => 'string',
         'expiration_date' => 'string',
         'id' => 'int',
@@ -361,7 +361,7 @@ class DomainCreateDomainResponseData implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\DomainAdditionalData|null
+     * @return \Panthera\Openprovider\Model\DomainAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -371,7 +371,7 @@ class DomainCreateDomainResponseData implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\DomainAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\DomainAdditionalData|null $additional_data additional_data
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * EmailUpdateEmailRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,14 +57,14 @@ class EmailUpdateEmailRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fields' => '\OpenAPI\Client\Model\EmailFields[]',
+        'fields' => '\Panthera\Openprovider\Model\EmailFields[]',
         'group' => 'string',
         'id' => 'int',
         'is_active' => 'bool',
         'is_default' => 'bool',
         'locale' => 'string[]',
         'name' => 'string',
-        'tags' => '\OpenAPI\Client\Model\EmailTags[]'
+        'tags' => '\Panthera\Openprovider\Model\EmailTags[]'
     ];
 
     /**
@@ -341,7 +341,7 @@ class EmailUpdateEmailRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets fields
      *
-     * @return \OpenAPI\Client\Model\EmailFields[]|null
+     * @return \Panthera\Openprovider\Model\EmailFields[]|null
      */
     public function getFields()
     {
@@ -351,7 +351,7 @@ class EmailUpdateEmailRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets fields
      *
-     * @param \OpenAPI\Client\Model\EmailFields[]|null $fields fields
+     * @param \Panthera\Openprovider\Model\EmailFields[]|null $fields fields
      *
      * @return self
      */
@@ -530,7 +530,7 @@ class EmailUpdateEmailRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets tags
      *
-     * @return \OpenAPI\Client\Model\EmailTags[]|null
+     * @return \Panthera\Openprovider\Model\EmailTags[]|null
      */
     public function getTags()
     {
@@ -540,7 +540,7 @@ class EmailUpdateEmailRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets tags
      *
-     * @param \OpenAPI\Client\Model\EmailTags[]|null $tags tags
+     * @param \Panthera\Openprovider\Model\EmailTags[]|null $tags tags
      *
      * @return self
      */

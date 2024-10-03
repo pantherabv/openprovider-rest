@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OrderListEasyDmarcOrder Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class OrderListEasyDmarcOrder implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'activated_at' => 'string',
-        'domain' => '\OpenAPI\Client\Model\OrderDomain',
+        'domain' => '\Panthera\Openprovider\Model\OrderDomain',
         'expired_at' => 'string',
         'id' => 'int',
         'record_host' => 'string',
@@ -375,7 +375,7 @@ class OrderListEasyDmarcOrder implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets domain
      *
-     * @return \OpenAPI\Client\Model\OrderDomain|null
+     * @return \Panthera\Openprovider\Model\OrderDomain|null
      */
     public function getDomain()
     {
@@ -385,7 +385,7 @@ class OrderListEasyDmarcOrder implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets domain
      *
-     * @param \OpenAPI\Client\Model\OrderDomain|null $domain domain
+     * @param \Panthera\Openprovider\Model\OrderDomain|null $domain domain
      *
      * @return self
      */

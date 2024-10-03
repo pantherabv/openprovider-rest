@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**amount** | [**\OpenAPI\Client\Model\InvoicePrices**](InvoicePrices.md) |  | [optional]
+**amount** | [**\Panthera\Openprovider\Model\InvoicePrices**](InvoicePrices.md) |  | [optional]
 **attachment_url** | **string** |  | [optional]
 **creation_date** | **string** |  | [optional]
 **id** | **int** |  | [optional]

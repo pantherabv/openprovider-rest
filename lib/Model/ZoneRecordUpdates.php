@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZoneRecordUpdates Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'add' => '\OpenAPI\Client\Model\ZoneRecord[]',
-        'remove' => '\OpenAPI\Client\Model\ZoneRecord[]',
-        'replace' => '\OpenAPI\Client\Model\ZoneRecord[]',
-        'update' => '\OpenAPI\Client\Model\ZoneRecordWithOriginal[]'
+        'add' => '\Panthera\Openprovider\Model\ZoneRecord[]',
+        'remove' => '\Panthera\Openprovider\Model\ZoneRecord[]',
+        'replace' => '\Panthera\Openprovider\Model\ZoneRecord[]',
+        'update' => '\Panthera\Openprovider\Model\ZoneRecordWithOriginal[]'
     ];
 
     /**
@@ -313,7 +313,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets add
      *
-     * @return \OpenAPI\Client\Model\ZoneRecord[]|null
+     * @return \Panthera\Openprovider\Model\ZoneRecord[]|null
      */
     public function getAdd()
     {
@@ -323,7 +323,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets add
      *
-     * @param \OpenAPI\Client\Model\ZoneRecord[]|null $add add
+     * @param \Panthera\Openprovider\Model\ZoneRecord[]|null $add add
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets remove
      *
-     * @return \OpenAPI\Client\Model\ZoneRecord[]|null
+     * @return \Panthera\Openprovider\Model\ZoneRecord[]|null
      */
     public function getRemove()
     {
@@ -350,7 +350,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets remove
      *
-     * @param \OpenAPI\Client\Model\ZoneRecord[]|null $remove remove
+     * @param \Panthera\Openprovider\Model\ZoneRecord[]|null $remove remove
      *
      * @return self
      */
@@ -367,7 +367,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets replace
      *
-     * @return \OpenAPI\Client\Model\ZoneRecord[]|null
+     * @return \Panthera\Openprovider\Model\ZoneRecord[]|null
      */
     public function getReplace()
     {
@@ -377,7 +377,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets replace
      *
-     * @param \OpenAPI\Client\Model\ZoneRecord[]|null $replace replace
+     * @param \Panthera\Openprovider\Model\ZoneRecord[]|null $replace replace
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets update
      *
-     * @return \OpenAPI\Client\Model\ZoneRecordWithOriginal[]|null
+     * @return \Panthera\Openprovider\Model\ZoneRecordWithOriginal[]|null
      */
     public function getUpdate()
     {
@@ -404,7 +404,7 @@ class ZoneRecordUpdates implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets update
      *
-     * @param \OpenAPI\Client\Model\ZoneRecordWithOriginal[]|null $update update
+     * @param \Panthera\Openprovider\Model\ZoneRecordWithOriginal[]|null $update update
      *
      * @return self
      */

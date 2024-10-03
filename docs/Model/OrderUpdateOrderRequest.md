@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **approver_email** | **string** | Email for domain ownership verification. Should start with well-known generic name like admin@, hostmater@, administrator@, etc. | [optional]
 **autorenew** | **string** |  | [optional]
 **csr** | **string** |  | [optional]
-**domain_validation_methods** | [**\OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]**](OrderSslOrderDomainValidationMethods.md) |  | [optional]
+**domain_validation_methods** | [**\Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]**](OrderSslOrderDomainValidationMethods.md) |  | [optional]
 **enable_dns_automation** | **bool** |  | [optional] [default to false]
 **host_names** | **string[]** |  | [optional]
 **id** | **int** |  | [optional]

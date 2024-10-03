@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ResellerUpdateResellerRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,19 +57,19 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => '\OpenAPI\Client\Model\ResellerResellerAdditionalData',
-        'address' => '\OpenAPI\Client\Model\ContactAddress',
+        'additional_data' => '\Panthera\Openprovider\Model\ResellerResellerAdditionalData',
+        'address' => '\Panthera\Openprovider\Model\ContactAddress',
         'comments' => 'string',
         'company_name' => 'string',
-        'company_size' => '\OpenAPI\Client\Model\AttributesCompanySize',
-        'fax' => '\OpenAPI\Client\Model\CustomerFax',
+        'company_size' => '\Panthera\Openprovider\Model\AttributesCompanySize',
+        'fax' => '\Panthera\Openprovider\Model\CustomerFax',
         'id' => 'int',
-        'industry' => '\OpenAPI\Client\Model\AttributesIndustry',
+        'industry' => '\Panthera\Openprovider\Model\AttributesIndustry',
         'inn' => 'string',
         'kpp' => 'string',
         'locale' => 'string',
-        'name' => '\OpenAPI\Client\Model\ContactName',
-        'phone' => '\OpenAPI\Client\Model\ContactPhone',
+        'name' => '\Panthera\Openprovider\Model\ContactName',
+        'phone' => '\Panthera\Openprovider\Model\ContactPhone',
         'vat' => 'string'
     ];
 
@@ -383,7 +383,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\ResellerResellerAdditionalData|null
+     * @return \Panthera\Openprovider\Model\ResellerResellerAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -393,7 +393,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\ResellerResellerAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\ResellerResellerAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\ContactAddress|null
+     * @return \Panthera\Openprovider\Model\ContactAddress|null
      */
     public function getAddress()
     {
@@ -420,7 +420,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\ContactAddress|null $address address
+     * @param \Panthera\Openprovider\Model\ContactAddress|null $address address
      *
      * @return self
      */
@@ -491,7 +491,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets company_size
      *
-     * @return \OpenAPI\Client\Model\AttributesCompanySize|null
+     * @return \Panthera\Openprovider\Model\AttributesCompanySize|null
      */
     public function getCompanySize()
     {
@@ -501,7 +501,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets company_size
      *
-     * @param \OpenAPI\Client\Model\AttributesCompanySize|null $company_size company_size
+     * @param \Panthera\Openprovider\Model\AttributesCompanySize|null $company_size company_size
      *
      * @return self
      */
@@ -518,7 +518,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets fax
      *
-     * @return \OpenAPI\Client\Model\CustomerFax|null
+     * @return \Panthera\Openprovider\Model\CustomerFax|null
      */
     public function getFax()
     {
@@ -528,7 +528,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets fax
      *
-     * @param \OpenAPI\Client\Model\CustomerFax|null $fax fax
+     * @param \Panthera\Openprovider\Model\CustomerFax|null $fax fax
      *
      * @return self
      */
@@ -572,7 +572,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets industry
      *
-     * @return \OpenAPI\Client\Model\AttributesIndustry|null
+     * @return \Panthera\Openprovider\Model\AttributesIndustry|null
      */
     public function getIndustry()
     {
@@ -582,7 +582,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets industry
      *
-     * @param \OpenAPI\Client\Model\AttributesIndustry|null $industry industry
+     * @param \Panthera\Openprovider\Model\AttributesIndustry|null $industry industry
      *
      * @return self
      */
@@ -680,7 +680,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\ContactName|null
+     * @return \Panthera\Openprovider\Model\ContactName|null
      */
     public function getName()
     {
@@ -690,7 +690,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\ContactName|null $name name
+     * @param \Panthera\Openprovider\Model\ContactName|null $name name
      *
      * @return self
      */
@@ -707,7 +707,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets phone
      *
-     * @return \OpenAPI\Client\Model\ContactPhone|null
+     * @return \Panthera\Openprovider\Model\ContactPhone|null
      */
     public function getPhone()
     {
@@ -717,7 +717,7 @@ class ResellerUpdateResellerRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets phone
      *
-     * @param \OpenAPI\Client\Model\ContactPhone|null $phone phone
+     * @param \Panthera\Openprovider\Model\ContactPhone|null $phone phone
      *
      * @return self
      */

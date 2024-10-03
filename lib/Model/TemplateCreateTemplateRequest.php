@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TemplateCreateTemplateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TemplateCreateTemplateRequest implements ModelInterface, ArrayAccess, \Jso
     protected static $openAPITypes = [
         'is_spamexperts_enabled' => 'bool',
         'name' => 'string',
-        'records' => '\OpenAPI\Client\Model\TemplateRecord[]'
+        'records' => '\Panthera\Openprovider\Model\TemplateRecord[]'
     ];
 
     /**
@@ -360,7 +360,7 @@ class TemplateCreateTemplateRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets records
      *
-     * @return \OpenAPI\Client\Model\TemplateRecord[]|null
+     * @return \Panthera\Openprovider\Model\TemplateRecord[]|null
      */
     public function getRecords()
     {
@@ -370,7 +370,7 @@ class TemplateCreateTemplateRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets records
      *
-     * @param \OpenAPI\Client\Model\TemplateRecord[]|null $records records
+     * @param \Panthera\Openprovider\Model\TemplateRecord[]|null $records records
      *
      * @return self
      */

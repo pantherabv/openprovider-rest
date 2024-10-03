@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZonePremiumDnsData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class ZonePremiumDnsData implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sectigo' => '\OpenAPI\Client\Model\ZoneSectigoData'
+        'sectigo' => '\Panthera\Openprovider\Model\ZoneSectigoData'
     ];
 
     /**
@@ -292,7 +292,7 @@ class ZonePremiumDnsData implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets sectigo
      *
-     * @return \OpenAPI\Client\Model\ZoneSectigoData|null
+     * @return \Panthera\Openprovider\Model\ZoneSectigoData|null
      */
     public function getSectigo()
     {
@@ -302,7 +302,7 @@ class ZonePremiumDnsData implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets sectigo
      *
-     * @param \OpenAPI\Client\Model\ZoneSectigoData|null $sectigo sectigo
+     * @param \Panthera\Openprovider\Model\ZoneSectigoData|null $sectigo sectigo
      *
      * @return self
      */

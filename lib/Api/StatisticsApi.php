@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * StatisticsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -129,9 +129,9 @@ class StatisticsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStatistics'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\StatisticsGetStatisticsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\StatisticsGetStatisticsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getStatistics(string $contentType = self::contentTypes['getStatistics'][0])
     {
@@ -146,9 +146,9 @@ class StatisticsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getStatistics'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\StatisticsGetStatisticsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\StatisticsGetStatisticsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStatisticsWithHttpInfo(string $contentType = self::contentTypes['getStatistics'][0])
     {
@@ -191,11 +191,11 @@ class StatisticsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\StatisticsGetStatisticsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\StatisticsGetStatisticsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -213,16 +213,16 @@ class StatisticsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\StatisticsGetStatisticsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -240,13 +240,13 @@ class StatisticsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\StatisticsGetStatisticsResponse';
+            $returnType = '\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -279,7 +279,7 @@ class StatisticsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\StatisticsGetStatisticsResponse',
+                        '\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -287,7 +287,7 @@ class StatisticsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class StatisticsApi
      */
     public function getStatisticsAsyncWithHttpInfo(string $contentType = self::contentTypes['getStatistics'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\StatisticsGetStatisticsResponse';
+        $returnType = '\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse';
         $request = $this->getStatisticsRequest($contentType);
 
         return $this->client

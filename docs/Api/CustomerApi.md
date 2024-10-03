@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomerApi
+# Panthera\Openprovider\CustomerApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createCustomer()`
 
 ```php
-createCustomer($body): \OpenAPI\Client\Model\CustomerCreateCustomerResponse
+createCustomer($body): \Panthera\Openprovider\Model\CustomerCreateCustomerResponse
 ```
 
 Create customer
@@ -27,18 +27,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerApi(
+$apiInstance = new Panthera\Openprovider\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\CustomerCreateCustomerRequest(); // \OpenAPI\Client\Model\CustomerCreateCustomerRequest
+$body = new \Panthera\Openprovider\Model\CustomerCreateCustomerRequest(); // \Panthera\Openprovider\Model\CustomerCreateCustomerRequest
 
 try {
     $result = $apiInstance->createCustomer($body);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\CustomerCreateCustomerRequest**](../Model/CustomerCreateCustomerRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\CustomerCreateCustomerRequest**](../Model/CustomerCreateCustomerRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerCreateCustomerResponse**](../Model/CustomerCreateCustomerResponse.md)
+[**\Panthera\Openprovider\Model\CustomerCreateCustomerResponse**](../Model/CustomerCreateCustomerResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `deleteCustomer()`
 
 ```php
-deleteCustomer($handle): \OpenAPI\Client\Model\CustomerDeleteCustomerResponse
+deleteCustomer($handle): \Panthera\Openprovider\Model\CustomerDeleteCustomerResponse
 ```
 
 Delete customer
@@ -87,12 +87,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerApi(
+$apiInstance = new Panthera\Openprovider\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerDeleteCustomerResponse**](../Model/CustomerDeleteCustomerResponse.md)
+[**\Panthera\Openprovider\Model\CustomerDeleteCustomerResponse**](../Model/CustomerDeleteCustomerResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ try {
 ## `getCustomer()`
 
 ```php
-getCustomer($handle, $with_additional_data): \OpenAPI\Client\Model\CustomerGetCustomerResponse
+getCustomer($handle, $with_additional_data): \Panthera\Openprovider\Model\CustomerGetCustomerResponse
 ```
 
 Get customer
@@ -147,12 +147,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerApi(
+$apiInstance = new Panthera\Openprovider\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerGetCustomerResponse**](../Model/CustomerGetCustomerResponse.md)
+[**\Panthera\Openprovider\Model\CustomerGetCustomerResponse**](../Model/CustomerGetCustomerResponse.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ try {
 ## `listCustomers()`
 
 ```php
-listCustomers($reseller_id, $limit, $offset, $order, $order_by, $email_pattern, $company_name_pattern, $last_name_pattern, $first_name_pattern, $comment_pattern, $handle_pattern, $pattern, $with_additional_data, $type, $columns): \OpenAPI\Client\Model\CustomerListCustomersResponse
+listCustomers($reseller_id, $limit, $offset, $order, $order_by, $email_pattern, $company_name_pattern, $last_name_pattern, $first_name_pattern, $comment_pattern, $handle_pattern, $pattern, $with_additional_data, $type, $columns): \Panthera\Openprovider\Model\CustomerListCustomersResponse
 ```
 
 List customers
@@ -209,12 +209,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerApi(
+$apiInstance = new Panthera\Openprovider\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -266,7 +266,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerListCustomersResponse**](../Model/CustomerListCustomersResponse.md)
+[**\Panthera\Openprovider\Model\CustomerListCustomersResponse**](../Model/CustomerListCustomersResponse.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ try {
 ## `updateCustomer()`
 
 ```php
-updateCustomer($handle, $body): \OpenAPI\Client\Model\CustomerUpdateCustomerResponse
+updateCustomer($handle, $body): \Panthera\Openprovider\Model\CustomerUpdateCustomerResponse
 ```
 
 Update customer
@@ -297,19 +297,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomerApi(
+$apiInstance = new Panthera\Openprovider\Api\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $handle = 'handle_example'; // string | Customer unique identifier or handle, which can be created via CreateCustomer API method
-$body = new \OpenAPI\Client\Model\CustomerUpdateCustomerRequest(); // \OpenAPI\Client\Model\CustomerUpdateCustomerRequest
+$body = new \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest(); // \Panthera\Openprovider\Model\CustomerUpdateCustomerRequest
 
 try {
     $result = $apiInstance->updateCustomer($handle, $body);
@@ -324,11 +324,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **handle** | **string**| Customer unique identifier or handle, which can be created via CreateCustomer API method | |
-| **body** | [**\OpenAPI\Client\Model\CustomerUpdateCustomerRequest**](../Model/CustomerUpdateCustomerRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\CustomerUpdateCustomerRequest**](../Model/CustomerUpdateCustomerRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CustomerUpdateCustomerResponse**](../Model/CustomerUpdateCustomerResponse.md)
+[**\Panthera\Openprovider\Model\CustomerUpdateCustomerResponse**](../Model/CustomerUpdateCustomerResponse.md)
 
 ### Authorization
 

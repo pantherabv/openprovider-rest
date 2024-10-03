@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ContactServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class ContactServiceApi
      *
      * Create contact
      *
-     * @param  \OpenAPI\Client\Model\ContactCreateContactRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ContactCreateContactRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContactCreateContactResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ContactCreateContactResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createContact($body, string $contentType = self::contentTypes['createContact'][0])
     {
@@ -157,12 +157,12 @@ class ContactServiceApi
      *
      * Create contact
      *
-     * @param  \OpenAPI\Client\Model\ContactCreateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactCreateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContactCreateContactResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ContactCreateContactResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContactWithHttpInfo($body, string $contentType = self::contentTypes['createContact'][0])
     {
@@ -205,11 +205,11 @@ class ContactServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContactCreateContactResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ContactCreateContactResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContactCreateContactResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ContactCreateContactResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContactCreateContactResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ContactCreateContactResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContactCreateContactResponse';
+            $returnType = '\Panthera\Openprovider\Model\ContactCreateContactResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class ContactServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContactCreateContactResponse',
+                        '\Panthera\Openprovider\Model\ContactCreateContactResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class ContactServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class ContactServiceApi
      *
      * Create contact
      *
-     * @param  \OpenAPI\Client\Model\ContactCreateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactCreateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class ContactServiceApi
      *
      * Create contact
      *
-     * @param  \OpenAPI\Client\Model\ContactCreateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactCreateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -345,7 +345,7 @@ class ContactServiceApi
      */
     public function createContactAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createContact'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContactCreateContactResponse';
+        $returnType = '\Panthera\Openprovider\Model\ContactCreateContactResponse';
         $request = $this->createContactRequest($body, $contentType);
 
         return $this->client
@@ -387,7 +387,7 @@ class ContactServiceApi
     /**
      * Create request for operation 'createContact'
      *
-     * @param  \OpenAPI\Client\Model\ContactCreateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactCreateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -488,9 +488,9 @@ class ContactServiceApi
      * @param  int $id Object ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContactDeleteContactResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ContactDeleteContactResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteContact($id, string $contentType = self::contentTypes['deleteContact'][0])
     {
@@ -506,9 +506,9 @@ class ContactServiceApi
      * @param  int $id Object ID (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContactDeleteContactResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ContactDeleteContactResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteContactWithHttpInfo($id, string $contentType = self::contentTypes['deleteContact'][0])
     {
@@ -551,11 +551,11 @@ class ContactServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContactDeleteContactResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ContactDeleteContactResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContactDeleteContactResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ContactDeleteContactResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -573,16 +573,16 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContactDeleteContactResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ContactDeleteContactResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -600,13 +600,13 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContactDeleteContactResponse';
+            $returnType = '\Panthera\Openprovider\Model\ContactDeleteContactResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -639,7 +639,7 @@ class ContactServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContactDeleteContactResponse',
+                        '\Panthera\Openprovider\Model\ContactDeleteContactResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -647,7 +647,7 @@ class ContactServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -691,7 +691,7 @@ class ContactServiceApi
      */
     public function deleteContactAsyncWithHttpInfo($id, string $contentType = self::contentTypes['deleteContact'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContactDeleteContactResponse';
+        $returnType = '\Panthera\Openprovider\Model\ContactDeleteContactResponse';
         $request = $this->deleteContactRequest($id, $contentType);
 
         return $this->client
@@ -836,9 +836,9 @@ class ContactServiceApi
      * @param  bool $with_additional_data Retrieves objects with (1) or without (0) additional data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContactGetContactResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ContactGetContactResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getContact($id, $with_additional_data = null, string $contentType = self::contentTypes['getContact'][0])
     {
@@ -855,9 +855,9 @@ class ContactServiceApi
      * @param  bool $with_additional_data Retrieves objects with (1) or without (0) additional data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContactGetContactResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ContactGetContactResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactWithHttpInfo($id, $with_additional_data = null, string $contentType = self::contentTypes['getContact'][0])
     {
@@ -900,11 +900,11 @@ class ContactServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContactGetContactResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ContactGetContactResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContactGetContactResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ContactGetContactResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -922,16 +922,16 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContactGetContactResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ContactGetContactResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -949,13 +949,13 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContactGetContactResponse';
+            $returnType = '\Panthera\Openprovider\Model\ContactGetContactResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -988,7 +988,7 @@ class ContactServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContactGetContactResponse',
+                        '\Panthera\Openprovider\Model\ContactGetContactResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class ContactServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class ContactServiceApi
      */
     public function getContactAsyncWithHttpInfo($id, $with_additional_data = null, string $contentType = self::contentTypes['getContact'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContactGetContactResponse';
+        $returnType = '\Panthera\Openprovider\Model\ContactGetContactResponse';
         $request = $this->getContactRequest($id, $with_additional_data, $contentType);
 
         return $this->client
@@ -1206,9 +1206,9 @@ class ContactServiceApi
      * @param  bool $with_additional_data Retrieves objects with (1) or without (0) additional data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContacts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContactListContactsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ContactListContactsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listContacts($limit = null, $offset = null, $order = null, $order_by = null, $email_pattern = null, $last_name_pattern = null, $company_name_pattern = null, $username_pattern = null, $role = null, $with_additional_data = null, string $contentType = self::contentTypes['listContacts'][0])
     {
@@ -1233,9 +1233,9 @@ class ContactServiceApi
      * @param  bool $with_additional_data Retrieves objects with (1) or without (0) additional data. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContacts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContactListContactsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ContactListContactsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listContactsWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $email_pattern = null, $last_name_pattern = null, $company_name_pattern = null, $username_pattern = null, $role = null, $with_additional_data = null, string $contentType = self::contentTypes['listContacts'][0])
     {
@@ -1278,11 +1278,11 @@ class ContactServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContactListContactsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ContactListContactsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContactListContactsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ContactListContactsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1300,16 +1300,16 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContactListContactsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ContactListContactsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1327,13 +1327,13 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContactListContactsResponse';
+            $returnType = '\Panthera\Openprovider\Model\ContactListContactsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1366,7 +1366,7 @@ class ContactServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContactListContactsResponse',
+                        '\Panthera\Openprovider\Model\ContactListContactsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1374,7 +1374,7 @@ class ContactServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1436,7 +1436,7 @@ class ContactServiceApi
      */
     public function listContactsAsyncWithHttpInfo($limit = null, $offset = null, $order = null, $order_by = null, $email_pattern = null, $last_name_pattern = null, $company_name_pattern = null, $username_pattern = null, $role = null, $with_additional_data = null, string $contentType = self::contentTypes['listContacts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContactListContactsResponse';
+        $returnType = '\Panthera\Openprovider\Model\ContactListContactsResponse';
         $request = $this->listContactsRequest($limit, $offset, $order, $order_by, $email_pattern, $last_name_pattern, $company_name_pattern, $username_pattern, $role, $with_additional_data, $contentType);
 
         return $this->client
@@ -1672,12 +1672,12 @@ class ContactServiceApi
      * Update contact
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ContactUpdateContactRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ContactUpdateContactRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ContactUpdateContactResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ContactUpdateContactResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateContact($id, $body, string $contentType = self::contentTypes['updateContact'][0])
     {
@@ -1691,12 +1691,12 @@ class ContactServiceApi
      * Update contact
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ContactUpdateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactUpdateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContact'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ContactUpdateContactResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ContactUpdateContactResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateContactWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateContact'][0])
     {
@@ -1739,11 +1739,11 @@ class ContactServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ContactUpdateContactResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ContactUpdateContactResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ContactUpdateContactResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ContactUpdateContactResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1761,16 +1761,16 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ContactUpdateContactResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ContactUpdateContactResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1788,13 +1788,13 @@ class ContactServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ContactUpdateContactResponse';
+            $returnType = '\Panthera\Openprovider\Model\ContactUpdateContactResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1827,7 +1827,7 @@ class ContactServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ContactUpdateContactResponse',
+                        '\Panthera\Openprovider\Model\ContactUpdateContactResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1835,7 +1835,7 @@ class ContactServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1851,7 +1851,7 @@ class ContactServiceApi
      * Update contact
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ContactUpdateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactUpdateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1873,7 +1873,7 @@ class ContactServiceApi
      * Update contact
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ContactUpdateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactUpdateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1881,7 +1881,7 @@ class ContactServiceApi
      */
     public function updateContactAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateContact'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ContactUpdateContactResponse';
+        $returnType = '\Panthera\Openprovider\Model\ContactUpdateContactResponse';
         $request = $this->updateContactRequest($id, $body, $contentType);
 
         return $this->client
@@ -1924,7 +1924,7 @@ class ContactServiceApi
      * Create request for operation 'updateContact'
      *
      * @param  int $id Object ID (required)
-     * @param  \OpenAPI\Client\Model\ContactUpdateContactRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ContactUpdateContactRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * LicenseExtendedLicense Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,11 +62,11 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
         'comment' => 'string',
         'contract' => 'string',
         'expiration_date' => 'string',
-        'extensions' => '\OpenAPI\Client\Model\LicenseExtendedLicense[]',
-        'features' => '\OpenAPI\Client\Model\LicenseLicenseItem[]',
+        'extensions' => '\Panthera\Openprovider\Model\LicenseExtendedLicense[]',
+        'features' => '\Panthera\Openprovider\Model\LicenseLicenseItem[]',
         'ip_address_binding' => 'string',
         'items' => 'string[]',
-        'key' => '\OpenAPI\Client\Model\LicenseKey',
+        'key' => '\Panthera\Openprovider\Model\LicenseKey',
         'key_id' => 'int',
         'key_number' => 'string',
         'order_date' => 'string',
@@ -553,7 +553,7 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets extensions
      *
-     * @return \OpenAPI\Client\Model\LicenseExtendedLicense[]|null
+     * @return \Panthera\Openprovider\Model\LicenseExtendedLicense[]|null
      */
     public function getExtensions()
     {
@@ -563,7 +563,7 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets extensions
      *
-     * @param \OpenAPI\Client\Model\LicenseExtendedLicense[]|null $extensions extensions
+     * @param \Panthera\Openprovider\Model\LicenseExtendedLicense[]|null $extensions extensions
      *
      * @return self
      */
@@ -580,7 +580,7 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets features
      *
-     * @return \OpenAPI\Client\Model\LicenseLicenseItem[]|null
+     * @return \Panthera\Openprovider\Model\LicenseLicenseItem[]|null
      */
     public function getFeatures()
     {
@@ -590,7 +590,7 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets features
      *
-     * @param \OpenAPI\Client\Model\LicenseLicenseItem[]|null $features features
+     * @param \Panthera\Openprovider\Model\LicenseLicenseItem[]|null $features features
      *
      * @return self
      */
@@ -661,7 +661,7 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets key
      *
-     * @return \OpenAPI\Client\Model\LicenseKey|null
+     * @return \Panthera\Openprovider\Model\LicenseKey|null
      */
     public function getKey()
     {
@@ -671,7 +671,7 @@ class LicenseExtendedLicense implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets key
      *
-     * @param \OpenAPI\Client\Model\LicenseKey|null $key key
+     * @param \Panthera\Openprovider\Model\LicenseKey|null $key key
      *
      * @return self
      */

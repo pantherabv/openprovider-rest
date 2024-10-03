@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainCheckDomainRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,9 +57,9 @@ class DomainCheckDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => '\OpenAPI\Client\Model\DomainCheckAdditionalData',
+        'additional_data' => '\Panthera\Openprovider\Model\DomainCheckAdditionalData',
         'application_mode' => 'string',
-        'domains' => '\OpenAPI\Client\Model\DomainDomain[]',
+        'domains' => '\Panthera\Openprovider\Model\DomainDomain[]',
         'provider' => 'string',
         'with_price' => 'bool'
     ];
@@ -320,7 +320,7 @@ class DomainCheckDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\DomainCheckAdditionalData|null
+     * @return \Panthera\Openprovider\Model\DomainCheckAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -330,7 +330,7 @@ class DomainCheckDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\DomainCheckAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\DomainCheckAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class DomainCheckDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets domains
      *
-     * @return \OpenAPI\Client\Model\DomainDomain[]|null
+     * @return \Panthera\Openprovider\Model\DomainDomain[]|null
      */
     public function getDomains()
     {
@@ -384,7 +384,7 @@ class DomainCheckDomainRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets domains
      *
-     * @param \OpenAPI\Client\Model\DomainDomain[]|null $domains domains
+     * @param \Panthera\Openprovider\Model\DomainDomain[]|null $domains domains
      *
      * @return self
      */

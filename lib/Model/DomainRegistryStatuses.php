@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainRegistryStatuses Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class DomainRegistryStatuses implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'client_hold' => '\OpenAPI\Client\Model\DomainRegistryStatus',
-        'client_transfer_prohibited' => '\OpenAPI\Client\Model\DomainRegistryStatus'
+        'client_hold' => '\Panthera\Openprovider\Model\DomainRegistryStatus',
+        'client_transfer_prohibited' => '\Panthera\Openprovider\Model\DomainRegistryStatus'
     ];
 
     /**
@@ -299,7 +299,7 @@ class DomainRegistryStatuses implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets client_hold
      *
-     * @return \OpenAPI\Client\Model\DomainRegistryStatus|null
+     * @return \Panthera\Openprovider\Model\DomainRegistryStatus|null
      */
     public function getClientHold()
     {
@@ -309,7 +309,7 @@ class DomainRegistryStatuses implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets client_hold
      *
-     * @param \OpenAPI\Client\Model\DomainRegistryStatus|null $client_hold client_hold
+     * @param \Panthera\Openprovider\Model\DomainRegistryStatus|null $client_hold client_hold
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class DomainRegistryStatuses implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets client_transfer_prohibited
      *
-     * @return \OpenAPI\Client\Model\DomainRegistryStatus|null
+     * @return \Panthera\Openprovider\Model\DomainRegistryStatus|null
      */
     public function getClientTransferProhibited()
     {
@@ -336,7 +336,7 @@ class DomainRegistryStatuses implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets client_transfer_prohibited
      *
-     * @param \OpenAPI\Client\Model\DomainRegistryStatus|null $client_transfer_prohibited client_transfer_prohibited
+     * @param \Panthera\Openprovider\Model\DomainRegistryStatus|null $client_transfer_prohibited client_transfer_prohibited
      *
      * @return self
      */

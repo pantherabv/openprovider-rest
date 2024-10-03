@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TransactionListTransactionsResponseDataResults Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,12 +62,12 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
         'discount' => 'float',
         'exchange_rate' => 'float',
         'object_type' => 'string',
-        'price' => '\OpenAPI\Client\Model\TransactionPrices',
+        'price' => '\Panthera\Openprovider\Model\TransactionPrices',
         'quantity' => 'int',
         'reference_id' => 'int',
-        'setup' => '\OpenAPI\Client\Model\TransactionPrices',
+        'setup' => '\Panthera\Openprovider\Model\TransactionPrices',
         'subject' => 'string',
-        'total' => '\OpenAPI\Client\Model\TransactionPrices',
+        'total' => '\Panthera\Openprovider\Model\TransactionPrices',
         'type' => 'string',
         'vat' => 'int'
     ];
@@ -511,7 +511,7 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\TransactionPrices|null
+     * @return \Panthera\Openprovider\Model\TransactionPrices|null
      */
     public function getPrice()
     {
@@ -521,7 +521,7 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\TransactionPrices|null $price price
+     * @param \Panthera\Openprovider\Model\TransactionPrices|null $price price
      *
      * @return self
      */
@@ -592,7 +592,7 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
     /**
      * Gets setup
      *
-     * @return \OpenAPI\Client\Model\TransactionPrices|null
+     * @return \Panthera\Openprovider\Model\TransactionPrices|null
      */
     public function getSetup()
     {
@@ -602,7 +602,7 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
     /**
      * Sets setup
      *
-     * @param \OpenAPI\Client\Model\TransactionPrices|null $setup setup
+     * @param \Panthera\Openprovider\Model\TransactionPrices|null $setup setup
      *
      * @return self
      */
@@ -646,7 +646,7 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
     /**
      * Gets total
      *
-     * @return \OpenAPI\Client\Model\TransactionPrices|null
+     * @return \Panthera\Openprovider\Model\TransactionPrices|null
      */
     public function getTotal()
     {
@@ -656,7 +656,7 @@ class TransactionListTransactionsResponseDataResults implements ModelInterface, 
     /**
      * Sets total
      *
-     * @param \OpenAPI\Client\Model\TransactionPrices|null $total total
+     * @param \Panthera\Openprovider\Model\TransactionPrices|null $total total
      *
      * @return self
      */

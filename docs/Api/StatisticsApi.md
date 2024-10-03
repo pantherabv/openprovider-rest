@@ -1,4 +1,4 @@
-# OpenAPI\Client\StatisticsApi
+# Panthera\Openprovider\StatisticsApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `getStatistics()`
 
 ```php
-getStatistics(): \OpenAPI\Client\Model\StatisticsGetStatisticsResponse
+getStatistics(): \Panthera\Openprovider\Model\StatisticsGetStatisticsResponse
 ```
 
 Get statistics
@@ -23,12 +23,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\StatisticsApi(
+$apiInstance = new Panthera\Openprovider\Api\StatisticsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StatisticsGetStatisticsResponse**](../Model/StatisticsGetStatisticsResponse.md)
+[**\Panthera\Openprovider\Model\StatisticsGetStatisticsResponse**](../Model/StatisticsGetStatisticsResponse.md)
 
 ### Authorization
 

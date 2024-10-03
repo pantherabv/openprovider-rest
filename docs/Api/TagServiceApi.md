@@ -1,4 +1,4 @@
-# OpenAPI\Client\TagServiceApi
+# Panthera\Openprovider\TagServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createTag()`
 
 ```php
-createTag($body): \OpenAPI\Client\Model\TagCreateTagResponse
+createTag($body): \Panthera\Openprovider\Model\TagCreateTagResponse
 ```
 
 Create tag
@@ -25,18 +25,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TagServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TagServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\HelperstagTag(); // \OpenAPI\Client\Model\HelperstagTag
+$body = new \Panthera\Openprovider\Model\HelperstagTag(); // \Panthera\Openprovider\Model\HelperstagTag
 
 try {
     $result = $apiInstance->createTag($body);
@@ -50,11 +50,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\HelperstagTag**](../Model/HelperstagTag.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\HelperstagTag**](../Model/HelperstagTag.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TagCreateTagResponse**](../Model/TagCreateTagResponse.md)
+[**\Panthera\Openprovider\Model\TagCreateTagResponse**](../Model/TagCreateTagResponse.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ try {
 ## `deleteTag()`
 
 ```php
-deleteTag($key, $value): \OpenAPI\Client\Model\TagDeleteTagResponse
+deleteTag($key, $value): \Panthera\Openprovider\Model\TagDeleteTagResponse
 ```
 
 Delete tag
@@ -85,12 +85,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TagServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TagServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TagDeleteTagResponse**](../Model/TagDeleteTagResponse.md)
+[**\Panthera\Openprovider\Model\TagDeleteTagResponse**](../Model/TagDeleteTagResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ try {
 ## `listTags()`
 
 ```php
-listTags($key, $value): \OpenAPI\Client\Model\TagListTagsResponse
+listTags($key, $value): \Panthera\Openprovider\Model\TagListTagsResponse
 ```
 
 List tags
@@ -147,12 +147,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\TagServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\TagServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TagListTagsResponse**](../Model/TagListTagsResponse.md)
+[**\Panthera\Openprovider\Model\TagListTagsResponse**](../Model/TagListTagsResponse.md)
 
 ### Authorization
 

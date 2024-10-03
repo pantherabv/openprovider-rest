@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SettingsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -129,9 +129,9 @@ class SettingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSettings'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\SettingsGetSettingsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\SettingsGetSettingsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getSettings(string $contentType = self::contentTypes['getSettings'][0])
     {
@@ -146,9 +146,9 @@ class SettingsApi
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getSettings'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\SettingsGetSettingsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\SettingsGetSettingsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSettingsWithHttpInfo(string $contentType = self::contentTypes['getSettings'][0])
     {
@@ -191,11 +191,11 @@ class SettingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\SettingsGetSettingsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\SettingsGetSettingsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\SettingsGetSettingsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\SettingsGetSettingsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -213,16 +213,16 @@ class SettingsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\SettingsGetSettingsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\SettingsGetSettingsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -240,13 +240,13 @@ class SettingsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\SettingsGetSettingsResponse';
+            $returnType = '\Panthera\Openprovider\Model\SettingsGetSettingsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -279,7 +279,7 @@ class SettingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\SettingsGetSettingsResponse',
+                        '\Panthera\Openprovider\Model\SettingsGetSettingsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -287,7 +287,7 @@ class SettingsApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class SettingsApi
      */
     public function getSettingsAsyncWithHttpInfo(string $contentType = self::contentTypes['getSettings'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\SettingsGetSettingsResponse';
+        $returnType = '\Panthera\Openprovider\Model\SettingsGetSettingsResponse';
         $request = $this->getSettingsRequest($contentType);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SeDomainDomain Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,8 +63,8 @@ class SeDomainDomain implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'is_active' => 'bool',
         'order_id' => 'int',
-        'products' => '\OpenAPI\Client\Model\SeDomainProducts',
-        'records' => '\OpenAPI\Client\Model\SeDomainRecords',
+        'products' => '\Panthera\Openprovider\Model\SeDomainProducts',
+        'records' => '\Panthera\Openprovider\Model\SeDomainRecords',
         'reseller_id' => 'int',
         'smtp_password' => 'string',
         'user_email' => 'string',
@@ -538,7 +538,7 @@ class SeDomainDomain implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets products
      *
-     * @return \OpenAPI\Client\Model\SeDomainProducts|null
+     * @return \Panthera\Openprovider\Model\SeDomainProducts|null
      */
     public function getProducts()
     {
@@ -548,7 +548,7 @@ class SeDomainDomain implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets products
      *
-     * @param \OpenAPI\Client\Model\SeDomainProducts|null $products products
+     * @param \Panthera\Openprovider\Model\SeDomainProducts|null $products products
      *
      * @return self
      */
@@ -565,7 +565,7 @@ class SeDomainDomain implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets records
      *
-     * @return \OpenAPI\Client\Model\SeDomainRecords|null
+     * @return \Panthera\Openprovider\Model\SeDomainRecords|null
      */
     public function getRecords()
     {
@@ -575,7 +575,7 @@ class SeDomainDomain implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets records
      *
-     * @param \OpenAPI\Client\Model\SeDomainRecords|null $records records
+     * @param \Panthera\Openprovider\Model\SeDomainRecords|null $records records
      *
      * @return self
      */

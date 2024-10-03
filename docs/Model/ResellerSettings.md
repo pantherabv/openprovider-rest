@@ -35,14 +35,14 @@ Name | Type | Description | Notes
 **minimum_payment** | **float** |  | [optional]
 **minimum_western_union_payment** | **float** |  | [optional]
 **pay_methods** | **string[]** |  | [optional]
-**payment_methods** | [**\OpenAPI\Client\Model\SettingsPaymentMethods[]**](SettingsPaymentMethods.md) |  | [optional]
+**payment_methods** | [**\Panthera\Openprovider\Model\SettingsPaymentMethods[]**](SettingsPaymentMethods.md) |  | [optional]
 **preregistered_domain_priorities** | **string** |  | [optional]
-**recurring_payment_methods** | [**\OpenAPI\Client\Model\SettingsPaymentMethods[]**](SettingsPaymentMethods.md) |  | [optional]
+**recurring_payment_methods** | [**\Panthera\Openprovider\Model\SettingsPaymentMethods[]**](SettingsPaymentMethods.md) |  | [optional]
 **renew_notification_days** | **int[]** |  | [optional]
 **renew_notification_every_week** | **bool** |  | [optional]
-**tac_contract** | [**\OpenAPI\Client\Model\SettingsTacContract**](SettingsTacContract.md) |  | [optional]
+**tac_contract** | [**\Panthera\Openprovider\Model\SettingsTacContract**](SettingsTacContract.md) |  | [optional]
 **tags** | **string[]** |  | [optional]
-**transaction_fee** | [**\OpenAPI\Client\Model\SettingsTransactionFee**](SettingsTransactionFee.md) |  | [optional]
+**transaction_fee** | [**\Panthera\Openprovider\Model\SettingsTransactionFee**](SettingsTransactionFee.md) |  | [optional]
 **type** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

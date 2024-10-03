@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **string** |  | [optional]
 **name** | **string** |  | [optional]
-**options** | [**\OpenAPI\Client\Model\AdditionalDataSelectOption[]**](AdditionalDataSelectOption.md) |  | [optional]
+**options** | [**\Panthera\Openprovider\Model\AdditionalDataSelectOption[]**](AdditionalDataSelectOption.md) |  | [optional]
 **required** | **bool** |  | [optional]
 **type** | **string** |  | [optional]
 

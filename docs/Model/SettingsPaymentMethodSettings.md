@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**limit** | [**\OpenAPI\Client\Model\SettingsPaymentMethodLimits**](SettingsPaymentMethodLimits.md) |  | [optional]
+**limit** | [**\Panthera\Openprovider\Model\SettingsPaymentMethodLimits**](SettingsPaymentMethodLimits.md) |  | [optional]
 **transaction_fee** | **float** |  | [optional]
 **transaction_fee_absolute** | **float** |  | [optional]
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **domain_count** | **int** |  | [optional]
 **id** | **int** |  | [optional]
-**name_servers** | [**\OpenAPI\Client\Model\NsGroupNameServersSet[]**](NsGroupNameServersSet.md) |  | [optional]
+**name_servers** | [**\Panthera\Openprovider\Model\NsGroupNameServersSet[]**](NsGroupNameServersSet.md) |  | [optional]
 **ns_count** | **int** |  | [optional]
 **ns_group** | **string** |  | [optional]
 

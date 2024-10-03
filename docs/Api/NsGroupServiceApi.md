@@ -1,4 +1,4 @@
-# OpenAPI\Client\NsGroupServiceApi
+# Panthera\Openprovider\NsGroupServiceApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createGroup()`
 
 ```php
-createGroup($body): \OpenAPI\Client\Model\NsGroupCreateGroupResponse
+createGroup($body): \Panthera\Openprovider\Model\NsGroupCreateGroupResponse
 ```
 
 Create group
@@ -27,18 +27,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NsGroupServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NsGroupServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\NsGroupCreateGroupRequest(); // \OpenAPI\Client\Model\NsGroupCreateGroupRequest
+$body = new \Panthera\Openprovider\Model\NsGroupCreateGroupRequest(); // \Panthera\Openprovider\Model\NsGroupCreateGroupRequest
 
 try {
     $result = $apiInstance->createGroup($body);
@@ -52,11 +52,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\NsGroupCreateGroupRequest**](../Model/NsGroupCreateGroupRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\NsGroupCreateGroupRequest**](../Model/NsGroupCreateGroupRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NsGroupCreateGroupResponse**](../Model/NsGroupCreateGroupResponse.md)
+[**\Panthera\Openprovider\Model\NsGroupCreateGroupResponse**](../Model/NsGroupCreateGroupResponse.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ try {
 ## `deleteGroup()`
 
 ```php
-deleteGroup($ns_group): \OpenAPI\Client\Model\NsGroupGroupBoolResponse
+deleteGroup($ns_group): \Panthera\Openprovider\Model\NsGroupGroupBoolResponse
 ```
 
 Delete group
@@ -87,12 +87,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NsGroupServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NsGroupServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NsGroupGroupBoolResponse**](../Model/NsGroupGroupBoolResponse.md)
+[**\Panthera\Openprovider\Model\NsGroupGroupBoolResponse**](../Model/NsGroupGroupBoolResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ try {
 ## `getGroup()`
 
 ```php
-getGroup($ns_group, $id): \OpenAPI\Client\Model\NsGroupGetGroupResponse
+getGroup($ns_group, $id): \Panthera\Openprovider\Model\NsGroupGetGroupResponse
 ```
 
 Get group
@@ -147,12 +147,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NsGroupServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NsGroupServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NsGroupGetGroupResponse**](../Model/NsGroupGetGroupResponse.md)
+[**\Panthera\Openprovider\Model\NsGroupGetGroupResponse**](../Model/NsGroupGetGroupResponse.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ try {
 ## `listGroups()`
 
 ```php
-listGroups($limit, $offset, $order_by_ns_group, $order_by_domain_count, $order_by_ns_count, $with_domain_count, $with_ns_count, $ns_group_pattern, $ns_name_pattern, $ns_ip_pattern): \OpenAPI\Client\Model\NsGroupListGroupsResponse
+listGroups($limit, $offset, $order_by_ns_group, $order_by_domain_count, $order_by_ns_count, $with_domain_count, $with_ns_count, $ns_group_pattern, $ns_name_pattern, $ns_ip_pattern): \Panthera\Openprovider\Model\NsGroupListGroupsResponse
 ```
 
 List groups
@@ -209,12 +209,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NsGroupServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NsGroupServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NsGroupListGroupsResponse**](../Model/NsGroupListGroupsResponse.md)
+[**\Panthera\Openprovider\Model\NsGroupListGroupsResponse**](../Model/NsGroupListGroupsResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ try {
 ## `updateGroup()`
 
 ```php
-updateGroup($ns_group, $body): \OpenAPI\Client\Model\NsGroupGroupBoolResponse
+updateGroup($ns_group, $body): \Panthera\Openprovider\Model\NsGroupGroupBoolResponse
 ```
 
 Update group
@@ -287,19 +287,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\NsGroupServiceApi(
+$apiInstance = new Panthera\Openprovider\Api\NsGroupServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $ns_group = 'ns_group_example'; // string | Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains.
-$body = new \OpenAPI\Client\Model\NsGroupUpdateGroupRequest(); // \OpenAPI\Client\Model\NsGroupUpdateGroupRequest
+$body = new \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest(); // \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest
 
 try {
     $result = $apiInstance->updateGroup($ns_group, $body);
@@ -314,11 +314,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ns_group** | **string**| Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. | |
-| **body** | [**\OpenAPI\Client\Model\NsGroupUpdateGroupRequest**](../Model/NsGroupUpdateGroupRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\NsGroupUpdateGroupRequest**](../Model/NsGroupUpdateGroupRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\NsGroupGroupBoolResponse**](../Model/NsGroupGroupBoolResponse.md)
+[**\Panthera\Openprovider\Model\NsGroupGroupBoolResponse**](../Model/NsGroupGroupBoolResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * InvoicePrices Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,8 +57,8 @@ class InvoicePrices implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'product' => '\OpenAPI\Client\Model\InvoicePrice',
-        'reseller' => '\OpenAPI\Client\Model\InvoicePrice'
+        'product' => '\Panthera\Openprovider\Model\InvoicePrice',
+        'reseller' => '\Panthera\Openprovider\Model\InvoicePrice'
     ];
 
     /**
@@ -299,7 +299,7 @@ class InvoicePrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets product
      *
-     * @return \OpenAPI\Client\Model\InvoicePrice|null
+     * @return \Panthera\Openprovider\Model\InvoicePrice|null
      */
     public function getProduct()
     {
@@ -309,7 +309,7 @@ class InvoicePrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets product
      *
-     * @param \OpenAPI\Client\Model\InvoicePrice|null $product product
+     * @param \Panthera\Openprovider\Model\InvoicePrice|null $product product
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class InvoicePrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets reseller
      *
-     * @return \OpenAPI\Client\Model\InvoicePrice|null
+     * @return \Panthera\Openprovider\Model\InvoicePrice|null
      */
     public function getReseller()
     {
@@ -336,7 +336,7 @@ class InvoicePrices implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets reseller
      *
-     * @param \OpenAPI\Client\Model\InvoicePrice|null $reseller reseller
+     * @param \Panthera\Openprovider\Model\InvoicePrice|null $reseller reseller
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ProductApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,9 +133,9 @@ class ProductApi
      * @param  int $id Object id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductGetProductResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ProductGetProductResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getProduct($id, string $contentType = self::contentTypes['getProduct'][0])
     {
@@ -151,9 +151,9 @@ class ProductApi
      * @param  int $id Object id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductGetProductResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ProductGetProductResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductWithHttpInfo($id, string $contentType = self::contentTypes['getProduct'][0])
     {
@@ -196,11 +196,11 @@ class ProductApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductGetProductResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ProductGetProductResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductGetProductResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ProductGetProductResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -218,16 +218,16 @@ class ProductApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductGetProductResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ProductGetProductResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -245,13 +245,13 @@ class ProductApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductGetProductResponse';
+            $returnType = '\Panthera\Openprovider\Model\ProductGetProductResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -284,7 +284,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductGetProductResponse',
+                        '\Panthera\Openprovider\Model\ProductGetProductResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -292,7 +292,7 @@ class ProductApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -336,7 +336,7 @@ class ProductApi
      */
     public function getProductAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getProduct'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductGetProductResponse';
+        $returnType = '\Panthera\Openprovider\Model\ProductGetProductResponse';
         $request = $this->getProductRequest($id, $contentType);
 
         return $this->client
@@ -490,9 +490,9 @@ class ProductApi
      * @param  string $order_by_product_seqno Sorting type (asc/desc). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ProductListProductsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ProductListProductsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listProducts($limit = null, $offset = null, $with_price = null, $with_supported_software = false, $with_description = null, $order_by_name = null, $order_by_brand_name = null, $order_by_category = null, $order_by_sub_category = null, $order_by_brand_seqno = null, $order_by_product_seqno = null, string $contentType = self::contentTypes['listProducts'][0])
     {
@@ -518,9 +518,9 @@ class ProductApi
      * @param  string $order_by_product_seqno Sorting type (asc/desc). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ProductListProductsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ProductListProductsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listProductsWithHttpInfo($limit = null, $offset = null, $with_price = null, $with_supported_software = false, $with_description = null, $order_by_name = null, $order_by_brand_name = null, $order_by_category = null, $order_by_sub_category = null, $order_by_brand_seqno = null, $order_by_product_seqno = null, string $contentType = self::contentTypes['listProducts'][0])
     {
@@ -563,11 +563,11 @@ class ProductApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ProductListProductsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ProductListProductsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ProductListProductsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ProductListProductsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -585,16 +585,16 @@ class ProductApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ProductListProductsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ProductListProductsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -612,13 +612,13 @@ class ProductApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ProductListProductsResponse';
+            $returnType = '\Panthera\Openprovider\Model\ProductListProductsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -651,7 +651,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ProductListProductsResponse',
+                        '\Panthera\Openprovider\Model\ProductListProductsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -659,7 +659,7 @@ class ProductApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -723,7 +723,7 @@ class ProductApi
      */
     public function listProductsAsyncWithHttpInfo($limit = null, $offset = null, $with_price = null, $with_supported_software = false, $with_description = null, $order_by_name = null, $order_by_brand_name = null, $order_by_category = null, $order_by_sub_category = null, $order_by_brand_seqno = null, $order_by_product_seqno = null, string $contentType = self::contentTypes['listProducts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ProductListProductsResponse';
+        $returnType = '\Panthera\Openprovider\Model\ProductListProductsResponse';
         $request = $this->listProductsRequest($limit, $offset, $with_price, $with_supported_software, $with_description, $order_by_name, $order_by_brand_name, $order_by_category, $order_by_sub_category, $order_by_brand_seqno, $order_by_product_seqno, $contentType);
 
         return $this->client

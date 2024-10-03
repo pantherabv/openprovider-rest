@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SettingsGetSettingsResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -88,15 +88,15 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
         'minimum_payment' => 'float',
         'minimum_western_union_payment' => 'float',
         'pay_methods' => 'string[]',
-        'payment_methods' => '\OpenAPI\Client\Model\SettingsPaymentMethods[]',
+        'payment_methods' => '\Panthera\Openprovider\Model\SettingsPaymentMethods[]',
         'preregistered_domain_priorities' => 'string',
-        'recurring_payment_methods' => '\OpenAPI\Client\Model\SettingsPaymentMethods[]',
+        'recurring_payment_methods' => '\Panthera\Openprovider\Model\SettingsPaymentMethods[]',
         'renew_notification_days' => 'int[]',
         'renew_notification_every_week' => 'bool',
-        'signed_contracts' => '\OpenAPI\Client\Model\SettingsSignedContracts[]',
-        'tac_contract' => '\OpenAPI\Client\Model\SettingsTacContract',
+        'signed_contracts' => '\Panthera\Openprovider\Model\SettingsSignedContracts[]',
+        'tac_contract' => '\Panthera\Openprovider\Model\SettingsTacContract',
         'tags' => 'string[]',
-        'transaction_fee' => '\OpenAPI\Client\Model\SettingsTransactionFee',
+        'transaction_fee' => '\Panthera\Openprovider\Model\SettingsTransactionFee',
         'type' => 'string'
     ];
 
@@ -1409,7 +1409,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Gets payment_methods
      *
-     * @return \OpenAPI\Client\Model\SettingsPaymentMethods[]|null
+     * @return \Panthera\Openprovider\Model\SettingsPaymentMethods[]|null
      */
     public function getPaymentMethods()
     {
@@ -1419,7 +1419,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Sets payment_methods
      *
-     * @param \OpenAPI\Client\Model\SettingsPaymentMethods[]|null $payment_methods payment_methods
+     * @param \Panthera\Openprovider\Model\SettingsPaymentMethods[]|null $payment_methods payment_methods
      *
      * @return self
      */
@@ -1463,7 +1463,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Gets recurring_payment_methods
      *
-     * @return \OpenAPI\Client\Model\SettingsPaymentMethods[]|null
+     * @return \Panthera\Openprovider\Model\SettingsPaymentMethods[]|null
      */
     public function getRecurringPaymentMethods()
     {
@@ -1473,7 +1473,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Sets recurring_payment_methods
      *
-     * @param \OpenAPI\Client\Model\SettingsPaymentMethods[]|null $recurring_payment_methods recurring_payment_methods
+     * @param \Panthera\Openprovider\Model\SettingsPaymentMethods[]|null $recurring_payment_methods recurring_payment_methods
      *
      * @return self
      */
@@ -1544,7 +1544,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Gets signed_contracts
      *
-     * @return \OpenAPI\Client\Model\SettingsSignedContracts[]|null
+     * @return \Panthera\Openprovider\Model\SettingsSignedContracts[]|null
      */
     public function getSignedContracts()
     {
@@ -1554,7 +1554,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Sets signed_contracts
      *
-     * @param \OpenAPI\Client\Model\SettingsSignedContracts[]|null $signed_contracts signed_contracts
+     * @param \Panthera\Openprovider\Model\SettingsSignedContracts[]|null $signed_contracts signed_contracts
      *
      * @return self
      */
@@ -1571,7 +1571,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Gets tac_contract
      *
-     * @return \OpenAPI\Client\Model\SettingsTacContract|null
+     * @return \Panthera\Openprovider\Model\SettingsTacContract|null
      */
     public function getTacContract()
     {
@@ -1581,7 +1581,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Sets tac_contract
      *
-     * @param \OpenAPI\Client\Model\SettingsTacContract|null $tac_contract tac_contract
+     * @param \Panthera\Openprovider\Model\SettingsTacContract|null $tac_contract tac_contract
      *
      * @return self
      */
@@ -1625,7 +1625,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Gets transaction_fee
      *
-     * @return \OpenAPI\Client\Model\SettingsTransactionFee|null
+     * @return \Panthera\Openprovider\Model\SettingsTransactionFee|null
      */
     public function getTransactionFee()
     {
@@ -1635,7 +1635,7 @@ class SettingsGetSettingsResponseData implements ModelInterface, ArrayAccess, \J
     /**
      * Sets transaction_fee
      *
-     * @param \OpenAPI\Client\Model\SettingsTransactionFee|null $transaction_fee transaction_fee
+     * @param \Panthera\Openprovider\Model\SettingsTransactionFee|null $transaction_fee transaction_fee
      *
      * @return self
      */

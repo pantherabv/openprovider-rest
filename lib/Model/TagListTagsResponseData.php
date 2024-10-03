@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * TagListTagsResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class TagListTagsResponseData implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\HelperstagTag[]',
+        'results' => '\Panthera\Openprovider\Model\HelperstagTag[]',
         'total' => 'int'
     ];
 
@@ -299,7 +299,7 @@ class TagListTagsResponseData implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\HelperstagTag[]|null
+     * @return \Panthera\Openprovider\Model\HelperstagTag[]|null
      */
     public function getResults()
     {
@@ -309,7 +309,7 @@ class TagListTagsResponseData implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\HelperstagTag[]|null $results results
+     * @param \Panthera\Openprovider\Model\HelperstagTag[]|null $results results
      *
      * @return self
      */

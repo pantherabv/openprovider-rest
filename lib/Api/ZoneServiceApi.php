@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ZoneServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class ZoneServiceApi
      *
      * Create zone
      *
-     * @param  \OpenAPI\Client\Model\ZoneCreateZoneRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneCreateZoneRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ZoneZoneBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ZoneZoneBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createZone($body, string $contentType = self::contentTypes['createZone'][0])
     {
@@ -157,12 +157,12 @@ class ZoneServiceApi
      *
      * Create zone
      *
-     * @param  \OpenAPI\Client\Model\ZoneCreateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneCreateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ZoneZoneBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ZoneZoneBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createZoneWithHttpInfo($body, string $contentType = self::contentTypes['createZone'][0])
     {
@@ -205,11 +205,11 @@ class ZoneServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ZoneZoneBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ZoneZoneBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ZoneZoneBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ZoneZoneBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ZoneZoneBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ZoneZoneBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ZoneZoneBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ZoneZoneBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class ZoneServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ZoneZoneBoolResponse',
+                        '\Panthera\Openprovider\Model\ZoneZoneBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class ZoneServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class ZoneServiceApi
      *
      * Create zone
      *
-     * @param  \OpenAPI\Client\Model\ZoneCreateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneCreateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createZone'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class ZoneServiceApi
      *
      * Create zone
      *
-     * @param  \OpenAPI\Client\Model\ZoneCreateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneCreateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createZone'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -345,7 +345,7 @@ class ZoneServiceApi
      */
     public function createZoneAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createZone'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ZoneZoneBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ZoneZoneBoolResponse';
         $request = $this->createZoneRequest($body, $contentType);
 
         return $this->client
@@ -387,7 +387,7 @@ class ZoneServiceApi
     /**
      * Create request for operation 'createZone'
      *
-     * @param  \OpenAPI\Client\Model\ZoneCreateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneCreateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createZone'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -492,9 +492,9 @@ class ZoneServiceApi
      * @param  string $provider Name of the DNS provider. Set provider&#x3D;sectigo in case of sectigo premium DNS zone should be deleted. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ZoneZoneBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ZoneZoneBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteZone($name, $id = null, $domain_name = null, $domain_extension = null, $provider = null, string $contentType = self::contentTypes['deleteZone'][0])
     {
@@ -514,9 +514,9 @@ class ZoneServiceApi
      * @param  string $provider Name of the DNS provider. Set provider&#x3D;sectigo in case of sectigo premium DNS zone should be deleted. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ZoneZoneBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ZoneZoneBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteZoneWithHttpInfo($name, $id = null, $domain_name = null, $domain_extension = null, $provider = null, string $contentType = self::contentTypes['deleteZone'][0])
     {
@@ -559,11 +559,11 @@ class ZoneServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ZoneZoneBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ZoneZoneBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ZoneZoneBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ZoneZoneBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -581,16 +581,16 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ZoneZoneBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ZoneZoneBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -608,13 +608,13 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ZoneZoneBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ZoneZoneBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -647,7 +647,7 @@ class ZoneServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ZoneZoneBoolResponse',
+                        '\Panthera\Openprovider\Model\ZoneZoneBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -655,7 +655,7 @@ class ZoneServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -707,7 +707,7 @@ class ZoneServiceApi
      */
     public function deleteZoneAsyncWithHttpInfo($name, $id = null, $domain_name = null, $domain_extension = null, $provider = null, string $contentType = self::contentTypes['deleteZone'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ZoneZoneBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ZoneZoneBoolResponse';
         $request = $this->deleteZoneRequest($name, $id, $domain_name, $domain_extension, $provider, $contentType);
 
         return $this->client
@@ -900,9 +900,9 @@ class ZoneServiceApi
      * @param  string $provider Name of the DNS provider. Set provider&#x3D;sectigo in case of only sectigo premium DNS zone should be retrieved. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ZoneGetZoneResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ZoneGetZoneResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getZone($name, $id = null, $with_records = false, $with_history = false, $with_dnskey = null, $provider = null, string $contentType = self::contentTypes['getZone'][0])
     {
@@ -923,9 +923,9 @@ class ZoneServiceApi
      * @param  string $provider Name of the DNS provider. Set provider&#x3D;sectigo in case of only sectigo premium DNS zone should be retrieved. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ZoneGetZoneResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ZoneGetZoneResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZoneWithHttpInfo($name, $id = null, $with_records = false, $with_history = false, $with_dnskey = null, $provider = null, string $contentType = self::contentTypes['getZone'][0])
     {
@@ -968,11 +968,11 @@ class ZoneServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ZoneGetZoneResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ZoneGetZoneResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ZoneGetZoneResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ZoneGetZoneResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -990,16 +990,16 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ZoneGetZoneResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ZoneGetZoneResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1017,13 +1017,13 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ZoneGetZoneResponse';
+            $returnType = '\Panthera\Openprovider\Model\ZoneGetZoneResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1056,7 +1056,7 @@ class ZoneServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ZoneGetZoneResponse',
+                        '\Panthera\Openprovider\Model\ZoneGetZoneResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1064,7 +1064,7 @@ class ZoneServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1118,7 +1118,7 @@ class ZoneServiceApi
      */
     public function getZoneAsyncWithHttpInfo($name, $id = null, $with_records = false, $with_history = false, $with_dnskey = null, $provider = null, string $contentType = self::contentTypes['getZone'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ZoneGetZoneResponse';
+        $returnType = '\Panthera\Openprovider\Model\ZoneGetZoneResponse';
         $request = $this->getZoneRequest($name, $id, $with_records, $with_history, $with_dnskey, $provider, $contentType);
 
         return $this->client
@@ -1327,9 +1327,9 @@ class ZoneServiceApi
      * @param  string $provider Name of the DNS provider. Set provider&#x3D;sectigo in case of only sectigo premium DNS zone should be retrieved. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listZones'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ZoneListZonesResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ZoneListZonesResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listZones($limit = 100, $offset = null, $order_by_creation_date = 'desc', $order_by_modification_date = null, $order_by_name = null, $type = null, $name_pattern = null, $with_records = null, $with_history = null, $with_dnskey = null, $provider = null, string $contentType = self::contentTypes['listZones'][0])
     {
@@ -1355,9 +1355,9 @@ class ZoneServiceApi
      * @param  string $provider Name of the DNS provider. Set provider&#x3D;sectigo in case of only sectigo premium DNS zone should be retrieved. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listZones'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ZoneListZonesResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ZoneListZonesResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listZonesWithHttpInfo($limit = 100, $offset = null, $order_by_creation_date = 'desc', $order_by_modification_date = null, $order_by_name = null, $type = null, $name_pattern = null, $with_records = null, $with_history = null, $with_dnskey = null, $provider = null, string $contentType = self::contentTypes['listZones'][0])
     {
@@ -1400,11 +1400,11 @@ class ZoneServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ZoneListZonesResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ZoneListZonesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ZoneListZonesResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ZoneListZonesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1422,16 +1422,16 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ZoneListZonesResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ZoneListZonesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1449,13 +1449,13 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ZoneListZonesResponse';
+            $returnType = '\Panthera\Openprovider\Model\ZoneListZonesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1488,7 +1488,7 @@ class ZoneServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ZoneListZonesResponse',
+                        '\Panthera\Openprovider\Model\ZoneListZonesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1496,7 +1496,7 @@ class ZoneServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1560,7 +1560,7 @@ class ZoneServiceApi
      */
     public function listZonesAsyncWithHttpInfo($limit = 100, $offset = null, $order_by_creation_date = 'desc', $order_by_modification_date = null, $order_by_name = null, $type = null, $name_pattern = null, $with_records = null, $with_history = null, $with_dnskey = null, $provider = null, string $contentType = self::contentTypes['listZones'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ZoneListZonesResponse';
+        $returnType = '\Panthera\Openprovider\Model\ZoneListZonesResponse';
         $request = $this->listZonesRequest($limit, $offset, $order_by_creation_date, $order_by_modification_date, $order_by_name, $type, $name_pattern, $with_records, $with_history, $with_dnskey, $provider, $contentType);
 
         return $this->client
@@ -1807,12 +1807,12 @@ class ZoneServiceApi
      * Update zone
      *
      * @param  string $name Name of the domain to which DNS zone corresponds (required)
-     * @param  \OpenAPI\Client\Model\ZoneUpdateZoneRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneUpdateZoneRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ZoneZoneBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\ZoneZoneBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateZone($name, $body, string $contentType = self::contentTypes['updateZone'][0])
     {
@@ -1826,12 +1826,12 @@ class ZoneServiceApi
      * Update zone
      *
      * @param  string $name Name of the domain to which DNS zone corresponds (required)
-     * @param  \OpenAPI\Client\Model\ZoneUpdateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneUpdateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateZone'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ZoneZoneBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\ZoneZoneBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateZoneWithHttpInfo($name, $body, string $contentType = self::contentTypes['updateZone'][0])
     {
@@ -1874,11 +1874,11 @@ class ZoneServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ZoneZoneBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ZoneZoneBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ZoneZoneBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ZoneZoneBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1896,16 +1896,16 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ZoneZoneBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ZoneZoneBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1923,13 +1923,13 @@ class ZoneServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ZoneZoneBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\ZoneZoneBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1962,7 +1962,7 @@ class ZoneServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ZoneZoneBoolResponse',
+                        '\Panthera\Openprovider\Model\ZoneZoneBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1970,7 +1970,7 @@ class ZoneServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1986,7 +1986,7 @@ class ZoneServiceApi
      * Update zone
      *
      * @param  string $name Name of the domain to which DNS zone corresponds (required)
-     * @param  \OpenAPI\Client\Model\ZoneUpdateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneUpdateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateZone'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2008,7 +2008,7 @@ class ZoneServiceApi
      * Update zone
      *
      * @param  string $name Name of the domain to which DNS zone corresponds (required)
-     * @param  \OpenAPI\Client\Model\ZoneUpdateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneUpdateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateZone'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2016,7 +2016,7 @@ class ZoneServiceApi
      */
     public function updateZoneAsyncWithHttpInfo($name, $body, string $contentType = self::contentTypes['updateZone'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ZoneZoneBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\ZoneZoneBoolResponse';
         $request = $this->updateZoneRequest($name, $body, $contentType);
 
         return $this->client
@@ -2059,7 +2059,7 @@ class ZoneServiceApi
      * Create request for operation 'updateZone'
      *
      * @param  string $name Name of the domain to which DNS zone corresponds (required)
-     * @param  \OpenAPI\Client\Model\ZoneUpdateZoneRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\ZoneUpdateZoneRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateZone'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

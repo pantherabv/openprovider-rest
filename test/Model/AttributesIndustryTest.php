@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  &quot;Panthera\Openprovider&quot;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client\Test\Model;
+namespace &quot;Panthera\Openprovider&quot;\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -35,7 +35,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description - UNKNOWN_INDUSTRY: Industry is not specified  - DOMAIN_REGISTRAR: Reseller&#39;s industry is domain registar  - CLOUD_SERVICES: Reseller&#39;s industry is cloud services  - MARKETING_AGENCIES: Reseller&#39;s industry is marketing agencies  - NETWORKING_SERVICES: Reseller&#39;s industry is networking services  - WEB_HOSTING: Reseller&#39;s industry is web hosting  - SOFTWARE_DEVELOPMENT: Reseller&#39;s industry is software development  - WEBSITE_BUILDERS: Reseller&#39;s industry is website builders  - SECURITY_SERVICES: Reseller&#39;s industry is security services
- * @package     OpenAPI\Client
+ * @package     &quot;Panthera\Openprovider&quot;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

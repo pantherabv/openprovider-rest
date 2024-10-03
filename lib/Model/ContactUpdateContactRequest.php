@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * ContactUpdateContactRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,10 +57,10 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'additional_data' => '\OpenAPI\Client\Model\ContactAdditionalData',
-        'address' => '\OpenAPI\Client\Model\ContactAddress',
+        'additional_data' => '\Panthera\Openprovider\Model\ContactAdditionalData',
+        'address' => '\Panthera\Openprovider\Model\ContactAddress',
         'api_access_enabled' => 'bool',
-        'api_client_ip_list' => '\OpenAPI\Client\Model\ContactClientIpList',
+        'api_client_ip_list' => '\Panthera\Openprovider\Model\ContactClientIpList',
         'auth_type' => 'string',
         'comments' => 'string',
         'company_name' => 'string',
@@ -70,10 +70,10 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
         'is_active' => 'bool',
         'kpp' => 'string',
         'locale' => 'string',
-        'name' => '\OpenAPI\Client\Model\ContactName',
+        'name' => '\Panthera\Openprovider\Model\ContactName',
         'password_change_declined_at' => 'string',
-        'phone' => '\OpenAPI\Client\Model\ContactPhone',
-        'rcp_client_ip_list' => '\OpenAPI\Client\Model\ContactClientIpList',
+        'phone' => '\Panthera\Openprovider\Model\ContactPhone',
+        'rcp_client_ip_list' => '\Panthera\Openprovider\Model\ContactClientIpList',
         'role' => 'string',
         'type' => 'string',
         'vat' => 'string'
@@ -425,7 +425,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\ContactAdditionalData|null
+     * @return \Panthera\Openprovider\Model\ContactAdditionalData|null
      */
     public function getAdditionalData()
     {
@@ -435,7 +435,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\ContactAdditionalData|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\ContactAdditionalData|null $additional_data additional_data
      *
      * @return self
      */
@@ -452,7 +452,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\ContactAddress|null
+     * @return \Panthera\Openprovider\Model\ContactAddress|null
      */
     public function getAddress()
     {
@@ -462,7 +462,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\ContactAddress|null $address address
+     * @param \Panthera\Openprovider\Model\ContactAddress|null $address address
      *
      * @return self
      */
@@ -506,7 +506,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets api_client_ip_list
      *
-     * @return \OpenAPI\Client\Model\ContactClientIpList|null
+     * @return \Panthera\Openprovider\Model\ContactClientIpList|null
      */
     public function getApiClientIpList()
     {
@@ -516,7 +516,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets api_client_ip_list
      *
-     * @param \OpenAPI\Client\Model\ContactClientIpList|null $api_client_ip_list api_client_ip_list
+     * @param \Panthera\Openprovider\Model\ContactClientIpList|null $api_client_ip_list api_client_ip_list
      *
      * @return self
      */
@@ -776,7 +776,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets name
      *
-     * @return \OpenAPI\Client\Model\ContactName|null
+     * @return \Panthera\Openprovider\Model\ContactName|null
      */
     public function getName()
     {
@@ -786,7 +786,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets name
      *
-     * @param \OpenAPI\Client\Model\ContactName|null $name name
+     * @param \Panthera\Openprovider\Model\ContactName|null $name name
      *
      * @return self
      */
@@ -830,7 +830,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets phone
      *
-     * @return \OpenAPI\Client\Model\ContactPhone|null
+     * @return \Panthera\Openprovider\Model\ContactPhone|null
      */
     public function getPhone()
     {
@@ -840,7 +840,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets phone
      *
-     * @param \OpenAPI\Client\Model\ContactPhone|null $phone phone
+     * @param \Panthera\Openprovider\Model\ContactPhone|null $phone phone
      *
      * @return self
      */
@@ -857,7 +857,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets rcp_client_ip_list
      *
-     * @return \OpenAPI\Client\Model\ContactClientIpList|null
+     * @return \Panthera\Openprovider\Model\ContactClientIpList|null
      */
     public function getRcpClientIpList()
     {
@@ -867,7 +867,7 @@ class ContactUpdateContactRequest implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets rcp_client_ip_list
      *
-     * @param \OpenAPI\Client\Model\ContactClientIpList|null $rcp_client_ip_list rcp_client_ip_list
+     * @param \Panthera\Openprovider\Model\ContactClientIpList|null $rcp_client_ip_list rcp_client_ip_list
      *
      * @return self
      */

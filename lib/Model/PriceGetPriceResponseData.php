@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * PriceGetPriceResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,10 +59,10 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     protected static $openAPITypes = [
         'is_premium' => 'bool',
         'is_promotion' => 'bool',
-        'membership_price' => '\OpenAPI\Client\Model\DomainPriceGroup',
-        'price' => '\OpenAPI\Client\Model\DomainPriceGroup',
-        'promotion_data' => '\OpenAPI\Client\Model\PricePromotionData',
-        'tier_price' => '\OpenAPI\Client\Model\DomainPriceGroup'
+        'membership_price' => '\Panthera\Openprovider\Model\DomainPriceGroup',
+        'price' => '\Panthera\Openprovider\Model\DomainPriceGroup',
+        'promotion_data' => '\Panthera\Openprovider\Model\PricePromotionData',
+        'tier_price' => '\Panthera\Openprovider\Model\DomainPriceGroup'
     ];
 
     /**
@@ -381,7 +381,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets membership_price
      *
-     * @return \OpenAPI\Client\Model\DomainPriceGroup|null
+     * @return \Panthera\Openprovider\Model\DomainPriceGroup|null
      */
     public function getMembershipPrice()
     {
@@ -391,7 +391,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets membership_price
      *
-     * @param \OpenAPI\Client\Model\DomainPriceGroup|null $membership_price membership_price
+     * @param \Panthera\Openprovider\Model\DomainPriceGroup|null $membership_price membership_price
      *
      * @return self
      */
@@ -408,7 +408,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets price
      *
-     * @return \OpenAPI\Client\Model\DomainPriceGroup|null
+     * @return \Panthera\Openprovider\Model\DomainPriceGroup|null
      */
     public function getPrice()
     {
@@ -418,7 +418,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets price
      *
-     * @param \OpenAPI\Client\Model\DomainPriceGroup|null $price price
+     * @param \Panthera\Openprovider\Model\DomainPriceGroup|null $price price
      *
      * @return self
      */
@@ -435,7 +435,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets promotion_data
      *
-     * @return \OpenAPI\Client\Model\PricePromotionData|null
+     * @return \Panthera\Openprovider\Model\PricePromotionData|null
      */
     public function getPromotionData()
     {
@@ -445,7 +445,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets promotion_data
      *
-     * @param \OpenAPI\Client\Model\PricePromotionData|null $promotion_data promotion_data
+     * @param \Panthera\Openprovider\Model\PricePromotionData|null $promotion_data promotion_data
      *
      * @return self
      */
@@ -462,7 +462,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets tier_price
      *
-     * @return \OpenAPI\Client\Model\DomainPriceGroup|null
+     * @return \Panthera\Openprovider\Model\DomainPriceGroup|null
      */
     public function getTierPrice()
     {
@@ -472,7 +472,7 @@ class PriceGetPriceResponseData implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets tier_price
      *
-     * @param \OpenAPI\Client\Model\DomainPriceGroup|null $tier_price tier_price
+     * @param \Panthera\Openprovider\Model\DomainPriceGroup|null $tier_price tier_price
      *
      * @return self
      */

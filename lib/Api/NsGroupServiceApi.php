@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * NsGroupServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class NsGroupServiceApi
      *
      * Create group
      *
-     * @param  \OpenAPI\Client\Model\NsGroupCreateGroupRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupCreateGroupRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NsGroupCreateGroupResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NsGroupCreateGroupResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createGroup($body, string $contentType = self::contentTypes['createGroup'][0])
     {
@@ -157,12 +157,12 @@ class NsGroupServiceApi
      *
      * Create group
      *
-     * @param  \OpenAPI\Client\Model\NsGroupCreateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupCreateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NsGroupCreateGroupResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NsGroupCreateGroupResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createGroupWithHttpInfo($body, string $contentType = self::contentTypes['createGroup'][0])
     {
@@ -205,11 +205,11 @@ class NsGroupServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NsGroupCreateGroupResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NsGroupCreateGroupResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NsGroupCreateGroupResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NsGroupCreateGroupResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NsGroupCreateGroupResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NsGroupCreateGroupResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NsGroupCreateGroupResponse';
+            $returnType = '\Panthera\Openprovider\Model\NsGroupCreateGroupResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class NsGroupServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NsGroupCreateGroupResponse',
+                        '\Panthera\Openprovider\Model\NsGroupCreateGroupResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class NsGroupServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class NsGroupServiceApi
      *
      * Create group
      *
-     * @param  \OpenAPI\Client\Model\NsGroupCreateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupCreateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class NsGroupServiceApi
      *
      * Create group
      *
-     * @param  \OpenAPI\Client\Model\NsGroupCreateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupCreateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -345,7 +345,7 @@ class NsGroupServiceApi
      */
     public function createGroupAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NsGroupCreateGroupResponse';
+        $returnType = '\Panthera\Openprovider\Model\NsGroupCreateGroupResponse';
         $request = $this->createGroupRequest($body, $contentType);
 
         return $this->client
@@ -387,7 +387,7 @@ class NsGroupServiceApi
     /**
      * Create request for operation 'createGroup'
      *
-     * @param  \OpenAPI\Client\Model\NsGroupCreateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupCreateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -488,9 +488,9 @@ class NsGroupServiceApi
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NsGroupGroupBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NsGroupGroupBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteGroup($ns_group, string $contentType = self::contentTypes['deleteGroup'][0])
     {
@@ -506,9 +506,9 @@ class NsGroupServiceApi
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NsGroupGroupBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NsGroupGroupBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteGroupWithHttpInfo($ns_group, string $contentType = self::contentTypes['deleteGroup'][0])
     {
@@ -551,11 +551,11 @@ class NsGroupServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NsGroupGroupBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NsGroupGroupBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NsGroupGroupBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NsGroupGroupBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -573,16 +573,16 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NsGroupGroupBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -600,13 +600,13 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NsGroupGroupBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -639,7 +639,7 @@ class NsGroupServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NsGroupGroupBoolResponse',
+                        '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -647,7 +647,7 @@ class NsGroupServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -691,7 +691,7 @@ class NsGroupServiceApi
      */
     public function deleteGroupAsyncWithHttpInfo($ns_group, string $contentType = self::contentTypes['deleteGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NsGroupGroupBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse';
         $request = $this->deleteGroupRequest($ns_group, $contentType);
 
         return $this->client
@@ -836,9 +836,9 @@ class NsGroupServiceApi
      * @param  int $id Nameserver group ID. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NsGroupGetGroupResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NsGroupGetGroupResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getGroup($ns_group, $id = null, string $contentType = self::contentTypes['getGroup'][0])
     {
@@ -855,9 +855,9 @@ class NsGroupServiceApi
      * @param  int $id Nameserver group ID. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NsGroupGetGroupResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NsGroupGetGroupResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupWithHttpInfo($ns_group, $id = null, string $contentType = self::contentTypes['getGroup'][0])
     {
@@ -900,11 +900,11 @@ class NsGroupServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NsGroupGetGroupResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NsGroupGetGroupResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NsGroupGetGroupResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NsGroupGetGroupResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -922,16 +922,16 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NsGroupGetGroupResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NsGroupGetGroupResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -949,13 +949,13 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NsGroupGetGroupResponse';
+            $returnType = '\Panthera\Openprovider\Model\NsGroupGetGroupResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -988,7 +988,7 @@ class NsGroupServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NsGroupGetGroupResponse',
+                        '\Panthera\Openprovider\Model\NsGroupGetGroupResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -996,7 +996,7 @@ class NsGroupServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1042,7 +1042,7 @@ class NsGroupServiceApi
      */
     public function getGroupAsyncWithHttpInfo($ns_group, $id = null, string $contentType = self::contentTypes['getGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NsGroupGetGroupResponse';
+        $returnType = '\Panthera\Openprovider\Model\NsGroupGetGroupResponse';
         $request = $this->getGroupRequest($ns_group, $id, $contentType);
 
         return $this->client
@@ -1206,9 +1206,9 @@ class NsGroupServiceApi
      * @param  string $ns_ip_pattern Nameserver IP address pattern. Wildcard (*) can be used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGroups'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NsGroupListGroupsResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NsGroupListGroupsResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listGroups($limit = 100, $offset = null, $order_by_ns_group = 'asc', $order_by_domain_count = null, $order_by_ns_count = null, $with_domain_count = null, $with_ns_count = null, $ns_group_pattern = null, $ns_name_pattern = null, $ns_ip_pattern = null, string $contentType = self::contentTypes['listGroups'][0])
     {
@@ -1233,9 +1233,9 @@ class NsGroupServiceApi
      * @param  string $ns_ip_pattern Nameserver IP address pattern. Wildcard (*) can be used. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGroups'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NsGroupListGroupsResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NsGroupListGroupsResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listGroupsWithHttpInfo($limit = 100, $offset = null, $order_by_ns_group = 'asc', $order_by_domain_count = null, $order_by_ns_count = null, $with_domain_count = null, $with_ns_count = null, $ns_group_pattern = null, $ns_name_pattern = null, $ns_ip_pattern = null, string $contentType = self::contentTypes['listGroups'][0])
     {
@@ -1278,11 +1278,11 @@ class NsGroupServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NsGroupListGroupsResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NsGroupListGroupsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NsGroupListGroupsResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NsGroupListGroupsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1300,16 +1300,16 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NsGroupListGroupsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NsGroupListGroupsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1327,13 +1327,13 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NsGroupListGroupsResponse';
+            $returnType = '\Panthera\Openprovider\Model\NsGroupListGroupsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1366,7 +1366,7 @@ class NsGroupServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NsGroupListGroupsResponse',
+                        '\Panthera\Openprovider\Model\NsGroupListGroupsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1374,7 +1374,7 @@ class NsGroupServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1436,7 +1436,7 @@ class NsGroupServiceApi
      */
     public function listGroupsAsyncWithHttpInfo($limit = 100, $offset = null, $order_by_ns_group = 'asc', $order_by_domain_count = null, $order_by_ns_count = null, $with_domain_count = null, $with_ns_count = null, $ns_group_pattern = null, $ns_name_pattern = null, $ns_ip_pattern = null, string $contentType = self::contentTypes['listGroups'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NsGroupListGroupsResponse';
+        $returnType = '\Panthera\Openprovider\Model\NsGroupListGroupsResponse';
         $request = $this->listGroupsRequest($limit, $offset, $order_by_ns_group, $order_by_domain_count, $order_by_ns_count, $with_domain_count, $with_ns_count, $ns_group_pattern, $ns_name_pattern, $ns_ip_pattern, $contentType);
 
         return $this->client
@@ -1672,12 +1672,12 @@ class NsGroupServiceApi
      * Update group
      *
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
-     * @param  \OpenAPI\Client\Model\NsGroupUpdateGroupRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NsGroupGroupBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NsGroupGroupBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateGroup($ns_group, $body, string $contentType = self::contentTypes['updateGroup'][0])
     {
@@ -1691,12 +1691,12 @@ class NsGroupServiceApi
      * Update group
      *
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
-     * @param  \OpenAPI\Client\Model\NsGroupUpdateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NsGroupGroupBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NsGroupGroupBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateGroupWithHttpInfo($ns_group, $body, string $contentType = self::contentTypes['updateGroup'][0])
     {
@@ -1739,11 +1739,11 @@ class NsGroupServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NsGroupGroupBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NsGroupGroupBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NsGroupGroupBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NsGroupGroupBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1761,16 +1761,16 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NsGroupGroupBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1788,13 +1788,13 @@ class NsGroupServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NsGroupGroupBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1827,7 +1827,7 @@ class NsGroupServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NsGroupGroupBoolResponse',
+                        '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1835,7 +1835,7 @@ class NsGroupServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1851,7 +1851,7 @@ class NsGroupServiceApi
      * Update group
      *
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
-     * @param  \OpenAPI\Client\Model\NsGroupUpdateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1873,7 +1873,7 @@ class NsGroupServiceApi
      * Update group
      *
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
-     * @param  \OpenAPI\Client\Model\NsGroupUpdateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1881,7 +1881,7 @@ class NsGroupServiceApi
      */
     public function updateGroupAsyncWithHttpInfo($ns_group, $body, string $contentType = self::contentTypes['updateGroup'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NsGroupGroupBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\NsGroupGroupBoolResponse';
         $request = $this->updateGroupRequest($ns_group, $body, $contentType);
 
         return $this->client
@@ -1924,7 +1924,7 @@ class NsGroupServiceApi
      * Create request for operation 'updateGroup'
      *
      * @param  string $ns_group Plain text name of the nameserver group, which can consist of several nameservers with attached IPs. Once created in Openprovider reseller account, nameserver group can be reused for operations with domains. (required)
-     * @param  \OpenAPI\Client\Model\NsGroupUpdateGroupRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\NsGroupUpdateGroupRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

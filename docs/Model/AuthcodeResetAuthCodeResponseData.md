@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auth_code** | **string** |  | [optional]
-**auth_info** | [**\OpenAPI\Client\Model\AuthcodeAuthInfo**](AuthcodeAuthInfo.md) |  | [optional]
+**auth_info** | [**\Panthera\Openprovider\Model\AuthcodeAuthInfo**](AuthcodeAuthInfo.md) |  | [optional]
 **domain_roid** | **string** |  | [optional]
 **epp_statuses** | **string[]** |  | [optional]
-**rgp_statuses** | [**\OpenAPI\Client\Model\AuthcodeRgpStatuses**](AuthcodeRgpStatuses.md) |  | [optional]
+**rgp_statuses** | [**\Panthera\Openprovider\Model\AuthcodeRgpStatuses**](AuthcodeRgpStatuses.md) |  | [optional]
 **success** | **bool** |  | [optional]
 **type** | **string** |  | [optional]
 

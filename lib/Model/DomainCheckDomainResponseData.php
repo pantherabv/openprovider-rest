@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * DomainCheckDomainResponseData Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class DomainCheckDomainResponseData implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'results' => '\OpenAPI\Client\Model\DomainCheckDomainResult[]'
+        'results' => '\Panthera\Openprovider\Model\DomainCheckDomainResult[]'
     ];
 
     /**
@@ -292,7 +292,7 @@ class DomainCheckDomainResponseData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets results
      *
-     * @return \OpenAPI\Client\Model\DomainCheckDomainResult[]|null
+     * @return \Panthera\Openprovider\Model\DomainCheckDomainResult[]|null
      */
     public function getResults()
     {
@@ -302,7 +302,7 @@ class DomainCheckDomainResponseData implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets results
      *
-     * @param \OpenAPI\Client\Model\DomainCheckDomainResult[]|null $results results
+     * @param \Panthera\Openprovider\Model\DomainCheckDomainResult[]|null $results results
      *
      * @return self
      */

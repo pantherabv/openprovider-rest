@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OrderApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -146,12 +146,12 @@ class OrderApi
      * Cancel order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderCancelOrderRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCancelOrderRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderCancelOrderResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderCancelOrderResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function cancelOrder($id, $body, string $contentType = self::contentTypes['cancelOrder'][0])
     {
@@ -165,12 +165,12 @@ class OrderApi
      * Cancel order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderCancelOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCancelOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderCancelOrderResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderCancelOrderResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelOrderWithHttpInfo($id, $body, string $contentType = self::contentTypes['cancelOrder'][0])
     {
@@ -213,11 +213,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderCancelOrderResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderCancelOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderCancelOrderResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderCancelOrderResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -235,16 +235,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderCancelOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderCancelOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -262,13 +262,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderCancelOrderResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderCancelOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -301,7 +301,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderCancelOrderResponse',
+                        '\Panthera\Openprovider\Model\OrderCancelOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -309,7 +309,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class OrderApi
      * Cancel order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderCancelOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCancelOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -347,7 +347,7 @@ class OrderApi
      * Cancel order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderCancelOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCancelOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -355,7 +355,7 @@ class OrderApi
      */
     public function cancelOrderAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['cancelOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderCancelOrderResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderCancelOrderResponse';
         $request = $this->cancelOrderRequest($id, $body, $contentType);
 
         return $this->client
@@ -398,7 +398,7 @@ class OrderApi
      * Create request for operation 'cancelOrder'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderCancelOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCancelOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['cancelOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -511,12 +511,12 @@ class OrderApi
      *
      * Create order
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateOrderRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateOrderRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderCreateOrderResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderCreateOrderResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createOrder($body, string $contentType = self::contentTypes['createOrder'][0])
     {
@@ -529,12 +529,12 @@ class OrderApi
      *
      * Create order
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderCreateOrderResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderCreateOrderResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrderWithHttpInfo($body, string $contentType = self::contentTypes['createOrder'][0])
     {
@@ -577,11 +577,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderCreateOrderResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderCreateOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderCreateOrderResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderCreateOrderResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -599,16 +599,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderCreateOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderCreateOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -626,13 +626,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderCreateOrderResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderCreateOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -665,7 +665,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderCreateOrderResponse',
+                        '\Panthera\Openprovider\Model\OrderCreateOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class OrderApi
      *
      * Create order
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -709,7 +709,7 @@ class OrderApi
      *
      * Create order
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -717,7 +717,7 @@ class OrderApi
      */
     public function createOrderAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderCreateOrderResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderCreateOrderResponse';
         $request = $this->createOrderRequest($body, $contentType);
 
         return $this->client
@@ -759,7 +759,7 @@ class OrderApi
     /**
      * Create request for operation 'createOrder'
      *
-     * @param  \OpenAPI\Client\Model\OrderCreateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderCreateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -860,9 +860,9 @@ class OrderApi
      * @param  int $id Object id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderGetOrderResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderGetOrderResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getOrder($id, string $contentType = self::contentTypes['getOrder'][0])
     {
@@ -878,9 +878,9 @@ class OrderApi
      * @param  int $id Object id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderGetOrderResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderGetOrderResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderWithHttpInfo($id, string $contentType = self::contentTypes['getOrder'][0])
     {
@@ -923,11 +923,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderGetOrderResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderGetOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderGetOrderResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderGetOrderResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -945,16 +945,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderGetOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderGetOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -972,13 +972,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderGetOrderResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderGetOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1011,7 +1011,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderGetOrderResponse',
+                        '\Panthera\Openprovider\Model\OrderGetOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1019,7 +1019,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1063,7 +1063,7 @@ class OrderApi
      */
     public function getOrderAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderGetOrderResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderGetOrderResponse';
         $request = $this->getOrderRequest($id, $contentType);
 
         return $this->client
@@ -1218,9 +1218,9 @@ class OrderApi
      * @param  bool $show_expiring Indicates, whether to return only certificates that are expiring within 30 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderListOrdersResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderListOrdersResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listOrders($limit = 100, $offset = null, $order_by_common_name = null, $order_by_order_date = 'desc', $order_by_active_date = null, $order_by_expiration_date = null, $order_by_status = null, $order_by_product_name = null, $common_name_pattern = null, $status = null, $contact_handle = null, $show_expiring = null, string $contentType = self::contentTypes['listOrders'][0])
     {
@@ -1247,9 +1247,9 @@ class OrderApi
      * @param  bool $show_expiring Indicates, whether to return only certificates that are expiring within 30 days. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOrders'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderListOrdersResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderListOrdersResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listOrdersWithHttpInfo($limit = 100, $offset = null, $order_by_common_name = null, $order_by_order_date = 'desc', $order_by_active_date = null, $order_by_expiration_date = null, $order_by_status = null, $order_by_product_name = null, $common_name_pattern = null, $status = null, $contact_handle = null, $show_expiring = null, string $contentType = self::contentTypes['listOrders'][0])
     {
@@ -1292,11 +1292,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderListOrdersResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderListOrdersResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderListOrdersResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderListOrdersResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1314,16 +1314,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderListOrdersResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderListOrdersResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1341,13 +1341,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderListOrdersResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderListOrdersResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1380,7 +1380,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderListOrdersResponse',
+                        '\Panthera\Openprovider\Model\OrderListOrdersResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1388,7 +1388,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1454,7 +1454,7 @@ class OrderApi
      */
     public function listOrdersAsyncWithHttpInfo($limit = 100, $offset = null, $order_by_common_name = null, $order_by_order_date = 'desc', $order_by_active_date = null, $order_by_expiration_date = null, $order_by_status = null, $order_by_product_name = null, $common_name_pattern = null, $status = null, $contact_handle = null, $show_expiring = null, string $contentType = self::contentTypes['listOrders'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderListOrdersResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderListOrdersResponse';
         $request = $this->listOrdersRequest($limit, $offset, $order_by_common_name, $order_by_order_date, $order_by_active_date, $order_by_expiration_date, $order_by_status, $order_by_product_name, $common_name_pattern, $status, $contact_handle, $show_expiring, $contentType);
 
         return $this->client
@@ -1712,12 +1712,12 @@ class OrderApi
      * Reissue order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderReissueOrderRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderReissueOrderRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reissueOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderReissueOrderResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderReissueOrderResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function reissueOrder($id, $body, string $contentType = self::contentTypes['reissueOrder'][0])
     {
@@ -1731,12 +1731,12 @@ class OrderApi
      * Reissue order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderReissueOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderReissueOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reissueOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderReissueOrderResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderReissueOrderResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function reissueOrderWithHttpInfo($id, $body, string $contentType = self::contentTypes['reissueOrder'][0])
     {
@@ -1779,11 +1779,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderReissueOrderResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderReissueOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderReissueOrderResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderReissueOrderResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1801,16 +1801,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderReissueOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderReissueOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1828,13 +1828,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderReissueOrderResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderReissueOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1867,7 +1867,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderReissueOrderResponse',
+                        '\Panthera\Openprovider\Model\OrderReissueOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1875,7 +1875,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1891,7 +1891,7 @@ class OrderApi
      * Reissue order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderReissueOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderReissueOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reissueOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1913,7 +1913,7 @@ class OrderApi
      * Reissue order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderReissueOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderReissueOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reissueOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1921,7 +1921,7 @@ class OrderApi
      */
     public function reissueOrderAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['reissueOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderReissueOrderResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderReissueOrderResponse';
         $request = $this->reissueOrderRequest($id, $body, $contentType);
 
         return $this->client
@@ -1964,7 +1964,7 @@ class OrderApi
      * Create request for operation 'reissueOrder'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderReissueOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderReissueOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['reissueOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2078,12 +2078,12 @@ class OrderApi
      * Renew order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderRenewOrderRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRenewOrderRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderRenewOrderResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderRenewOrderResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function renewOrder($id, $body, string $contentType = self::contentTypes['renewOrder'][0])
     {
@@ -2097,12 +2097,12 @@ class OrderApi
      * Renew order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderRenewOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRenewOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderRenewOrderResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderRenewOrderResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function renewOrderWithHttpInfo($id, $body, string $contentType = self::contentTypes['renewOrder'][0])
     {
@@ -2145,11 +2145,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderRenewOrderResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderRenewOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderRenewOrderResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderRenewOrderResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2167,16 +2167,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderRenewOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderRenewOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2194,13 +2194,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderRenewOrderResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderRenewOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2233,7 +2233,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderRenewOrderResponse',
+                        '\Panthera\Openprovider\Model\OrderRenewOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2241,7 +2241,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2257,7 +2257,7 @@ class OrderApi
      * Renew order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderRenewOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRenewOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2279,7 +2279,7 @@ class OrderApi
      * Renew order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderRenewOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRenewOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2287,7 +2287,7 @@ class OrderApi
      */
     public function renewOrderAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['renewOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderRenewOrderResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderRenewOrderResponse';
         $request = $this->renewOrderRequest($id, $body, $contentType);
 
         return $this->client
@@ -2330,7 +2330,7 @@ class OrderApi
      * Create request for operation 'renewOrder'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderRenewOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderRenewOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['renewOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2444,12 +2444,12 @@ class OrderApi
      * Update order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderUpdateOrderRequest $body body (required)
+     * @param  \Panthera\Openprovider\Model\OrderUpdateOrderRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\OrderUpdateOrderResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\OrderUpdateOrderResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateOrder($id, $body, string $contentType = self::contentTypes['updateOrder'][0])
     {
@@ -2463,12 +2463,12 @@ class OrderApi
      * Update order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderUpdateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderUpdateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrder'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\OrderUpdateOrderResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\OrderUpdateOrderResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateOrderWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateOrder'][0])
     {
@@ -2511,11 +2511,11 @@ class OrderApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\OrderUpdateOrderResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\OrderUpdateOrderResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\OrderUpdateOrderResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\OrderUpdateOrderResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2533,16 +2533,16 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OrderUpdateOrderResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\OrderUpdateOrderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2560,13 +2560,13 @@ class OrderApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\OrderUpdateOrderResponse';
+            $returnType = '\Panthera\Openprovider\Model\OrderUpdateOrderResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2599,7 +2599,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\OrderUpdateOrderResponse',
+                        '\Panthera\Openprovider\Model\OrderUpdateOrderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2607,7 +2607,7 @@ class OrderApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2623,7 +2623,7 @@ class OrderApi
      * Update order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderUpdateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderUpdateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2645,7 +2645,7 @@ class OrderApi
      * Update order
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderUpdateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderUpdateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2653,7 +2653,7 @@ class OrderApi
      */
     public function updateOrderAsyncWithHttpInfo($id, $body, string $contentType = self::contentTypes['updateOrder'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\OrderUpdateOrderResponse';
+        $returnType = '\Panthera\Openprovider\Model\OrderUpdateOrderResponse';
         $request = $this->updateOrderRequest($id, $body, $contentType);
 
         return $this->client
@@ -2696,7 +2696,7 @@ class OrderApi
      * Create request for operation 'updateOrder'
      *
      * @param  int $id Object id (required)
-     * @param  \OpenAPI\Client\Model\OrderUpdateOrderRequest $body (required)
+     * @param  \Panthera\Openprovider\Model\OrderUpdateOrderRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOrder'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

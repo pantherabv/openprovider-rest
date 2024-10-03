@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **company_registration_number** | **string** |  | [optional]
 **coop_acceptance** | **string** |  | [optional]
 **customer_uin** | **string** |  | [optional]
-**customer_uin_doc_type** | [**\OpenAPI\Client\Model\DomainUINDocumentType**](DomainUINDocumentType.md) |  | [optional]
+**customer_uin_doc_type** | [**\Panthera\Openprovider\Model\DomainUINDocumentType**](DomainUINDocumentType.md) |  | [optional]
 **domain_name_variants** | **string[]** |  | [optional]
 **eligibility_type** | **string** |  | [optional]
 **eligibility_type_relationship** | **string** |  | [optional]

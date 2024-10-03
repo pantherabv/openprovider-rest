@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * SettingsPaymentMethodSettings Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,7 +57,7 @@ class SettingsPaymentMethodSettings implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'limit' => '\OpenAPI\Client\Model\SettingsPaymentMethodLimits',
+        'limit' => '\Panthera\Openprovider\Model\SettingsPaymentMethodLimits',
         'transaction_fee' => 'float',
         'transaction_fee_absolute' => 'float'
     ];
@@ -306,7 +306,7 @@ class SettingsPaymentMethodSettings implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets limit
      *
-     * @return \OpenAPI\Client\Model\SettingsPaymentMethodLimits|null
+     * @return \Panthera\Openprovider\Model\SettingsPaymentMethodLimits|null
      */
     public function getLimit()
     {
@@ -316,7 +316,7 @@ class SettingsPaymentMethodSettings implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets limit
      *
-     * @param \OpenAPI\Client\Model\SettingsPaymentMethodLimits|null $limit limit
+     * @param \Panthera\Openprovider\Model\SettingsPaymentMethodLimits|null $limit limit
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Panthera\Openprovider\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Panthera\Openprovider\ApiException;
+use Panthera\Openprovider\Configuration;
+use Panthera\Openprovider\HeaderSelector;
+use Panthera\Openprovider\ObjectSerializer;
 
 /**
  * NameserverServiceApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,12 +139,12 @@ class NameserverServiceApi
      *
      * Create nameserver
      *
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NameserverCreateNameserverResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NameserverCreateNameserverResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function createNameserver($body, string $contentType = self::contentTypes['createNameserver'][0])
     {
@@ -157,12 +157,12 @@ class NameserverServiceApi
      *
      * Create nameserver
      *
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NameserverCreateNameserverResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NameserverCreateNameserverResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function createNameserverWithHttpInfo($body, string $contentType = self::contentTypes['createNameserver'][0])
     {
@@ -205,11 +205,11 @@ class NameserverServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NameserverCreateNameserverResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NameserverCreateNameserverResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NameserverCreateNameserverResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NameserverCreateNameserverResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NameserverCreateNameserverResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NameserverCreateNameserverResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NameserverCreateNameserverResponse';
+            $returnType = '\Panthera\Openprovider\Model\NameserverCreateNameserverResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class NameserverServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NameserverCreateNameserverResponse',
+                        '\Panthera\Openprovider\Model\NameserverCreateNameserverResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class NameserverServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,7 +316,7 @@ class NameserverServiceApi
      *
      * Create nameserver
      *
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNameserver'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class NameserverServiceApi
      *
      * Create nameserver
      *
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNameserver'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -345,7 +345,7 @@ class NameserverServiceApi
      */
     public function createNameserverAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createNameserver'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NameserverCreateNameserverResponse';
+        $returnType = '\Panthera\Openprovider\Model\NameserverCreateNameserverResponse';
         $request = $this->createNameserverRequest($body, $contentType);
 
         return $this->client
@@ -387,7 +387,7 @@ class NameserverServiceApi
     /**
      * Create request for operation 'createNameserver'
      *
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createNameserver'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -488,9 +488,9 @@ class NameserverServiceApi
      * @param  string $name Nameserver name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NameserverNameserverBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NameserverNameserverBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function deleteNameserver($name, string $contentType = self::contentTypes['deleteNameserver'][0])
     {
@@ -506,9 +506,9 @@ class NameserverServiceApi
      * @param  string $name Nameserver name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NameserverNameserverBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NameserverNameserverBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteNameserverWithHttpInfo($name, string $contentType = self::contentTypes['deleteNameserver'][0])
     {
@@ -551,11 +551,11 @@ class NameserverServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NameserverNameserverBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NameserverNameserverBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NameserverNameserverBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NameserverNameserverBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -573,16 +573,16 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NameserverNameserverBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -600,13 +600,13 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NameserverNameserverBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -639,7 +639,7 @@ class NameserverServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NameserverNameserverBoolResponse',
+                        '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -647,7 +647,7 @@ class NameserverServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -691,7 +691,7 @@ class NameserverServiceApi
      */
     public function deleteNameserverAsyncWithHttpInfo($name, string $contentType = self::contentTypes['deleteNameserver'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NameserverNameserverBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse';
         $request = $this->deleteNameserverRequest($name, $contentType);
 
         return $this->client
@@ -835,9 +835,9 @@ class NameserverServiceApi
      * @param  string $name Nameserver name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NameserverGetNameserverResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NameserverGetNameserverResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function getNameserver($name, string $contentType = self::contentTypes['getNameserver'][0])
     {
@@ -853,9 +853,9 @@ class NameserverServiceApi
      * @param  string $name Nameserver name (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NameserverGetNameserverResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NameserverGetNameserverResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getNameserverWithHttpInfo($name, string $contentType = self::contentTypes['getNameserver'][0])
     {
@@ -898,11 +898,11 @@ class NameserverServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NameserverGetNameserverResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NameserverGetNameserverResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NameserverGetNameserverResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NameserverGetNameserverResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -920,16 +920,16 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NameserverGetNameserverResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NameserverGetNameserverResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -947,13 +947,13 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NameserverGetNameserverResponse';
+            $returnType = '\Panthera\Openprovider\Model\NameserverGetNameserverResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -986,7 +986,7 @@ class NameserverServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NameserverGetNameserverResponse',
+                        '\Panthera\Openprovider\Model\NameserverGetNameserverResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -994,7 +994,7 @@ class NameserverServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class NameserverServiceApi
      */
     public function getNameserverAsyncWithHttpInfo($name, string $contentType = self::contentTypes['getNameserver'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NameserverGetNameserverResponse';
+        $returnType = '\Panthera\Openprovider\Model\NameserverGetNameserverResponse';
         $request = $this->getNameserverRequest($name, $contentType);
 
         return $this->client
@@ -1189,9 +1189,9 @@ class NameserverServiceApi
      * @param  string $order_by Field for sorting output. Possible values: id, name. (optional, default to 'name')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listNameservers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NameserverListNameserversResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NameserverListNameserversResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function listNameservers($name = null, $ip = null, $ip6 = null, $pattern = null, $limit = 100, $offset = null, $order = 'asc', $order_by = 'name', string $contentType = self::contentTypes['listNameservers'][0])
     {
@@ -1214,9 +1214,9 @@ class NameserverServiceApi
      * @param  string $order_by Field for sorting output. Possible values: id, name. (optional, default to 'name')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listNameservers'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NameserverListNameserversResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NameserverListNameserversResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listNameserversWithHttpInfo($name = null, $ip = null, $ip6 = null, $pattern = null, $limit = 100, $offset = null, $order = 'asc', $order_by = 'name', string $contentType = self::contentTypes['listNameservers'][0])
     {
@@ -1259,11 +1259,11 @@ class NameserverServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NameserverListNameserversResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NameserverListNameserversResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NameserverListNameserversResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NameserverListNameserversResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1281,16 +1281,16 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NameserverListNameserversResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NameserverListNameserversResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1308,13 +1308,13 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NameserverListNameserversResponse';
+            $returnType = '\Panthera\Openprovider\Model\NameserverListNameserversResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1347,7 +1347,7 @@ class NameserverServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NameserverListNameserversResponse',
+                        '\Panthera\Openprovider\Model\NameserverListNameserversResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1355,7 +1355,7 @@ class NameserverServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1413,7 +1413,7 @@ class NameserverServiceApi
      */
     public function listNameserversAsyncWithHttpInfo($name = null, $ip = null, $ip6 = null, $pattern = null, $limit = 100, $offset = null, $order = 'asc', $order_by = 'name', string $contentType = self::contentTypes['listNameservers'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NameserverListNameserversResponse';
+        $returnType = '\Panthera\Openprovider\Model\NameserverListNameserversResponse';
         $request = $this->listNameserversRequest($name, $ip, $ip6, $pattern, $limit, $offset, $order, $order_by, $contentType);
 
         return $this->client
@@ -1627,12 +1627,12 @@ class NameserverServiceApi
      * Update nameserver
      *
      * @param  string $name Nameserver name (required)
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\NameserverNameserverBoolResponse|\OpenAPI\Client\Model\ErrorError
+     * @return \Panthera\Openprovider\Model\NameserverNameserverBoolResponse|\Panthera\Openprovider\Model\ErrorError
      */
     public function updateNameserver($name, $body, string $contentType = self::contentTypes['updateNameserver'][0])
     {
@@ -1646,12 +1646,12 @@ class NameserverServiceApi
      * Update nameserver
      *
      * @param  string $name Nameserver name (required)
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNameserver'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Panthera\Openprovider\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\NameserverNameserverBoolResponse|\OpenAPI\Client\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Panthera\Openprovider\Model\NameserverNameserverBoolResponse|\Panthera\Openprovider\Model\ErrorError, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateNameserverWithHttpInfo($name, $body, string $contentType = self::contentTypes['updateNameserver'][0])
     {
@@ -1694,11 +1694,11 @@ class NameserverServiceApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\NameserverNameserverBoolResponse' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\NameserverNameserverBoolResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\NameserverNameserverBoolResponse' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\NameserverNameserverBoolResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1716,16 +1716,16 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\NameserverNameserverBoolResponse', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 default:
-                    if ('\OpenAPI\Client\Model\ErrorError' === '\SplFileObject') {
+                    if ('\Panthera\Openprovider\Model\ErrorError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorError' !== 'string') {
+                        if ('\Panthera\Openprovider\Model\ErrorError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1743,13 +1743,13 @@ class NameserverServiceApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorError', []),
+                        ObjectSerializer::deserialize($content, '\Panthera\Openprovider\Model\ErrorError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\NameserverNameserverBoolResponse';
+            $returnType = '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1782,7 +1782,7 @@ class NameserverServiceApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\NameserverNameserverBoolResponse',
+                        '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1790,7 +1790,7 @@ class NameserverServiceApi
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorError',
+                        '\Panthera\Openprovider\Model\ErrorError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1806,7 +1806,7 @@ class NameserverServiceApi
      * Update nameserver
      *
      * @param  string $name Nameserver name (required)
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNameserver'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1828,7 +1828,7 @@ class NameserverServiceApi
      * Update nameserver
      *
      * @param  string $name Nameserver name (required)
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNameserver'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1836,7 +1836,7 @@ class NameserverServiceApi
      */
     public function updateNameserverAsyncWithHttpInfo($name, $body, string $contentType = self::contentTypes['updateNameserver'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\NameserverNameserverBoolResponse';
+        $returnType = '\Panthera\Openprovider\Model\NameserverNameserverBoolResponse';
         $request = $this->updateNameserverRequest($name, $body, $contentType);
 
         return $this->client
@@ -1879,7 +1879,7 @@ class NameserverServiceApi
      * Create request for operation 'updateNameserver'
      *
      * @param  string $name Nameserver name (required)
-     * @param  \OpenAPI\Client\Model\NameserverNameserver $body (required)
+     * @param  \Panthera\Openprovider\Model\NameserverNameserver $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateNameserver'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

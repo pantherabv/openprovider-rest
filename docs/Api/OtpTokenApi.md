@@ -1,4 +1,4 @@
-# OpenAPI\Client\OtpTokenApi
+# Panthera\Openprovider\OtpTokenApi
 
 All URIs are relative to https://api.openprovider.eu, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.openprovider.eu, except if the operation de
 ## `createOtpToken()`
 
 ```php
-createOtpToken($id, $body): \OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse
+createOtpToken($id, $body): \Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse
 ```
 
 Create otp token
@@ -23,19 +23,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Panthera\Openprovider\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OtpTokenApi(
+$apiInstance = new Panthera\Openprovider\Api\OtpTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | Object id
-$body = new \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest(); // \OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest
+$body = new \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest(); // \Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest
 
 try {
     $result = $apiInstance->createOtpToken($id, $body);
@@ -50,11 +50,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **int**| Object id | |
-| **body** | [**\OpenAPI\Client\Model\OtptokenCreateOtpTokenRequest**](../Model/OtptokenCreateOtpTokenRequest.md)|  | |
+| **body** | [**\Panthera\Openprovider\Model\OtptokenCreateOtpTokenRequest**](../Model/OtptokenCreateOtpTokenRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OtptokenCreateOtpTokenResponse**](../Model/OtptokenCreateOtpTokenResponse.md)
+[**\Panthera\Openprovider\Model\OtptokenCreateOtpTokenResponse**](../Model/OtptokenCreateOtpTokenResponse.md)
 
 ### Authorization
 

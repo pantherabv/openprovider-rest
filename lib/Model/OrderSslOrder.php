@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Panthera\Openprovider\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Panthera\Openprovider\ObjectSerializer;
 
 /**
  * OrderSslOrder Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Panthera\Openprovider
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'active_date' => 'string',
-        'additional_data' => '\OpenAPI\Client\Model\OrderSslOrderAdditionalData[]',
+        'additional_data' => '\Panthera\Openprovider\Model\OrderSslOrderAdditionalData[]',
         'administrative_handle' => 'string',
         'autorenew' => 'string',
         'billing_handle' => 'string',
@@ -66,8 +66,8 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'certificate' => 'string',
         'common_name' => 'string',
         'csr' => 'string',
-        'domain_validation_methods' => '\OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]',
-        'domain_validation_statuses' => '\OpenAPI\Client\Model\OrderSslOrderDomainValidationStatuses',
+        'domain_validation_methods' => '\Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]',
+        'domain_validation_statuses' => '\Panthera\Openprovider\Model\OrderSslOrderDomainValidationStatuses',
         'email_approver' => 'string',
         'email_reissue' => 'string',
         'expiration_date' => 'string',
@@ -75,7 +75,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
         'host_names' => 'string[]',
         'id' => 'int',
         'intermediate_certificate' => 'string',
-        'options' => '\OpenAPI\Client\Model\OrderSslOrderOptions',
+        'options' => '\Panthera\Openprovider\Model\OrderSslOrderOptions',
         'order_date' => 'string',
         'order_ends_at' => 'string',
         'organization_handle' => 'string',
@@ -550,7 +550,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets additional_data
      *
-     * @return \OpenAPI\Client\Model\OrderSslOrderAdditionalData[]|null
+     * @return \Panthera\Openprovider\Model\OrderSslOrderAdditionalData[]|null
      */
     public function getAdditionalData()
     {
@@ -560,7 +560,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets additional_data
      *
-     * @param \OpenAPI\Client\Model\OrderSslOrderAdditionalData[]|null $additional_data additional_data
+     * @param \Panthera\Openprovider\Model\OrderSslOrderAdditionalData[]|null $additional_data additional_data
      *
      * @return self
      */
@@ -766,7 +766,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets domain_validation_methods
      *
-     * @return \OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]|null
+     * @return \Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]|null
      */
     public function getDomainValidationMethods()
     {
@@ -776,7 +776,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets domain_validation_methods
      *
-     * @param \OpenAPI\Client\Model\OrderSslOrderDomainValidationMethods[]|null $domain_validation_methods domain_validation_methods
+     * @param \Panthera\Openprovider\Model\OrderSslOrderDomainValidationMethods[]|null $domain_validation_methods domain_validation_methods
      *
      * @return self
      */
@@ -793,7 +793,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets domain_validation_statuses
      *
-     * @return \OpenAPI\Client\Model\OrderSslOrderDomainValidationStatuses|null
+     * @return \Panthera\Openprovider\Model\OrderSslOrderDomainValidationStatuses|null
      */
     public function getDomainValidationStatuses()
     {
@@ -803,7 +803,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets domain_validation_statuses
      *
-     * @param \OpenAPI\Client\Model\OrderSslOrderDomainValidationStatuses|null $domain_validation_statuses domain_validation_statuses
+     * @param \Panthera\Openprovider\Model\OrderSslOrderDomainValidationStatuses|null $domain_validation_statuses domain_validation_statuses
      *
      * @return self
      */
@@ -1009,7 +1009,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets options
      *
-     * @return \OpenAPI\Client\Model\OrderSslOrderOptions|null
+     * @return \Panthera\Openprovider\Model\OrderSslOrderOptions|null
      */
     public function getOptions()
     {
@@ -1019,7 +1019,7 @@ class OrderSslOrder implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets options
      *
-     * @param \OpenAPI\Client\Model\OrderSslOrderOptions|null $options options
+     * @param \Panthera\Openprovider\Model\OrderSslOrderOptions|null $options options
      *
      * @return self
      */
